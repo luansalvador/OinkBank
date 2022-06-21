@@ -32,6 +32,7 @@ final class EditDataDatePickerTableViewCell: UITableViewCell {
         view.inputView = datePicker
         view.inputAccessoryView = toolBar
         view.layer.cornerRadius = 5
+        view.isUserInteractionEnabled = false
         view.translatesAutoresizingMaskIntoConstraints = false
         
         view.rightView = accessoryAlertImageView

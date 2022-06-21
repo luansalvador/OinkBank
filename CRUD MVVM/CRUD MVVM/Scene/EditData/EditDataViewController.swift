@@ -130,9 +130,10 @@ extension EditDataViewController {
             //textfielddata
             cell.editTextField.tag = indexPath.row
             
-            if cell.editTextField.tag == 1 {
+            if cell.editTextField.tag == 0 || cell.editTextField.tag == 1{
                 cell.editTextField.isUserInteractionEnabled = false
             }
+            
             else {
                 cell.editTextField.isUserInteractionEnabled = true
             }
