@@ -13,6 +13,10 @@ class Error404ViewController: UIViewController {
         super.viewDidLoad()
         configureView()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.navigationController?.isNavigationBarHidden = true
+    }
     
     private func configureView() {
         let error404View = Error404View()

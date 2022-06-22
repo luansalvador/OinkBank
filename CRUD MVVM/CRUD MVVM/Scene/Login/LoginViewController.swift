@@ -15,7 +15,9 @@ class LoginViewController: UIViewController {
         view.backgroundColor = .MyTheme.backgroundColor
         //UIColor.MyTheme.mainPinkColor
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.agencyTextField.addBottomLineWithColor(color: .MyTheme.defaultTextColor, width: 1.0)
@@ -40,8 +42,8 @@ class LoginViewController: UIViewController {
         let attrs3 = [NSAttributedString.Key.font : UIFont.MyTheme.boldTitleText, NSAttributedString.Key.foregroundColor : UIColor.white]
         
         let atritutedString1 = NSMutableAttributedString(string: "Seja bem-vindo ao ", attributes: attrs1 as [NSAttributedString.Key : Any])
-        let atritutedString2 = NSMutableAttributedString(string: "OinkBank, ", attributes: attrs2 as [NSAttributedString.Key : Any])
-        let atritutedString3 = NSMutableAttributedString(string: "seu mais novo banco.", attributes: attrs3 as [NSAttributedString.Key : Any])
+        let atritutedString2 = NSMutableAttributedString(string: "\nOinkBank ", attributes: attrs2 as [NSAttributedString.Key : Any])
+        let atritutedString3 = NSMutableAttributedString(string: ", seu \nmais novo banco.", attributes: attrs3 as [NSAttributedString.Key : Any])
         
         
         atritutedString1.append(atritutedString2)
@@ -200,9 +202,9 @@ class LoginViewController: UIViewController {
     private func setupConstraints(){
         NSLayoutConstraint.activate([
             
-            welcomeLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -70),
-            welcomeLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            welcomeLabel.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.70),
+            welcomeLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -16),
             
             rectangleImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
             rectangleImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),

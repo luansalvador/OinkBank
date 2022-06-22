@@ -76,7 +76,7 @@ class Error404View: UIView {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),//topAnchor, constant: 80),
+            self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
@@ -92,9 +92,13 @@ class Error404View: UIView {
             self.vrau.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.vrau.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
+
             self.tryAgainButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             self.tryAgainButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             self.tryAgainButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+
+
+
         ])
     }
     
