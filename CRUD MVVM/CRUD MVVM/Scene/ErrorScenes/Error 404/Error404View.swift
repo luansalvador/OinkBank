@@ -13,7 +13,7 @@ class Error404View: UIView {
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel()
-        view.text = "Esses não são os porcos que você estava procurando!"
+        view.text = "Esses não são os porcos \nque você estava procurando!"
         view.numberOfLines = 0
         view.font = UIFont.MyTheme.homeHeaderText
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -22,7 +22,7 @@ class Error404View: UIView {
     
     private lazy var subtitleLabel: UILabel = {
         let view = UILabel()
-        view.text = "Caso precise, entre em contato com o suporte."
+        view.text = "Caso precise, entre em contato \ncom o suporte."
         view.numberOfLines = 0
         view.font = UIFont.MyTheme.defaultText
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -92,7 +92,7 @@ class Error404View: UIView {
             self.vrau.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.vrau.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            self.tryAgainButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            self.tryAgainButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor,constant: -16),
             self.tryAgainButton.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 16),
             self.tryAgainButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -16),
         ])
