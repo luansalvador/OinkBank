@@ -10,6 +10,7 @@ import UIKit
 
 class ReceivedTransferViewController: UIViewController {
     
+    //MARK: - Labels
     
     lazy var titleLabel: UILabel = {
         let lb = UILabel()
@@ -33,6 +34,8 @@ class ReceivedTransferViewController: UIViewController {
         return lb
     }()
     
+    //MARK: - Image
+    
     lazy var happyPigImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +44,9 @@ class ReceivedTransferViewController: UIViewController {
         return image
     }()
     
-    lazy var backBotton:UIButton = {
+    //MARK: - Button
+    
+    lazy var backButton:UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Voltar", for: .normal)
@@ -53,9 +58,19 @@ class ReceivedTransferViewController: UIViewController {
         return button
     }()
     
+    //MARK: - Button Action
+    
     @objc func back(sender:UIButton){
         print("teste")
     }
+    
+    //MARK: - viewWillAppear
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    //MARK: - loadView
     
     override func loadView() {
         super.loadView()
@@ -64,31 +79,40 @@ class ReceivedTransferViewController: UIViewController {
     }
     
     
+    //MARK: - viewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
 
     }
     
+    //MARK: - Func addSubviews
+    
     private func addSubviews() {
         self.view.addSubview(titleLabel)
         self.view.addSubview(subtitleLabel)
         self.view.addSubview(happyPigImage)
-        self.view.addSubview(backBotton)
+        self.view.addSubview(backButton)
     }
+    
+    //MARK: - Constraints
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-        self.titleLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 60),
+        self.titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 16),
         self.titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+        
         self.subtitleLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor),
         self.subtitleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
         self.subtitleLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+        
         self.happyPigImage.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 60),
         self.happyPigImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-        self.backBotton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -60),
-        self.backBotton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -60),
-        self.backBotton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 60)
+        
+        self.backButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+        self.backButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+        self.backButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
         ])
     }
     

@@ -254,6 +254,38 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		30D6A7842862431D00CA6EA1 /* TranferFail */ = {
+			isa = PBXGroup;
+			children = (
+				B89E0890285A3B36006D6AA0 /* TransferFailViewController.swift */,
+			);
+			path = TranferFail;
+			sourceTree = "<group>";
+		};
+		30D6A785286243CC00CA6EA1 /* ReceivedTransfer */ = {
+			isa = PBXGroup;
+			children = (
+				90AD79F72860C50700B7150B /* ReceivedTransferViewController.swift */,
+			);
+			path = ReceivedTransfer;
+			sourceTree = "<group>";
+		};
+		30D6A786286243F900CA6EA1 /* RegisterSucess */ = {
+			isa = PBXGroup;
+			children = (
+				B8437A9E2858E75400F272D5 /* RegisterSucessViewController.swift */,
+			);
+			path = RegisterSucess;
+			sourceTree = "<group>";
+		};
+		30D6A7872862442700CA6EA1 /* TransactionSucess */ = {
+			isa = PBXGroup;
+			children = (
+				90AD79E22860B77600B7150B /* TransactionSuccessViewController.swift */,
+			);
+			path = TransactionSucess;
+			sourceTree = "<group>";
+		};
 		900479F3283D36A7005D7208 /* HomePix */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,8 +397,9 @@
 		90AD79E42860B81000B7150B /* SuccessScenes */ = {
 			isa = PBXGroup;
 			children = (
-				90AD79E22860B77600B7150B /* TransactionSuccessViewController.swift */,
-				B8437A9E2858E75400F272D5 /* RegisterSucessViewController.swift */,
+				30D6A7872862442700CA6EA1 /* TransactionSucess */,
+				30D6A786286243F900CA6EA1 /* RegisterSucess */,
+				30D6A785286243CC00CA6EA1 /* ReceivedTransfer */,
 			);
 			path = SuccessScenes;
 			sourceTree = "<group>";
@@ -374,10 +407,9 @@
 		90AD79E52860B81F00B7150B /* ErrorScenes */ = {
 			isa = PBXGroup;
 			children = (
+				30D6A7842862431D00CA6EA1 /* TranferFail */,
 				90AD79F32860C50700B7150B /* Error 404 */,
-				90AD79F62860C50700B7150B /* ReceivedTransfer */,
 				90AD79F12860C50700B7150B /* UnexpectedError */,
-				B89E0890285A3B36006D6AA0 /* TransferFailViewController.swift */,
 			);
 			path = ErrorScenes;
 			sourceTree = "<group>";
@@ -397,14 +429,6 @@
 				90AD79F52860C50700B7150B /* Error404View.swift */,
 			);
 			path = "Error 404";
-			sourceTree = "<group>";
-		};
-		90AD79F62860C50700B7150B /* ReceivedTransfer */ = {
-			isa = PBXGroup;
-			children = (
-				90AD79F72860C50700B7150B /* ReceivedTransferViewController.swift */,
-			);
-			path = ReceivedTransfer;
 			sourceTree = "<group>";
 		};
 		90D587F5283FA5C900A22B45 /* OldService */ = {

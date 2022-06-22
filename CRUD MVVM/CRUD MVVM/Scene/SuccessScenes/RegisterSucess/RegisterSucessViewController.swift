@@ -42,13 +42,15 @@ class RegisterSucessViewController: UIViewController {
     }()
     //MARK: - Botão
     private lazy var sucessButton: UIButton = {
-        let view = UIButton()
-        view.setTitle("Entrar", for: .normal)
-        view.addTarget(self, action: #selector(sucessEnterButton), for: .touchUpInside)
-        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        return view
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Entrar", for: .normal)
+        button.titleLabel?.font = UIFont.MyTheme.defaultText
+        button.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
+        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(self.sucessEnterButton), for: .touchUpInside)
+        return button
     }()
     
     //MARK: - Button Actions
@@ -89,15 +91,19 @@ class RegisterSucessViewController: UIViewController {
             sucessLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 20),
             sucessLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 16),
             sucessLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -16),
+            
             infoLabel.topAnchor.constraint(equalTo: sucessLabel.bottomAnchor,constant: 20),
             infoLabel.leadingAnchor.constraint(equalTo: sucessLabel.leadingAnchor),
             infoLabel.trailingAnchor.constraint(equalTo: sucessLabel.trailingAnchor),
+            
             infosAccount.topAnchor.constraint(equalTo: infoLabel.bottomAnchor,constant: 10),
             infosAccount.leadingAnchor.constraint(equalTo: infoLabel.leadingAnchor),
             infosAccount.trailingAnchor.constraint(equalTo: infoLabel.trailingAnchor),
-            sucessButton.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -40),
-            sucessButton.trailingAnchor.constraint(equalTo: sucessLabel.trailingAnchor),
-            sucessButton.leadingAnchor.constraint(equalTo: sucessLabel.leadingAnchor),
+            
+            sucessButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            sucessButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            sucessButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            
             pigImageRegisterSucess.bottomAnchor.constraint(equalTo: sucessButton.topAnchor,constant: -40),
             pigImageRegisterSucess.leadingAnchor.constraint(equalTo: sucessLabel.leadingAnchor),
             pigImageRegisterSucess.trailingAnchor.constraint(equalTo: sucessLabel.trailingAnchor)
