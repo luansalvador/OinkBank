@@ -26,10 +26,10 @@ final class RegisterDatePickerTableViewCell: UITableViewCell {
     lazy var registerTextField: UITextField = {
        let view = UITextField()
         view.textAlignment = .center
-        view.textColor = UIColor.MyTheme.mainBlueColor
+//        view.textColor = UIColor.MyTheme.mainBlueColor
         view.text = "Selecionar"
         view.font = UIFont.MyTheme.defaultText
-        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+//        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
         view.inputView = datePicker
         view.inputAccessoryView = toolBar
         view.layer.cornerRadius = 5
@@ -53,7 +53,7 @@ final class RegisterDatePickerTableViewCell: UITableViewCell {
         let view = UIDatePicker()
         view.backgroundColor = .clear
         view.datePickerMode = .date
-        view.tintColor = UIColor.MyTheme.mainBlueColor
+//        view.tintColor = UIColor.MyTheme.mainBlueColor
         view.preferredDatePickerStyle = .wheels
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -88,7 +88,7 @@ final class RegisterDatePickerTableViewCell: UITableViewCell {
         // setupconstraints
         setupConstraints()
         
-        contentView.backgroundColor = .systemBackground
+        contentView.backgroundColor = .MyTheme.backgroundColor
     }
     
     required init?(coder: NSCoder) {
@@ -111,15 +111,15 @@ final class RegisterDatePickerTableViewCell: UITableViewCell {
         contentView.addSubview(tipLabel)
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            titleLabel.widthAnchor.constraint(equalToConstant: 110),
-            titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+//            titleLabel.widthAnchor.constraint(equalToConstant: 110),
+            titleLabel.bottomAnchor.constraint(equalTo: registerTextField.topAnchor),
             
-            registerTextField.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 10),
-            registerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            registerTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            registerTextField.heightAnchor.constraint(equalToConstant: 30),
+            registerTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            registerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+//            registerTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+//            registerTextField.heightAnchor.constraint(equalToConstant: 30),
             
             tipLabel.widthAnchor.constraint(equalTo: registerTextField.widthAnchor),
             tipLabel.centerXAnchor.constraint(equalTo: registerTextField.centerXAnchor),

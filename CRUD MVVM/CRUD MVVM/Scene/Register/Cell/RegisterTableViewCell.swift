@@ -86,19 +86,20 @@ final class RegisterTableViewCell: UITableViewCell {
         contentView.addSubview(tipLabel)
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            titleLabel.widthAnchor.constraint(equalToConstant: 110),
-            titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+//            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+//            titleLabel.widthAnchor.constraint(equalToConstant: 110),
+            titleLabel.bottomAnchor.constraint(equalTo: registerTextField.topAnchor),
             
-            registerTextField.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 10),
-            registerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            registerTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            registerTextField.heightAnchor.constraint(equalToConstant: 30),
+            registerTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            registerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            registerTextField.bottomAnchor.constraint(equalTo: self.tipLabel.topAnchor),
+//            registerTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+//            registerTextField.heightAnchor.constraint(equalToConstant: 30),
             
             tipLabel.widthAnchor.constraint(equalTo: registerTextField.widthAnchor),
             tipLabel.centerXAnchor.constraint(equalTo: registerTextField.centerXAnchor),
-            tipLabel.topAnchor.constraint(equalTo: registerTextField.bottomAnchor)
+            tipLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
 }

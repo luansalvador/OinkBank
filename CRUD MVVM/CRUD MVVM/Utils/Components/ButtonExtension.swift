@@ -14,7 +14,7 @@ extension UIButton {
 
         let view = UIButton()
         view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        view.setTitleColor(.MyTheme.defaultTextColor, for: .normal)
+        view.setTitleColor(.MyTheme.blackColor, for: .normal)
         view.setTitle(title, for: .normal)
         view.titleLabel?.font = font
         view.layer.cornerRadius = 5

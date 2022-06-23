@@ -18,18 +18,8 @@ class RegisterFooterView: UIView {
     var clickRegisterButton: (() -> Void)?
     
     //MARK: - UIElements
-    private lazy var registerButton: UIButton = {
-       let view = UIButton()
-        view.backgroundColor = UIColor.MyTheme.mainBlueColor
-        view.titleLabel?.font = .MyTheme.defaultText
-        view.tintColor = UIColor.MyTheme.backgroundColor
-        view.setTitleColor(.tintColor, for: .normal)
-        view.setTitle("Cadastrar", for: .normal)
-        view.addTarget(self, action: #selector(performRegister), for: .touchUpInside)
-        view.layer.cornerRadius = 5
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private lazy var registerButton: UIButton = UIButton.defaultButton(title: "Cadastrar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performRegister))
+    
     
     //MARK: - Initializer
     init() {
@@ -49,9 +39,9 @@ class RegisterFooterView: UIView {
     
     func setupLayoutConstraints(){
         NSLayoutConstraint.activate([
-            registerButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.85),
-            registerButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 15),
-            registerButton.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+            registerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            registerButton.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            registerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16)
         ])
     }
     
