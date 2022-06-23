@@ -51,7 +51,7 @@ class ReceivedTransferViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Voltar", for: .normal)
         button.titleLabel?.font = UIFont.MyTheme.defaultText
-        button.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
+        button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(self.back), for: .touchUpInside)
@@ -83,7 +83,7 @@ class ReceivedTransferViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .systemBackground
 
     }
     

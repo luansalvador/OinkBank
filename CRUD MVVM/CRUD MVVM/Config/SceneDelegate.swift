@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 //        let rootViewController = TransferFailViewController()
 //        let rootViewController = TransactionSuccessViewController()
-        let rootViewController = TransactionSuccessViewController()
+        let rootViewController = ReceivedTransferViewController()
         
         let navigationController = UINavigationController()
         navigationController.navigationBar.prefersLargeTitles = true
