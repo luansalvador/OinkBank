@@ -21,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene:  windowScene)
         
-        let rootViewController = LoginViewController()
+        let rootViewController = RegisterSucessViewController()
+        //let rootViewController = LoginViewController()
         //let rootViewController = Error404ViewController()
         //let rootViewController = UnexpectedErrorViewController()
         //let rootViewController = ReceivedTransferViewController()

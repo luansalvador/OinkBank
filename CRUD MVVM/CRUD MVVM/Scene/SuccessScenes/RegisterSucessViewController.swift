@@ -37,6 +37,7 @@ class RegisterSucessViewController: UIViewController {
     private lazy var pigImageRegisterSucess: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "FredSucesso")
+        view.contentMode = .scaleToFill
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -44,12 +45,15 @@ class RegisterSucessViewController: UIViewController {
     private lazy var sucessButton: UIButton = {
         let view = UIButton()
         view.setTitle("Entrar", for: .normal)
+        view.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
         view.addTarget(self, action: #selector(sucessEnterButton), for: .touchUpInside)
         view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
     }()
+    
+    
     
     //MARK: - Button Actions
     @objc func sucessEnterButton() {
@@ -67,14 +71,23 @@ class RegisterSucessViewController: UIViewController {
                 presentationController.detents = [
                     .large()
                 ]
+            
             setupView()
             setupConstraints()
-            self.navigationController?.isNavigationBarHidden = true
-            view.backgroundColor = .white
+            self.additionalSetup()
+           
     }
     }
+    
+    private func additionalSetup(){
+        self.view.backgroundColor = .MyTheme.backgroundColor
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    
     //MARK: - SetupView
         func setupView(){
+        
         view.addSubview(sucessLabel)
         view.addSubview(infoLabel)
         view.addSubview(infosAccount)
@@ -95,12 +108,13 @@ class RegisterSucessViewController: UIViewController {
             infosAccount.topAnchor.constraint(equalTo: infoLabel.bottomAnchor,constant: 10),
             infosAccount.leadingAnchor.constraint(equalTo: infoLabel.leadingAnchor),
             infosAccount.trailingAnchor.constraint(equalTo: infoLabel.trailingAnchor),
-            sucessButton.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -40),
+            sucessButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             sucessButton.trailingAnchor.constraint(equalTo: sucessLabel.trailingAnchor),
             sucessButton.leadingAnchor.constraint(equalTo: sucessLabel.leadingAnchor),
-            pigImageRegisterSucess.bottomAnchor.constraint(equalTo: sucessButton.topAnchor,constant: -40),
-            pigImageRegisterSucess.leadingAnchor.constraint(equalTo: sucessLabel.leadingAnchor),
-            pigImageRegisterSucess.trailingAnchor.constraint(equalTo: sucessLabel.trailingAnchor)
+            pigImageRegisterSucess.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 80),
+            pigImageRegisterSucess.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            pigImageRegisterSucess.widthAnchor.constraint(equalTo: self.view.widthAnchor , multiplier: 0.85),
+            pigImageRegisterSucess.heightAnchor.constraint(equalTo: self.view.heightAnchor , multiplier: 0.45)
             
         ])
     }
