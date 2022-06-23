@@ -34,17 +34,8 @@ class TransactionSuccessViewController: UIViewController {
         return view
     }()
     
-    private lazy var continueButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Continuar", for: .normal)
-        button.titleLabel?.font = UIFont.MyTheme.defaultText
-        button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
-        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        button.layer.cornerRadius = 5
-        button.addTarget(self, action: #selector(self.tappedButton), for: .touchUpInside)
-        return button
-    }()
+    private lazy var continueButton: UIButton = UIButton.defaultButton(title: "Continuar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(tappedButton))
+        
 
     override func viewDidLoad() {
         super.viewDidLoad()
