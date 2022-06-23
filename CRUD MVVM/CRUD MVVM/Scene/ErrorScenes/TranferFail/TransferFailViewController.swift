@@ -36,13 +36,15 @@ class TransferFailViewController: UIViewController {
     }()
     //MARK: - Botão
     private lazy var backButton: UIButton = {
-        let view = UIButton()
-        view.setTitle("Voltar", for: .normal)
-        view.addTarget(self, action: #selector(TapBack), for: .touchUpInside)
-        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        return view
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Voltar", for: .normal)
+        button.titleLabel?.font = UIFont.MyTheme.defaultText
+        button.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
+        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(TapBack), for: .touchUpInside)
+        return button
     }()
     
     //MARK: - Button Actions
@@ -81,12 +83,15 @@ class TransferFailViewController: UIViewController {
             errorLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             errorLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 16),
             errorLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -16),
+            
             infoLabel.topAnchor.constraint(equalTo: errorLabel.bottomAnchor,constant: 20),
             infoLabel.leadingAnchor.constraint(equalTo: errorLabel.leadingAnchor),
             infoLabel.trailingAnchor.constraint(equalTo: errorLabel.trailingAnchor),
-            backButton.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -40),
-            backButton.trailingAnchor.constraint(equalTo: errorLabel.trailingAnchor),
-            backButton.leadingAnchor.constraint(equalTo: errorLabel.leadingAnchor),
+            
+            backButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            backButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            backButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            
             pigImageTransferFail.bottomAnchor.constraint(equalTo: backButton.topAnchor,constant: -40),
             pigImageTransferFail.leadingAnchor.constraint(equalTo: backButton.leadingAnchor),
             pigImageTransferFail.trailingAnchor.constraint(equalTo: backButton.trailingAnchor)
