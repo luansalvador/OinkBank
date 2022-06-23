@@ -69,7 +69,7 @@ class ReceivedTransferViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
     }
-    
+
     //MARK: - loadView
     
     override func loadView() {
@@ -83,7 +83,7 @@ class ReceivedTransferViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .MyTheme.backgroundColor
 
     }
     
