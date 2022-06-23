@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let rootViewController = ReceivedTransferViewController()
         
 //        let rootViewController = TransferFailViewController()
-//        let rootViewController = TransactionSuccessViewController()
+       //let rootViewController = TransactionSuccessViewController()
       //  let rootViewController = RegisterSucessViewController()
         
         let navigationController = UINavigationController()

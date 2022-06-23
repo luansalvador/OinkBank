@@ -133,10 +133,8 @@ class LoginViewController: UIViewController {
     }()
     
     // MARK: - login button
-    private lazy var loginButton: UIButton = {
-        let view = UIButton.defaultButton(title: "Entrar", target: self, selector: #selector(performLogin))
-        return view
-    }()
+    
+        private lazy var loginButton: UIButton = UIButton.defaultButton(title: "Entrar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performLogin))
     
     //MARK: -register button
     private lazy var registerButton: UIButton = {
