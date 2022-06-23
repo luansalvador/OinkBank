@@ -206,15 +206,16 @@ class LoginViewController: UIViewController {
             welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -16),
             
-            rectangleImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            rectangleImage.topAnchor.constraint(equalTo: view.topAnchor),
             rectangleImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            rectangleImage.widthAnchor.constraint(equalTo: view.widthAnchor),
-            rectangleImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.40),
+            rectangleImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            rectangleImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            rectangleImage.heightAnchor.constraint(equalTo: view.heightAnchor,multiplier: 0.40),
+            rectangleImage.bottomAnchor.constraint(equalTo: view.centerYAnchor,constant: -16),
             
-            logoImageView.topAnchor.constraint(equalTo: rectangleImage.bottomAnchor, constant: -50),
+            logoImageView.topAnchor.constraint(equalTo: rectangleImage.bottomAnchor,constant: -60),
             logoImageView.centerXAnchor.constraint(equalTo: self.loginButton.centerXAnchor),
             logoImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
-            logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor, multiplier: 0.5),
             
             agencyLabel.topAnchor.constraint(equalTo: view.centerYAnchor),
             agencyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
