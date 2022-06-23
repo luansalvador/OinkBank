@@ -12,7 +12,7 @@ class PixChargeViewModel {
     public func generateCopyPaste(value: String, clientCPF: String) -> String{
         let arrayValueChanged = value.components(separatedBy: "R$")
         
-        let valueChanged = arrayValueChanged[1].replacingOccurrences(of: ",", with: "_").replacingOccurrences(of: " ", with: "")
+        let valueChanged = arrayValueChanged[1].replacingOccurrences(of: ",", with: "_").components(separatedBy: .whitespaces).filter({ !$0.isEmpty }).joined(separator: "")
         
         var timeStampText: String {
             return "\(NSDate().timeIntervalSince1970 * 1000)"
