@@ -13,6 +13,7 @@ class TransactionSuccessViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
+        label.textColor = .MyTheme.defaultTextColor
         label.text = "Transação Concluída!"
         label.font = .MyTheme.boldTitleText
         return label
@@ -22,6 +23,7 @@ class TransactionSuccessViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
+        label.textColor = .MyTheme.defaultTextColor
         label.text = "Sua transação foi efetuada com sucesso."
         label.font = .MyTheme.defaultText
         return label
@@ -39,7 +41,7 @@ class TransactionSuccessViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Continuar", for: .normal)
         button.titleLabel?.font = UIFont.MyTheme.defaultText
-        button.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
+        button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(self.tappedButton), for: .touchUpInside)
