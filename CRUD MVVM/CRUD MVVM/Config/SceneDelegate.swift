@@ -22,8 +22,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene:  windowScene)
         
 
- //      let rootViewController = LoginViewController()
-        let rootViewController = HomeViewController()
+ //       let rootViewController = CopyAndPastViewController()
+
+          let rootViewController = LoginViewController()
+ //       let rootViewController = HomeViewController()
+
 
 //        let rootViewController = Error404ViewController()
       
@@ -31,6 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //
 //        let rootViewController = TransferFailViewController()
 //        let rootViewController = TransactionSuccessViewController()
+
         
         let navigationController = UINavigationController()
         navigationController.navigationBar.prefersLargeTitles = true
