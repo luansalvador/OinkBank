@@ -21,14 +21,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene:  windowScene)
         
-//        let rootViewController = LoginViewController()
+
+ //      let rootViewController = LoginViewController()
+        let rootViewController = HomeViewController()
+
 //        let rootViewController = Error404ViewController()
-//        let rootViewController = UnexpectedErrorViewController()
+      
 //        let rootViewController = ReceivedTransferViewController()
-        
+//
 //        let rootViewController = TransferFailViewController()
 //        let rootViewController = TransactionSuccessViewController()
-        let rootViewController = ReceivedTransferViewController()
         
         let navigationController = UINavigationController()
         navigationController.navigationBar.prefersLargeTitles = true
