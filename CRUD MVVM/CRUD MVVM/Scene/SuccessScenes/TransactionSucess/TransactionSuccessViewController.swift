@@ -31,22 +31,16 @@ class TransactionSuccessViewController: UIViewController {
     
     private lazy var backgroundImageView: UIImageView = {
         let view = UIImageView(image: UIImage(named: "TransactionSuccessImage"))
-
+        view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    private lazy var continueButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Continuar", for: .normal)
-        button.titleLabel?.font = UIFont.MyTheme.defaultText
-        button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
-        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        button.layer.cornerRadius = 5
-        button.addTarget(self, action: #selector(self.tappedButton), for: .touchUpInside)
-        return button
-    }()
+
+
+    private lazy var continueButton: UIButton = UIButton.defaultButton(title: "Continuar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(tappedButton))
+        
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +75,9 @@ class TransactionSuccessViewController: UIViewController {
     private func setupConstraints(){
         NSLayoutConstraint.activate([
             
-            self.topLabelTitle.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+
+            self.topLabelTitle.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,constant: 16),
+
             self.topLabelTitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
             self.topLabelTitle.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
             

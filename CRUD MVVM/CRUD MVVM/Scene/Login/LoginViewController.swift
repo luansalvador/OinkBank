@@ -9,7 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     let viewModel = LoginViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .MyTheme.backgroundColor
@@ -52,21 +52,21 @@ class LoginViewController: UIViewController {
         view.attributedText = atritutedString1
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
-    
+        
     }()
     
     private lazy var rectangleImage: UIImageView = {
         let wallpapper = UIImageView()
         wallpapper.tintColor = .MyTheme.mainBlueColor
         wallpapper.translatesAutoresizingMaskIntoConstraints = false
-        wallpapper.image = UIImage(named: "rectangle1")
+        wallpapper.image = UIImage(named: "Rectangle")
         return wallpapper
     }()
     
-
+    
     //Label
     private lazy var agencyLabel: UILabel = {
-       let view = UILabel()
+        let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
         //.MyTheme.whiteTextColor
         view.font = .MyTheme.defaultText
@@ -76,7 +76,7 @@ class LoginViewController: UIViewController {
     }()
     
     private lazy var accountLabel: UILabel = {
-       let view = UILabel()
+        let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
         //.MyTheme.whiteTextColor
         view.text = "Conta com dígito"
@@ -87,7 +87,7 @@ class LoginViewController: UIViewController {
     
     //TextField
     private lazy var agencyTextField: UITextField = {
-       let view = UITextField()
+        let view = UITextField()
         view.borderStyle = .none
         view.placeholder = "1-9"
         view.backgroundColor = .clear
@@ -100,7 +100,7 @@ class LoginViewController: UIViewController {
     }()
     
     private lazy var accountTextField: UITextField = {
-       let view = UITextField()
+        let view = UITextField()
         view.borderStyle = .none
         view.placeholder = "1-9"
         view.backgroundColor = .clear
@@ -113,7 +113,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - password label and textfield
     private lazy var passwordLabel: UILabel = {
-       let view = UILabel()
+        let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
         view.font = .MyTheme.defaultText
         view.text = "Senha"
@@ -122,7 +122,7 @@ class LoginViewController: UIViewController {
     }()
     
     private lazy var passwordTextField: UITextField = {
-       let view = UITextField()
+        let view = UITextField()
         view.placeholder = "******"
         view.backgroundColor = .clear
         view.textColor = .MyTheme.mainBlueColor
@@ -132,14 +132,12 @@ class LoginViewController: UIViewController {
     }()
     
     // MARK: - login button
-    private lazy var loginButton: UIButton = {
-        let view = UIButton.defaultButton(title: "Entrar", target: self, selector: #selector(performLogin))
-        return view
-    }()
+    
+        private lazy var loginButton: UIButton = UIButton.defaultButton(title: "Entrar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performLogin))
     
     //MARK: -register button
     private lazy var registerButton: UIButton = {
-       let view = UIButton()
+        let view = UIButton()
         view.tintColor = .MyTheme.defaultTextColor
         view.setTitleColor(.tintColor, for: .normal)
         view.setTitle("Não tem conta? Cadastre-se", for: .normal)
@@ -155,7 +153,7 @@ class LoginViewController: UIViewController {
         let registerViewController = RegisterViewController()
         self.navigationController?.pushViewController(registerViewController, animated: true)
     }
-
+    
     
     
     //MARK: - logo imageview
@@ -163,12 +161,13 @@ class LoginViewController: UIViewController {
         let view = UIImageView()
         view.tintColor = .MyTheme.whiteTextColor
         view.image = UIImage(named: "logo pig")
+        view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-
-
+    
+    
     //MARK: - init
     init(){
         super.init(nibName: nil, bundle: nil)
@@ -201,7 +200,7 @@ class LoginViewController: UIViewController {
     private func setupConstraints(){
         NSLayoutConstraint.activate([
             
-            welcomeLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            welcomeLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 16),
             welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -16),
             
@@ -209,43 +208,43 @@ class LoginViewController: UIViewController {
             rectangleImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             rectangleImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             rectangleImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            rectangleImage.heightAnchor.constraint(equalTo: view.heightAnchor,multiplier: 0.40),
+            rectangleImage.heightAnchor.constraint(equalTo: view.heightAnchor,multiplier: 0.41),
             rectangleImage.bottomAnchor.constraint(equalTo: view.centerYAnchor,constant: -16),
             
-            logoImageView.topAnchor.constraint(equalTo: rectangleImage.bottomAnchor,constant: -60),
+            logoImageView.topAnchor.constraint(equalTo: rectangleImage.bottomAnchor,constant: -16),
             logoImageView.centerXAnchor.constraint(equalTo: self.loginButton.centerXAnchor),
             logoImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
             
-            agencyLabel.topAnchor.constraint(equalTo: view.centerYAnchor),
-            agencyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            
+            agencyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            agencyLabel.bottomAnchor.constraint(equalTo: agencyTextField.topAnchor,constant: -16),
             
             accountLabel.topAnchor.constraint(equalTo: agencyLabel.topAnchor),
             accountLabel.leadingAnchor.constraint(equalTo: view.centerXAnchor),
             
-            agencyTextField.topAnchor.constraint(equalTo: agencyLabel.bottomAnchor, constant: 5),
-            agencyTextField.leadingAnchor.constraint(equalTo: agencyLabel.leadingAnchor),
+            agencyTextField.topAnchor.constraint(equalTo: agencyLabel.bottomAnchor, constant: 16),
+            agencyTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 16),
             agencyTextField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4),
             
             accountTextField.topAnchor.constraint(equalTo: agencyTextField.topAnchor),
-            accountTextField.leadingAnchor.constraint(equalTo: accountLabel.leadingAnchor),
-//            accountTextField.widthAnchor.constraint(equalTo: agencyTextField.widthAnchor),
-            accountTextField.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -30),
+            accountTextField.leadingAnchor.constraint(equalTo: agencyTextField.trailingAnchor,constant: 16),
+            accountTextField.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
             
-            passwordLabel.topAnchor.constraint(equalTo: agencyTextField.bottomAnchor, constant: 5),
-            passwordLabel.leadingAnchor.constraint(equalTo: agencyTextField.leadingAnchor),
+            passwordLabel.topAnchor.constraint(equalTo: agencyTextField.bottomAnchor,constant: 16),
+            passwordLabel.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor),
             
-            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 5),
-            passwordTextField.leadingAnchor.constraint(equalTo: passwordLabel.leadingAnchor),
-            passwordTextField.trailingAnchor.constraint(equalTo: accountTextField.trailingAnchor),
+            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 16),
+            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 16),
+            passwordTextField.trailingAnchor.constraint(equalTo:view.trailingAnchor,constant: -16),
             
-            loginButton.widthAnchor.constraint(equalTo: passwordTextField.widthAnchor),
-            loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 30),
+            loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 16),
+            loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -16),
+            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 16),
             
-            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 20),
-            registerButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75),
-            registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
+            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 16),
+            registerButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 16),
+            registerButton.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -16),
+            registerButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -16)
         ])
     }
     
@@ -282,7 +281,7 @@ extension UIView {
         bottomBorderLine.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: width)
         self.layer.addSublayer(bottomBorderLine)
         
-
+        
     }
 }
 
