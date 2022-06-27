@@ -31,7 +31,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
  //       let rootViewController = CopyAndPastViewController()
 
-          let rootViewController = LoginViewController()
  //       let rootViewController = HomeViewController()
 
 
