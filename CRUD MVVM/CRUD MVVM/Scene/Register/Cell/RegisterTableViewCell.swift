@@ -89,7 +89,7 @@ final class RegisterTableViewCell: UITableViewCell {
 //            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
 //            titleLabel.widthAnchor.constraint(equalToConstant: 110),
-            titleLabel.bottomAnchor.constraint(equalTo: registerTextField.topAnchor),
+            titleLabel.bottomAnchor.constraint(equalTo: registerTextField.topAnchor, constant: 5),
             
             registerTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             registerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),

@@ -25,9 +25,10 @@ final class RegisterDatePickerTableViewCell: UITableViewCell {
     //textfield
     lazy var registerTextField: UITextField = {
        let view = UITextField()
-        view.textAlignment = .center
+        view.textAlignment = .left
 //        view.textColor = UIColor.MyTheme.mainBlueColor
-        view.text = "Selecionar"
+//        view.text = "00/00/0000"
+        view.placeholder = "00/00/0000"
         view.font = UIFont.MyTheme.defaultText
 //        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
         view.inputView = datePicker
@@ -114,7 +115,7 @@ final class RegisterDatePickerTableViewCell: UITableViewCell {
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
 //            titleLabel.widthAnchor.constraint(equalToConstant: 110),
-            titleLabel.bottomAnchor.constraint(equalTo: registerTextField.topAnchor),
+            titleLabel.bottomAnchor.constraint(equalTo: registerTextField.topAnchor, constant: 5),
             
             registerTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             registerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
