@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .MyTheme.backgroundColor
-        //UIColor.MyTheme.mainPinkColor
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
@@ -115,7 +115,6 @@ class LoginViewController: UIViewController {
     private lazy var passwordLabel: UILabel = {
         let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
-        //.MyTheme.whiteTextColor
         view.font = .MyTheme.defaultText
         view.text = "Senha"
         view.translatesAutoresizingMaskIntoConstraints = false
