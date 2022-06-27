@@ -29,17 +29,8 @@ class Error404View: UIView {
         return view
     }()
     
-    private lazy var tryAgainButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Tentar Novamente", for: .normal)
-        button.titleLabel?.font = UIFont.MyTheme.defaultText
-        button.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
-        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        button.layer.cornerRadius = 5
-        button.addTarget(self, action: #selector(performTryAgain), for: .touchUpInside)
-        return button
-    }()
+    private lazy var tryAgainButton: UIButton = UIButton.defaultButton(title: "Tentar Novamente", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performTryAgain))
+        
     
     private lazy var error404Image: UIImageView = {
         let view = UIImageView()

@@ -42,16 +42,9 @@ class RegisterSucessViewController: UIViewController {
         return view
     }()
     //MARK: - Botão
-    private lazy var sucessButton: UIButton = {
-        let view = UIButton()
-        view.setTitle("Entrar", for: .normal)
-        view.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
-        view.addTarget(self, action: #selector(sucessEnterButton), for: .touchUpInside)
-        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        view.translatesAutoresizingMaskIntoConstraints = false
+    private lazy var sucessButton: UIButton = UIButton.defaultButton(title: "Entrar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(sucessEnterButton))
         
-        return view
-    }()
+
     
     
     
