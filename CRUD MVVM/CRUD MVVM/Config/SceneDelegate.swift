@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
         //let rootViewController = LoginViewController()
 
-        let rootViewController = LoginViewController()
+  //      let rootViewController = LoginViewController()
 
         //let rootViewController = RegisterSucessViewController()
        
@@ -44,7 +44,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 //        let rootViewController = Error404ViewController()
       
-//        let rootViewController = ReceivedTransferViewController()
+       let rootViewController = ReceivedTransferViewController()
 //
 //        let rootViewController = TransferFailViewController()
 
