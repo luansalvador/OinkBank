@@ -13,7 +13,9 @@ class RegisterViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Criar Conta"
+        self.title = "Criar Conta"
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
         
         setupTableView()
@@ -58,6 +60,16 @@ class RegisterViewController: UIViewController, UITableViewDelegate, UITableView
 
 // MARK: - TableView Functions
 extension RegisterViewController {
+    //MARK: - Header
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = RegisterHeaderView()
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        RegisterHeaderView.height
+    }
+    
     // MARK: - Footer
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footer = RegisterFooterView()
@@ -75,7 +87,7 @@ extension RegisterViewController {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        65
+        78
     }
     
     // MARK: - Cell, SetupCell, TextfieldData
