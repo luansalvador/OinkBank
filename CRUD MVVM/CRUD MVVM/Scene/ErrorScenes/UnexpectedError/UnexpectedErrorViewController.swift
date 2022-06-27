@@ -10,6 +10,8 @@ import UIKit
 
 class UnexpectedErrorViewController: UIViewController {
     
+    //MARK: - Labels
+    
     lazy var titleLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
@@ -32,29 +34,43 @@ class UnexpectedErrorViewController: UIViewController {
         return lb
     }()
     
+    //MARK: - Image
+    
     lazy var baconImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "unexpectedErrorImage")
-        image.contentMode = .scaleToFill
+        image.contentMode = .scaleAspectFill
         return image
     }()
     
-    lazy var backBotton:UIButton = {
+    //MARK: - Button
+    
+    lazy var backButton:UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Voltar", for: .normal)
         button.titleLabel?.font = UIFont.MyTheme.defaultText
-        button.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
+        button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(self.back), for: .touchUpInside)
         return button
     }()
     
+    //MARK: - Button Action
+    
     @objc func back(sender:UIButton){
         print("teste")
     }
+    
+    //MARK: - viewWillAppear
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    //MARK: - loadView
     
     override func loadView() {
         super.loadView()
@@ -62,35 +78,42 @@ class UnexpectedErrorViewController: UIViewController {
         configConstraints()
     }
     
+    //MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .systemBackground
 
     }
+    
+    //MARK: - Func addSubviews
     
     private func addSubviews() {
         self.view.addSubview(titleLabel)
         self.view.addSubview(subtitleLabel)
         self.view.addSubview(baconImage)
-        self.view.addSubview(backBotton)
+        self.view.addSubview(backButton)
     }
+    
+    //MARK: - Constraints
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-        self.titleLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 60),
+        self.titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 16),
         self.titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+        
         self.subtitleLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor),
         self.subtitleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
         self.subtitleLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
-        self.baconImage.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 280),
-        self.baconImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-        self.baconImage.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 40),
-        self.baconImage.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -40),
-        self.baconImage.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -140),
-        self.backBotton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -60),
-        self.backBotton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -60),
-        self.backBotton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 60)
+        
+        self.baconImage.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 280),
+        self.baconImage.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
+        self.baconImage.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -40),
+        self.baconImage.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -140),
+        
+        self.backButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+        self.backButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+        self.backButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
         ])
     }
 }

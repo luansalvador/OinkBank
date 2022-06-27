@@ -43,7 +43,7 @@ class HomeHeaderView: UIView {
        let view = UILabel()
         view.text = "Saldo:"
         view.font = UIFont.MyTheme.homeHeaderText
-        view.textColor = UIColor.MyTheme.whiteTextColor
+        view.textColor = UIColor.MyTheme.defaultTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -52,7 +52,7 @@ class HomeHeaderView: UIView {
          let view = UILabel()
          view.text = "R$999,99"
         view.font = UIFont.MyTheme.homeHeaderText
-         view.textColor = UIColor.MyTheme.whiteTextColor
+         view.textColor = UIColor.MyTheme.defaultTextColor
          view.translatesAutoresizingMaskIntoConstraints = false
          return view
     }()
@@ -60,7 +60,7 @@ class HomeHeaderView: UIView {
     private lazy var hideBalanceButton: UIButton = {
        let view = UIButton()
         let image = UIImage(named: "ic_eye_visibility")
-        view.tintColor = UIColor.MyTheme.whiteTextColor
+        view.tintColor = UIColor.MyTheme.defaultTextColor
         view.setImage(image, for: .normal)
         view.addTarget(self, action: #selector(performHideBalance), for: .touchUpInside)
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
@@ -71,33 +71,33 @@ class HomeHeaderView: UIView {
     //MARK: - Fast Action Buttons
     private lazy var payBillsButton: UIButton = {
         let view = UIButton()
+        view.semanticContentAttribute = .forceLeftToRight
+        view.contentHorizontalAlignment = .center
         let image = UIImage(named: "ic_barcode")
-         view.layer.cornerRadius = 5
+        view.layer.cornerRadius = 5
         view.setImage(image, for: .normal)
-         view.setTitle("Pagar", for: .normal)
+        view.setTitle("Pagar", for: .normal)
         view.titleLabel?.font = UIFont.MyTheme.defaultText
         view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        //view.tintColor = UIColor.MyTheme.mainPinkColor
-        view.tintColor = UIColor.MyTheme.defaultTextColor
-        //view.setTitleColor(UIColor.MyTheme.mainPinkColor, for: .normal)
-        view.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
+        view.tintColor = UIColor.MyTheme.blackColor
+        view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
-         view.translatesAutoresizingMaskIntoConstraints = false
+        view.translatesAutoresizingMaskIntoConstraints = false
          return view
     }()
     
     private lazy var pixButton: UIButton = {
         let view = UIButton()
+        view.semanticContentAttribute = .forceLeftToRight
+        view.contentHorizontalAlignment = .center
         let image = UIImage(named: "ic_pix")
-         view.layer.cornerRadius = 5
+        view.layer.cornerRadius = 5
         view.setImage(image, for: .normal)
-         view.setTitle("Pix", for: .normal)
+        view.setTitle("Pix", for: .normal)
         view.titleLabel?.font = UIFont.MyTheme.defaultText
         view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        //view.tintColor = UIColor.MyTheme.mainPinkColor
-        view.tintColor = UIColor.MyTheme.defaultTextColor
-        //view.setTitleColor(UIColor.MyTheme.mainPinkColor, for: .normal)
-        view.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
+        view.tintColor = UIColor.MyTheme.blackColor
+        view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.addTarget(self, action: #selector(performPix), for: .touchUpInside)
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
          view.translatesAutoresizingMaskIntoConstraints = false
@@ -106,18 +106,18 @@ class HomeHeaderView: UIView {
     
     private lazy var transferButton: UIButton = {
         let view = UIButton()
+        view.semanticContentAttribute = .forceLeftToRight
+        view.contentHorizontalAlignment = .left
         let image = UIImage(named: "ic_transferir")
-         view.layer.cornerRadius = 5
+        view.layer.cornerRadius = 5
         view.setImage(image, for: .normal)
-         view.setTitle("Transferir", for: .normal)
+        view.setTitle("Transferir", for: .normal)
         view.titleLabel?.font = UIFont.MyTheme.defaultText
         view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        //view.tintColor = UIColor.MyTheme.mainPinkColor
-        view.tintColor = UIColor.MyTheme.defaultTextColor
-        //view.setTitleColor(UIColor.MyTheme.mainPinkColor, for: .normal)
-        view.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
+        view.tintColor = UIColor.MyTheme.blackColor
+        view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
-         view.translatesAutoresizingMaskIntoConstraints = false
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(performLogOut), for: .touchUpInside)
          return view
     }()
@@ -126,7 +126,7 @@ class HomeHeaderView: UIView {
     private lazy var agencyLabel: UILabel = {
         let view = UILabel()
         view.text = "Agência: 1-9"
-        view.textColor = UIColor.MyTheme.whiteTextColor
+        view.textColor = UIColor.MyTheme.defaultTextColor
         view.font = UIFont.MyTheme.homeHeaderText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -135,7 +135,7 @@ class HomeHeaderView: UIView {
     private lazy var accountLabel: UILabel = {
         let view = UILabel()
         view.text = "Conta: 00000-0"
-        view.textColor = UIColor.MyTheme.whiteTextColor
+        view.textColor = UIColor.MyTheme.defaultTextColor
         view.font = UIFont.MyTheme.homeHeaderText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -203,7 +203,8 @@ class HomeHeaderView: UIView {
             hideBalanceButton.topAnchor.constraint(equalTo: cardImageView.topAnchor, constant: 10),
             hideBalanceButton.trailingAnchor.constraint(equalTo: cardImageView.trailingAnchor, constant: -10),
             
-            payBillsButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.28),
+                                                                                        
+            payBillsButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.29),
             payBillsButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             payBillsButton.heightAnchor.constraint(equalToConstant: 50),
             payBillsButton.topAnchor.constraint(equalTo: cardImageView.bottomAnchor, constant: 10),

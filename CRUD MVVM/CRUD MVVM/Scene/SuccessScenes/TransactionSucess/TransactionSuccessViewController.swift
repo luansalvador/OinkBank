@@ -13,6 +13,7 @@ class TransactionSuccessViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
+        label.textColor = .MyTheme.defaultTextColor
         label.text = "Transação Concluída!"
         label.font = .MyTheme.boldTitleText
         return label
@@ -22,6 +23,7 @@ class TransactionSuccessViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
+        label.textColor = .MyTheme.defaultTextColor
         label.text = "Sua transação foi efetuada com sucesso."
         label.font = .MyTheme.defaultText
         return label
@@ -35,13 +37,14 @@ class TransactionSuccessViewController: UIViewController {
     }()
     
     private lazy var continueButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Continuar", for: .normal)
-        button.titleLabel?.font = UIFont.MyTheme.defaultBoldText
-        button.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
+        button.titleLabel?.font = UIFont.MyTheme.defaultText
+        button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        button.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(self.tappedButton), for: .touchUpInside)
         return button
     }()
 
@@ -79,21 +82,21 @@ class TransactionSuccessViewController: UIViewController {
         NSLayoutConstraint.activate([
             
             self.topLabelTitle.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            self.topLabelTitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 15),
-            self.topLabelTitle.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -15),
+            self.topLabelTitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            self.topLabelTitle.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
             
             self.topLabelSubtitle.topAnchor.constraint(equalTo: self.topLabelTitle.bottomAnchor),
-            self.topLabelSubtitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 15),
-            self.topLabelSubtitle.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -15),
+            self.topLabelSubtitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            self.topLabelSubtitle.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
             
             self.backgroundImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            self.backgroundImageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 15),
-            self.backgroundImageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -15),
+            self.backgroundImageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            self.backgroundImageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
             
-//            self.continueButton.topAnchor.constraint(equalTo: self.backgroundImageView.bottomAnchor),
-            self.continueButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.continueButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
-            self.continueButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8)
+            self.continueButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            self.continueButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            self.continueButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+        
         ])
     }
     

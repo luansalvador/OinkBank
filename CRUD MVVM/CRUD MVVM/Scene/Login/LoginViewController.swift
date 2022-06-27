@@ -13,9 +13,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .MyTheme.backgroundColor
-        //UIColor.MyTheme.mainPinkColor
+        
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.agencyTextField.addBottomLineWithColor(color: .MyTheme.defaultTextColor, width: 1.0)
@@ -40,8 +42,8 @@ class LoginViewController: UIViewController {
         let attrs3 = [NSAttributedString.Key.font : UIFont.MyTheme.boldTitleText, NSAttributedString.Key.foregroundColor : UIColor.white]
         
         let atritutedString1 = NSMutableAttributedString(string: "Seja bem-vindo ao ", attributes: attrs1 as [NSAttributedString.Key : Any])
-        let atritutedString2 = NSMutableAttributedString(string: "OinkBank, ", attributes: attrs2 as [NSAttributedString.Key : Any])
-        let atritutedString3 = NSMutableAttributedString(string: "seu mais novo banco.", attributes: attrs3 as [NSAttributedString.Key : Any])
+        let atritutedString2 = NSMutableAttributedString(string: "\nOinkBank ", attributes: attrs2 as [NSAttributedString.Key : Any])
+        let atritutedString3 = NSMutableAttributedString(string: ", seu \nmais novo banco.", attributes: attrs3 as [NSAttributedString.Key : Any])
         
         
         atritutedString1.append(atritutedString2)
@@ -113,7 +115,6 @@ class LoginViewController: UIViewController {
     private lazy var passwordLabel: UILabel = {
        let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
-        //.MyTheme.whiteTextColor
         view.font = .MyTheme.defaultText
         view.text = "Senha"
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -200,19 +201,20 @@ class LoginViewController: UIViewController {
     private func setupConstraints(){
         NSLayoutConstraint.activate([
             
-            welcomeLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -70),
-            welcomeLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            welcomeLabel.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.70),
+            welcomeLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -16),
             
-            rectangleImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            rectangleImage.topAnchor.constraint(equalTo: view.topAnchor),
             rectangleImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            rectangleImage.widthAnchor.constraint(equalTo: view.widthAnchor),
-            rectangleImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.40),
+            rectangleImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            rectangleImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            rectangleImage.heightAnchor.constraint(equalTo: view.heightAnchor,multiplier: 0.40),
+            rectangleImage.bottomAnchor.constraint(equalTo: view.centerYAnchor,constant: -16),
             
-            logoImageView.topAnchor.constraint(equalTo: rectangleImage.bottomAnchor, constant: -50),
+            logoImageView.topAnchor.constraint(equalTo: rectangleImage.bottomAnchor,constant: -60),
             logoImageView.centerXAnchor.constraint(equalTo: self.loginButton.centerXAnchor),
             logoImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
-            logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor, multiplier: 0.5),
             
             agencyLabel.topAnchor.constraint(equalTo: view.centerYAnchor),
             agencyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),

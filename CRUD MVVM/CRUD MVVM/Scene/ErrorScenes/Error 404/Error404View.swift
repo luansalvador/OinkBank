@@ -13,7 +13,7 @@ class Error404View: UIView {
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel()
-        view.text = "Esses não são os porcos que você estava procurando!"
+        view.text = "Esses não são os porcos \nque você estava procurando!"
         view.numberOfLines = 0
         view.font = UIFont.MyTheme.homeHeaderText
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -22,7 +22,7 @@ class Error404View: UIView {
     
     private lazy var subtitleLabel: UILabel = {
         let view = UILabel()
-        view.text = "Caso precise, entre em contato com o suporte."
+        view.text = "Caso precise, entre em contato \ncom o suporte."
         view.numberOfLines = 0
         view.font = UIFont.MyTheme.defaultText
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -30,15 +30,15 @@ class Error404View: UIView {
     }()
     
     private lazy var tryAgainButton: UIButton = {
-        let view = UIButton(frame: .zero)
-        view.titleLabel?.font = UIFont.MyTheme.defaultText
-        view.setTitle("Tentar Novamente", for: .normal)
-        view.setTitleColor(UIColor.black, for: .normal)
-        view.backgroundColor = UIColor(displayP3Red: 155/255, green: 246/255, blue: 255/255, alpha: 1)
-        view.layer.cornerRadius = 9
-        view.addTarget(self, action: #selector(performTryAgain), for: .touchUpInside)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Tentar Novamente", for: .normal)
+        button.titleLabel?.font = UIFont.MyTheme.defaultText
+        button.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
+        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(performTryAgain), for: .touchUpInside)
+        return button
     }()
     
     private lazy var error404Image: UIImageView = {
@@ -76,7 +76,7 @@ class Error404View: UIView {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),//topAnchor, constant: 80),
+            self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
@@ -92,10 +92,10 @@ class Error404View: UIView {
             self.vrau.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.vrau.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            self.tryAgainButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
-            self.tryAgainButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.7),
-            self.tryAgainButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.tryAgainButton.heightAnchor.constraint(equalToConstant: 42)
+            self.tryAgainButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor,constant: -16),
+            self.tryAgainButton.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 16),
+            self.tryAgainButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -16),
+
         ])
     }
     
