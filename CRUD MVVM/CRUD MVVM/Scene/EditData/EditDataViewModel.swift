@@ -74,18 +74,21 @@ final class EditDataViewModel {
     
     func updateClient(){
         let updateClient = Client(name: editClientName, cpf: editClientCpf, birthDate: editClientBirthDate, email: editClientEmail, monthlyIncome: editClientMonthlyIncome, netWorth: editClientNetWorth, password: editClientPassword, balance: Double(editClientBalance) , account: editClientAccount, verifyDigit: editClientVerifyDigit)
-        let verify = verifyTf()
+//        let verify = verifyTf()
         let verifyEmail = verifyEmail(email: updateClient.email)
         print(updateClient.cpf)
         let verifyCpf = verifyCpf(cpf: updateClient.cpf)
+        print(updateClient)
         
-        if verify == true && verifyEmail == true && verifyCpf == true{
+        if verifyEmail == true && verifyCpf == true{
             clients[editIndex] = updateClient
             //service.updateClient(editClient: updateClient)
             
             reloadUpdateAllRegister()
             displayAlertWithDismissAction(title: "Sucesso", message: "Atualização realizada")
             print(updateClient)
+        } else{
+            print("else")
         }
     }
     
@@ -96,7 +99,7 @@ final class EditDataViewModel {
         for i in 0...valuesTyped.count-1{
             if valuesTyped[i] == "" || valuesTyped[i]  == "0.0"{
                 //mudar depois ALERTA
-                self.delegate?.displayAlert(title: "Erro", message: "Preencha todos os Campos")
+//                self.delegate?.displayAlert(title: "Erro", message: "Preencha todos os Campos")
                 return false
             }
         }
@@ -107,14 +110,14 @@ final class EditDataViewModel {
         let cpfVerify = cpf.isValidCPF
         
         if cpf != clients[editIndex].cpf {
-            self.delegate?.displayAlert(title: "Erro", message: "Não é possível editar CPF")
+//            self.delegate?.displayAlert(title: "Erro", message: "Não é possível editar CPF")
             return false
         }
         
         if cpfVerify == true {
             return true
         } else {
-            self.delegate?.displayAlert(title: "Erro", message: "CPF Inválido")
+//            self.delegate?.displayAlert(title: "Erro", message: "CPF Inválido")
             return false
         }
     }
@@ -129,7 +132,7 @@ final class EditDataViewModel {
         if validate == true {
             return true
         } else {
-            self.delegate?.displayAlert(title: "Erro", message: "E-mail Inválido")
+//            self.delegate?.displayAlert(title: "Erro", message: "E-mail Inválido")
             return false
         }
     }
@@ -143,7 +146,7 @@ final class EditDataViewModel {
         print(maxAge)
         
         if date >= minAge || date <= maxAge {
-            self.delegate?.displayAlert(title: "Erro", message: "Idade Inválida, a idade mínima é 18 anos e a máxima 120 anos")
+//            self.delegate?.displayAlert(title: "Erro", message: "Idade Inválida, a idade mínima é 18 anos e a máxima 120 anos")
             editClientBirthDate = ""
             //return false
         } else {

@@ -23,21 +23,16 @@ class RegisterFooterView: UIView {
     
     private lazy var loginButton: UIButton = UIButton.transparentButton(title: "Já possui uma conta? Entre aqui", font: .MyTheme.defaultText, target: self, selector: #selector(goToLogin))
     
-    private lazy var toggleButtonTerms: UIButton = {
+    private lazy var toggleButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "square"), for: .normal)
-        button.backgroundColor = .clear
-        button.semanticContentAttribute = .forceLeftToRight
-        button.contentHorizontalAlignment = .center
-        button.setTitle("Ao criar uma conta você aceita nossos termos e condições", for: .normal)
-        button.titleLabel?.numberOfLines = 0
-        button.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
-        button.titleLabel?.font = .MyTheme.defaultText
+        button.tintColor = .MyTheme.defaultTextColor
         button.addTarget(self, action: #selector(toggleButtonTapped), for: .touchUpInside)
         return button
     }()
     
+    private lazy var termsAndConditionsButton: UIButton = UIButton.transparentButton(title: "Ao criar uma conta você aceita nossos termos e condições", font: .MyTheme.defaultText, target: self, selector: #selector(termsButtonTapped))
     
     //MARK: - Initializer
     init() {
@@ -54,24 +49,29 @@ class RegisterFooterView: UIView {
     func setupView(){
         self.addSubview(registerButton)
         self.addSubview(loginButton)
-        self.addSubview(toggleButtonTerms)
+        self.addSubview(toggleButton)
+        self.addSubview(termsAndConditionsButton)
     }
     
     func setupLayoutConstraints(){
         NSLayoutConstraint.activate([
-            toggleButtonTerms.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            toggleButtonTerms.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-//            toggleButtonTerms.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
             
+            toggleButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            toggleButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor, constant: -25),
+            toggleButton.centerYAnchor.constraint(equalTo: termsAndConditionsButton.centerYAnchor),
+            
+            termsAndConditionsButton.leadingAnchor.constraint(equalTo: toggleButton.trailingAnchor, constant: 16),
+            termsAndConditionsButton.trailingAnchor.constraint(equalTo: registerButton.trailingAnchor),
+            termsAndConditionsButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor, constant: -25),
 
-            registerButton.topAnchor.constraint(equalTo: self.toggleButtonTerms.bottomAnchor, constant: 25),
-            registerButton.trailingAnchor.constraint(equalTo: toggleButtonTerms.trailingAnchor),
-            registerButton.leadingAnchor.constraint(equalTo: toggleButtonTerms.leadingAnchor),
+            registerButton.topAnchor.constraint(equalTo: self.toggleButton.bottomAnchor, constant: 16),
+            registerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            registerButton.leadingAnchor.constraint(equalTo: toggleButton.leadingAnchor),
             
             loginButton.topAnchor.constraint(equalTo: self.registerButton.bottomAnchor, constant: 16),
             loginButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16),
-            loginButton.trailingAnchor.constraint(equalTo: toggleButtonTerms.trailingAnchor),
-            loginButton.leadingAnchor.constraint(equalTo: toggleButtonTerms.leadingAnchor),
+            loginButton.trailingAnchor.constraint(equalTo: registerButton.trailingAnchor),
+            loginButton.leadingAnchor.constraint(equalTo: toggleButton.leadingAnchor),
         ])
     }
     
@@ -91,19 +91,21 @@ class RegisterFooterView: UIView {
     @objc func toggleButtonTapped(){
         clickRegisterButton?()
         
-        guard let image = self.toggleButtonTerms.currentImage else {return}
+        guard let image = self.toggleButton.currentImage else {return}
         let square = UIImage(systemName: "square")
         let check = UIImage(systemName: "checkmark.square.fill")
         
         if image == square {
-            self.toggleButtonTerms.setImage(check, for: .normal)
+            self.toggleButton.setImage(check, for: .normal)
         }
         
         if image == check {
-            self.toggleButtonTerms.setImage(square, for: .normal)
+            self.toggleButton.setImage(square, for: .normal)
         }
-        
-        
+    }
+    
+    @objc func termsButtonTapped(){
+       
     }
     
     

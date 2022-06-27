@@ -26,11 +26,8 @@ final class EditDataPickerTableViewCell: UITableViewCell {
     
     lazy var editTextField: UITextField = {
         let view = UITextField()
-        view.borderStyle = .roundedRect
-        view.textAlignment = .center
-        view.textColor = .MyTheme.mainBlueColor
+        view.textAlignment = .left
         view.text = "Selecionar"
-        view.backgroundColor = .MyTheme.mainGreenButtonColor
         view.inputView = Picker
         view.inputAccessoryView = toolBar
         view.layer.cornerRadius = 5
@@ -104,19 +101,17 @@ final class EditDataPickerTableViewCell: UITableViewCell {
         contentView.addSubview(tipLabel)
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            titleLabel.widthAnchor.constraint(equalToConstant: 110),
-            titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            titleLabel.bottomAnchor.constraint(equalTo: editTextField.topAnchor),
             
-            editTextField.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 10),
-            editTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            editTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            editTextField.heightAnchor.constraint(equalToConstant: 30),
+            editTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            editTextField.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            editTextField.bottomAnchor.constraint(equalTo: tipLabel.topAnchor),
             
-            tipLabel.widthAnchor.constraint(equalTo: editTextField.widthAnchor),
-            tipLabel.centerXAnchor.constraint(equalTo: editTextField.centerXAnchor),
-            tipLabel.topAnchor.constraint(equalTo: editTextField.bottomAnchor)
+            tipLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            tipLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            tipLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
     
