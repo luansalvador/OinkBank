@@ -34,8 +34,7 @@ class HomePixViewController: UIViewController {
         let image = UIImage(named: "ic_celular")
         view.setImage(image, for: .normal)
         view.layer.cornerRadius = 20
-        view.tintColor = .MyTheme.mainBlueColor
-        view.tintColor = .MyTheme.defaultTextColor
+        view.tintColor = UIColor.MyTheme.blackColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.6, 0.6, 0.6)
         view.backgroundColor = .MyTheme.mainGreenButtonColor
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -44,7 +43,6 @@ class HomePixViewController: UIViewController {
     
     private lazy var phoneLabel: UILabel = {
        let view = UILabel()
-        //view.textColor = .systemGray5
         view.font = .MyTheme.myKeysText
         view.text = "Celular"
         view.textAlignment = .center
@@ -54,12 +52,11 @@ class HomePixViewController: UIViewController {
     
     //MARK: QRCode button
     private lazy var qrCodeButton: UIButton = {
-       let view = UIButton()
+        let view = UIButton(frame: .zero)
         let image = UIImage(named: "ic_qrcode")
         view.setImage(image, for: .normal)
         view.layer.cornerRadius = 20
-        view.tintColor = .MyTheme.mainBlueColor
-        view.tintColor = .MyTheme.defaultTextColor
+        view.tintColor = UIColor.MyTheme.blackColor
         view.backgroundColor = .MyTheme.mainGreenButtonColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +65,6 @@ class HomePixViewController: UIViewController {
     
     private lazy var qrCodeLabel: UILabel = {
        let view = UILabel()
-        //view.textColor = .systemGray5
         view.font = .MyTheme.myKeysText
         view.text = "QR Code"
         view.textAlignment = .center
@@ -82,8 +78,7 @@ class HomePixViewController: UIViewController {
         let image = UIImage(named: "ic_email")
         view.setImage(image, for: .normal)
         view.layer.cornerRadius = 20
-        view.tintColor = .MyTheme.mainBlueColor
-        view.tintColor = .MyTheme.defaultTextColor
+        view.tintColor = UIColor.MyTheme.blackColor
         view.backgroundColor = .MyTheme.mainGreenButtonColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -92,7 +87,6 @@ class HomePixViewController: UIViewController {
     
     private lazy var emailLabel: UILabel = {
        let view = UILabel()
-        //view.textColor = .systemGray5
         view.font = .MyTheme.myKeysText
         view.text = "E-mail"
         view.textAlignment = .center
@@ -105,10 +99,8 @@ class HomePixViewController: UIViewController {
        let view = UIButton()
         let image = UIImage(named: "ic_cpf")
         view.setImage(image, for: .normal)
-        //view.setBackgroundImage(image, for: .normal)
         view.layer.cornerRadius = 20
-        view.tintColor = .MyTheme.mainBlueColor
-        view.tintColor = .MyTheme.defaultTextColor
+        view.tintColor = UIColor.MyTheme.blackColor
         view.backgroundColor = .MyTheme.mainGreenButtonColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -117,7 +109,6 @@ class HomePixViewController: UIViewController {
     
     private lazy var cpfLabel: UILabel = {
        let view = UILabel()
-        //view.textColor = .systemGray5
         view.font = .MyTheme.myKeysText
         view.text = "CPF/CNPJ"
         view.textAlignment = .center
@@ -132,8 +123,7 @@ class HomePixViewController: UIViewController {
         let image = UIImage(named: "ic_key")
         view.setImage(image, for: .normal)
         view.layer.cornerRadius = 20
-        view.tintColor = .MyTheme.mainBlueColor
-        view.tintColor = .MyTheme.defaultTextColor
+        view.tintColor = UIColor.MyTheme.blackColor
         view.backgroundColor = .MyTheme.mainGreenButtonColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -158,8 +148,7 @@ class HomePixViewController: UIViewController {
         view.setImage(image, for: .normal)
         view.addTarget(self, action: #selector(performGoToCopyAndPaste), for: .touchUpInside)
         view.layer.cornerRadius = 20
-        view.tintColor = .MyTheme.mainBlueColor
-        view.tintColor = .MyTheme.defaultTextColor
+        view.tintColor = UIColor.MyTheme.blackColor
         view.backgroundColor = .MyTheme.mainGreenButtonColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -168,7 +157,6 @@ class HomePixViewController: UIViewController {
     
     private lazy var copyPasteLabel: UILabel = {
        let view = UILabel()
-        //view.textColor = .systemGray5
         view.font = .MyTheme.myKeysText
         view.text = "Pix copia e cola"
         view.numberOfLines = -1
@@ -183,9 +171,7 @@ class HomePixViewController: UIViewController {
         let image = UIImage(named: "ic_transferir")
         view.setImage(image, for: .normal)
         view.layer.cornerRadius = 20
-        view.tintColor = .MyTheme.mainBlueColor
-        view.tintColor = .MyTheme.mainBlueColor
-        view.tintColor = .MyTheme.defaultTextColor
+        view.tintColor = UIColor.MyTheme.blackColor
         view.backgroundColor = .MyTheme.mainGreenButtonColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -194,7 +180,6 @@ class HomePixViewController: UIViewController {
     
     private lazy var transferLabel: UILabel = {
        let view = UILabel()
-        //view.textColor = .systemGray5
         view.font = .MyTheme.myKeysText
         view.text = "Transferir"
         view.numberOfLines = -1
@@ -209,9 +194,7 @@ class HomePixViewController: UIViewController {
         let image = UIImage(named: "ic_receber")
         view.setImage(image, for: .normal)
         view.layer.cornerRadius = 20
-        view.tintColor = .MyTheme.mainBlueColor
-        view.tintColor = .MyTheme.mainBlueColor
-        view.tintColor = .MyTheme.defaultTextColor
+        view.tintColor = UIColor.MyTheme.blackColor
         view.backgroundColor = .MyTheme.mainGreenButtonColor
         view.addTarget(self, action: #selector(performGoToCharge), for: .touchUpInside)
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
@@ -221,7 +204,6 @@ class HomePixViewController: UIViewController {
     
     private lazy var chargeLabel: UILabel = {
        let view = UILabel()
-        //view.textColor = .systemGray5
         view.font = .MyTheme.myKeysText
         view.text = "Receber"
         view.numberOfLines = -1
@@ -233,7 +215,8 @@ class HomePixViewController: UIViewController {
     //MARK: - MyKeys button
     private lazy var myKeysButton: UIButton = {
        let view = UIButton()
-        view.tintColor = .MyTheme.mainBlueColor
+        view.tintColor = .MyTheme.mainGreenButtonColor
+        view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.setTitle("Minhas chaves PIX", for: .normal)
         view.titleLabel?.font = .MyTheme.defaultText
         view.backgroundColor = .tintColor
@@ -251,11 +234,30 @@ class HomePixViewController: UIViewController {
         return view
     }()
     
+    private lazy var topButtonStackView: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [qrCodeButton, phoneButton, emailButton, cpfButton])
+        view.alignment = .center
+        view.distribution = .equalSpacing
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+        
+    }()
+    
+    private lazy var bottomButtonStackView: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [randomKeyButton, copyPasteButton, transferButton, chargeButton])
+        view.alignment = .center
+        view.distribution = .equalSpacing
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+        
+    }()
+    
     //MARK: - Init
     init(){
         super.init(nibName: nil, bundle: nil)
         setupView()
         setupLayoutConstraints()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -274,6 +276,7 @@ class HomePixViewController: UIViewController {
         view.addSubview(emailLabel)
         view.addSubview(cpfButton)
         view.addSubview(cpfLabel)
+        view.addSubview(topButtonStackView)
         //second row
         view.addSubview(randomKeyButton)
         view.addSubview(randomKeyLabel)
@@ -285,91 +288,88 @@ class HomePixViewController: UIViewController {
         view.addSubview(chargeLabel)
         view.addSubview(myKeysButton)
         view.addSubview(myKeysImageView)
+        view.addSubview(bottomButtonStackView)
     }
     
     //MARK: - SetupConstraints
     private func setupLayoutConstraints() {
         NSLayoutConstraint.activate([
-            descriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            descriptionLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
-            descriptionLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             
-            //every button uses phone button as reference
-            phoneButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.17),
-            phoneButton.heightAnchor.constraint(equalTo: phoneButton.widthAnchor),
-            phoneButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -40),
-            phoneButton.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 15),
-            
-            phoneLabel.topAnchor.constraint(equalTo: phoneButton.bottomAnchor, constant: 5),
-            phoneLabel.centerXAnchor.constraint(equalTo: phoneButton.centerXAnchor),
-            
-            qrCodeButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
-            qrCodeButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
-            qrCodeButton.centerYAnchor.constraint(equalTo: phoneButton.centerYAnchor),
-            qrCodeButton.trailingAnchor.constraint(equalTo: phoneButton.leadingAnchor, constant: -15),
-            
-            qrCodeLabel.topAnchor.constraint(equalTo: phoneLabel.topAnchor),
-            qrCodeLabel.centerXAnchor.constraint(equalTo: qrCodeButton.centerXAnchor),
-            
-            emailButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
-            emailButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
-            emailButton.centerYAnchor.constraint(equalTo: phoneButton.centerYAnchor),
-            emailButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 40),
-            
-            emailLabel.topAnchor.constraint(equalTo: phoneLabel.topAnchor),
-            emailLabel.centerXAnchor.constraint(equalTo: emailButton.centerXAnchor),
-            
-            cpfButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
-            cpfButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
-            cpfButton.centerYAnchor.constraint(equalTo: phoneButton.centerYAnchor),
-            cpfButton.leadingAnchor.constraint(equalTo: emailButton.trailingAnchor, constant: 15),
-            
-            cpfLabel.topAnchor.constraint(equalTo: phoneLabel.topAnchor),
-            cpfLabel.centerXAnchor.constraint(equalTo: cpfButton.centerXAnchor),
-            
-            //second row
-            randomKeyButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
-            randomKeyButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
-            randomKeyButton.topAnchor.constraint(equalTo: phoneLabel.bottomAnchor, constant: 20),
-            randomKeyButton.centerXAnchor.constraint(equalTo: qrCodeButton.centerXAnchor),
-            
-            randomKeyLabel.centerXAnchor.constraint(equalTo: randomKeyButton.centerXAnchor),
-            randomKeyLabel.topAnchor.constraint(equalTo: randomKeyButton.bottomAnchor, constant: 5),
-            randomKeyLabel.widthAnchor.constraint(equalTo: randomKeyButton.widthAnchor),
-            
-            copyPasteButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
-            copyPasteButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
-            copyPasteButton.topAnchor.constraint(equalTo: phoneLabel.bottomAnchor, constant: 20),
-            copyPasteButton.centerXAnchor.constraint(equalTo: phoneButton.centerXAnchor),
-            
-            copyPasteLabel.centerXAnchor.constraint(equalTo: copyPasteButton.centerXAnchor),
-            copyPasteLabel.topAnchor.constraint(equalTo: copyPasteButton.bottomAnchor, constant: 5),
-            copyPasteLabel.widthAnchor.constraint(equalTo: copyPasteButton.widthAnchor),
-            
-            transferButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
-            transferButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
-            transferButton.topAnchor.constraint(equalTo: phoneLabel.bottomAnchor, constant: 20),
-            transferButton.centerXAnchor.constraint(equalTo: emailButton.centerXAnchor),
-            
-            transferLabel.centerXAnchor.constraint(equalTo: transferButton.centerXAnchor),
-            transferLabel.topAnchor.constraint(equalTo: transferButton.bottomAnchor, constant: 5),
-            
-            chargeButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
-            chargeButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
-            chargeButton.topAnchor.constraint(equalTo: phoneLabel.bottomAnchor, constant: 20),
-            chargeButton.centerXAnchor.constraint(equalTo: cpfButton.centerXAnchor),
-            
-            chargeLabel.centerXAnchor.constraint(equalTo: chargeButton.centerXAnchor),
-            chargeLabel.topAnchor.constraint(equalTo: chargeButton.bottomAnchor, constant: 5),
-            
-            myKeysButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            myKeysButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
-            myKeysButton.topAnchor.constraint(equalTo: randomKeyLabel.bottomAnchor, constant: 20),
-            
-            myKeysImageView.heightAnchor.constraint(equalTo: myKeysButton.heightAnchor, multiplier: 0.55),
-            myKeysImageView.widthAnchor.constraint(equalTo: myKeysImageView.heightAnchor),
-            myKeysImageView.centerYAnchor.constraint(equalTo: myKeysButton.centerYAnchor),
-            myKeysImageView.leadingAnchor.constraint(equalTo: myKeysButton.leadingAnchor, constant: 10)
+        descriptionLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+        descriptionLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+        descriptionLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+        
+        topButtonStackView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 16),
+        topButtonStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+        topButtonStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+        
+         
+         //every button uses phone button as reference
+        phoneButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.17),
+        phoneButton.heightAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.17),
+         
+         phoneLabel.topAnchor.constraint(equalTo: phoneButton.bottomAnchor, constant: 5),
+         phoneLabel.centerXAnchor.constraint(equalTo: phoneButton.centerXAnchor),
+         
+         qrCodeButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
+         qrCodeButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
+         
+         qrCodeLabel.topAnchor.constraint(equalTo: phoneLabel.topAnchor),
+         qrCodeLabel.centerXAnchor.constraint(equalTo: qrCodeButton.centerXAnchor),
+         
+         emailButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
+         emailButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
+         
+         emailLabel.topAnchor.constraint(equalTo: phoneLabel.topAnchor),
+         emailLabel.centerXAnchor.constraint(equalTo: emailButton.centerXAnchor),
+         
+         cpfButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
+         cpfButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
+         
+         cpfLabel.topAnchor.constraint(equalTo: phoneLabel.topAnchor),
+         cpfLabel.centerXAnchor.constraint(equalTo: cpfButton.centerXAnchor),
+         
+         //second row
+        
+        bottomButtonStackView.topAnchor.constraint(equalTo: phoneLabel.bottomAnchor, constant: 16),
+        bottomButtonStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+        bottomButtonStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+        
+         randomKeyButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
+         randomKeyButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
+         
+         randomKeyLabel.centerXAnchor.constraint(equalTo: randomKeyButton.centerXAnchor),
+         randomKeyLabel.topAnchor.constraint(equalTo: randomKeyButton.bottomAnchor, constant: 5),
+         randomKeyLabel.widthAnchor.constraint(equalTo: randomKeyButton.widthAnchor),
+         
+         copyPasteButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
+         copyPasteButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
+         
+         copyPasteLabel.centerXAnchor.constraint(equalTo: copyPasteButton.centerXAnchor),
+         copyPasteLabel.topAnchor.constraint(equalTo: copyPasteButton.bottomAnchor, constant: 5),
+         copyPasteLabel.widthAnchor.constraint(equalTo: copyPasteButton.widthAnchor),
+         
+         transferButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
+         transferButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
+         
+         transferLabel.centerXAnchor.constraint(equalTo: transferButton.centerXAnchor),
+         transferLabel.topAnchor.constraint(equalTo: transferButton.bottomAnchor, constant: 5),
+         
+         chargeButton.widthAnchor.constraint(equalTo: phoneButton.widthAnchor),
+         chargeButton.heightAnchor.constraint(equalTo: phoneButton.heightAnchor),
+         
+         chargeLabel.centerXAnchor.constraint(equalTo: chargeButton.centerXAnchor),
+         chargeLabel.topAnchor.constraint(equalTo: chargeButton.bottomAnchor, constant: 5),
+         
+         myKeysButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+         myKeysButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+         myKeysButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+         myKeysButton.topAnchor.constraint(equalTo: randomKeyLabel.bottomAnchor, constant: 20),
+         
+         myKeysImageView.heightAnchor.constraint(equalTo: myKeysButton.heightAnchor, multiplier: 0.55),
+         myKeysImageView.widthAnchor.constraint(equalTo: myKeysImageView.heightAnchor),
+         myKeysImageView.centerYAnchor.constraint(equalTo: myKeysButton.centerYAnchor),
+         myKeysImageView.leadingAnchor.constraint(equalTo: myKeysButton.leadingAnchor, constant: 10)
         ])
     }
     
