@@ -22,8 +22,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene:  windowScene)
         
 
+          let rootViewController = LoginViewController()
+
         //let rootViewController = RegisterSucessViewController()
-        let rootViewController = LoginViewController()
+       
         //let rootViewController = Error404ViewController()
         //let rootViewController = UnexpectedErrorViewController()
         //let rootViewController = ReceivedTransferViewController()
@@ -34,12 +36,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
  //       let rootViewController = HomeViewController()
 
 
+
 //        let rootViewController = Error404ViewController()
       
 //        let rootViewController = ReceivedTransferViewController()
 //
 //        let rootViewController = TransferFailViewController()
+
+       //let rootViewController = TransactionSuccessViewController()
+      //  let rootViewController = RegisterSucessViewController()
+
 //        let rootViewController = TransactionSuccessViewController()
+
 
 
         
