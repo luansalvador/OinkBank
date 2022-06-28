@@ -103,10 +103,10 @@ class CopyAndPasteConfirmViewController: UIViewController {
     lazy var confirmButton:UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("CONFIRMAR PIX", for: .normal)
+        button.setTitle("Confirmar pix", for: .normal)
         button.titleLabel?.font = UIFont.MyTheme.defaultText
-        button.setTitleColor(UIColor.MyTheme.whiteTextColor, for: .normal)
-        button.backgroundColor = UIColor.MyTheme.mainBlueColor
+        button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
+        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(self.confirmPix), for: .touchUpInside)
         return button
@@ -169,25 +169,25 @@ class CopyAndPasteConfirmViewController: UIViewController {
     private func configConstraints() {
         NSLayoutConstraint.activate([
             self.confirmLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
-            self.confirmLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-            self.confirmLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+            self.confirmLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            self.confirmLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
             self.valueLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             self.valueLabel.topAnchor.constraint(equalTo: self.confirmLabel.bottomAnchor, constant: 50),
             self.pixKeyLabel.topAnchor.constraint(equalTo: self.valueLabel.bottomAnchor, constant: 50),
-            self.pixKeyLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            self.pixKeyLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
             self.keyLabel.topAnchor.constraint(equalTo: self.valueLabel.bottomAnchor, constant: 50),
-            self.keyLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
-            self.pixNameLabel.topAnchor.constraint(equalTo: self.pixKeyLabel.bottomAnchor, constant: 20),
-            self.pixNameLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-            self.nameLabel.topAnchor.constraint(equalTo: self.pixKeyLabel.bottomAnchor, constant: 20),
-            self.nameLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
-            self.pixCPFLabel.topAnchor.constraint(equalTo: self.pixNameLabel.bottomAnchor, constant: 20),
-            self.pixCPFLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-            self.cpfLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 20),
-            self.cpfLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
-            self.confirmButton.topAnchor.constraint(equalTo: self.pixCPFLabel.bottomAnchor, constant: 50),
-            self.confirmButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-            self.confirmButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20)
+            self.keyLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            self.pixNameLabel.topAnchor.constraint(equalTo: self.pixKeyLabel.bottomAnchor, constant: 16),
+            self.pixNameLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            self.nameLabel.topAnchor.constraint(equalTo: self.pixKeyLabel.bottomAnchor, constant: 16),
+            self.nameLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            self.pixCPFLabel.topAnchor.constraint(equalTo: self.pixNameLabel.bottomAnchor, constant: 16),
+            self.pixCPFLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            self.cpfLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 16),
+            self.cpfLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            self.confirmButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            self.confirmButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            self.confirmButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
         ])
     }
     
