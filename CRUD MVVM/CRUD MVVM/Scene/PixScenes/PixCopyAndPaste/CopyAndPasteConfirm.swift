@@ -40,7 +40,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
         lb.numberOfLines = 1
         lb.text = "Nome"
         lb.font = UIFont.MyTheme.defaultText
-        lb.textColor = .MyTheme.defaultTextColor
+        lb.textColor = UIColor.MyTheme.defaultTextColor
         lb.textAlignment = .left
         return lb
     }()
@@ -149,10 +149,9 @@ class CopyAndPasteConfirmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .systemBackground
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Confirmação"
-//        pixCopyAndPastViewModel.delegate = self
     }
     
     private func addSubviews(){
