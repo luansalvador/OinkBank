@@ -22,11 +22,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene:  windowScene)
         
 
-        let rootViewController = ConfirmViewController()
+        //let rootViewController = ConfirmViewController()
     
-        //let rootViewController = LoginViewController()
+ 
+        let rootViewController = LoginViewController()
 
-  //      let rootViewController = LoginViewController()
+
+
+//        let rootViewController = EditDataViewController()
 
         //let rootViewController = RegisterSucessViewController()
        

@@ -34,6 +34,7 @@ extension UIButton {
         view.titleLabel?.font = font
         view.addTarget(target, action: selector!, for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.titleLabel?.numberOfLines = 0
         
         return view
 
