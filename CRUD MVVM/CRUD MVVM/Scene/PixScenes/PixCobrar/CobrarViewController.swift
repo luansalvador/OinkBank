@@ -41,17 +41,17 @@ class ChargeViewController: UIViewController {
         view.setTitle("Não especificar valor", for: .normal)
         view.backgroundColor = .MyTheme.backgroundColor
         view.setTitleColor(UIColor.MyTheme.mainBlueColor, for: .normal)
-        view.layer.cornerRadius = 9
         view.addTarget(self, action: #selector(notValueButtonTapped), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     private lazy var button: UIButton = {
         let view = UIButton(frame: .zero)
-        view.setTitle("CONFIRMAR", for: .normal)
-        view.backgroundColor = .MyTheme.mainBlueColor
-        view.setTitleColor(UIColor.MyTheme.whiteTextColor, for: .normal)
-        view.layer.cornerRadius = 9
+        view.setTitle("Confirmar", for: .normal)
+        view.titleLabel?.font = UIFont.MyTheme.defaultText
+        view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
+        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        view.layer.cornerRadius = 5
         view.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -91,20 +91,20 @@ class ChargeViewController: UIViewController {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             self.label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
-            self.label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            self.label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            self.label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            self.label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
-            self.textField.topAnchor.constraint(equalTo: self.label.bottomAnchor, constant: 20),
+            self.textField.topAnchor.constraint(equalTo: self.label.bottomAnchor, constant: 16),
             self.textField.leadingAnchor.constraint(equalTo: self.label.leadingAnchor),
-            self.textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            self.textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
             self.notValuebutton.bottomAnchor.constraint(equalTo: self.textField.bottomAnchor, constant: 50),
             self.notValuebutton.leadingAnchor.constraint(equalTo: self.label.leadingAnchor),
             self.notValuebutton.trailingAnchor.constraint(equalTo: self.label.trailingAnchor),
             
-            self.button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
-            self.button.leadingAnchor.constraint(equalTo: self.label.leadingAnchor),
-            self.button.trailingAnchor.constraint(equalTo: self.label.trailingAnchor),
+            self.button.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            self.button.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            self.button.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
             
             
         ])

@@ -49,9 +49,10 @@ class ConfirmViewController: UIViewController {
     private lazy var button: UIButton = {
         let view = UIButton(frame: .zero)
         view.setTitle("Confirmar", for: .normal)
-        view.backgroundColor = .MyTheme.mainBlueColor
+        view.titleLabel?.font = UIFont.MyTheme.defaultText
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
-        view.layer.cornerRadius = 9
+        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        view.layer.cornerRadius = 5
         view.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -95,8 +96,8 @@ class ConfirmViewController: UIViewController {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             self.firstLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
-            self.firstLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            self.firstLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            self.firstLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            self.firstLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
             qrCodeImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             qrCodeImageView.topAnchor.constraint(equalTo: confirmLabel.bottomAnchor, constant: 20),
@@ -110,9 +111,9 @@ class ConfirmViewController: UIViewController {
             self.copyButton.leadingAnchor.constraint(equalTo: self.confirmLabel.trailingAnchor, constant: 10),
             self.copyButton.centerYAnchor.constraint(equalTo: self.confirmLabel.centerYAnchor),
             
-            self.button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
-            self.button.leadingAnchor.constraint(equalTo: self.firstLabel.leadingAnchor),
-            self.button.trailingAnchor.constraint(equalTo: self.firstLabel.trailingAnchor),
+            self.button.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            self.button.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            self.button.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
         ])
     }
     required init?(coder: NSCoder) {

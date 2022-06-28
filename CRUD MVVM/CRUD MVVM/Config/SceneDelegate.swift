@@ -22,10 +22,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene:  windowScene)
         
 
-        //let rootViewController = ConfirmViewController()
+//        let rootViewController = ConfirmViewController()
+//        let rootViewController = CopyAndPasteConfirmViewController()
+        let rootViewController = ChargeViewController()
     
  
-        let rootViewController = LoginViewController()
+//        let rootViewController = LoginViewController()
 
 
 
