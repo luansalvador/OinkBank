@@ -15,7 +15,7 @@ class CopyAndPastViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Pix copia e cola"
+        title = "Copia e Cola"
         setupView()
     }
     

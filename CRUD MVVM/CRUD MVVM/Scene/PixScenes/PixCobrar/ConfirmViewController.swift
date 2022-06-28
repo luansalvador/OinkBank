@@ -40,8 +40,7 @@ class ConfirmViewController: UIViewController {
         view.backgroundColor = .MyTheme.mainBlueColor
         view.layer.cornerRadius = 20
         view.tintColor = .MyTheme.whiteTextColor
-        let image = UIImage(named:  "ic_qrcode")
-        view.image = image
+        view.image = UIImage.init(systemName: "qrcode")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

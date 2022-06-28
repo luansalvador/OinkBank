@@ -14,7 +14,7 @@ class PixHomeHeaderView: UIView {
     
     //MARK: - UIElements
     private lazy var descriptionLabel: UILabel = {
-       let view = UILabel()
+        let view = UILabel()
         view.text = "Envie e receba pagamentos a qualquer hora, sem ser cobrado por isso."
         view.font = .boldSystemFont(ofSize: 17)
         view.numberOfLines = 3
@@ -25,51 +25,51 @@ class PixHomeHeaderView: UIView {
     //MARK: - Fast Action Buttons
     private lazy var transferPixButton: UIButton = {
         let view = UIButton()
-         view.layer.cornerRadius = 5
-         view.setImage(UIImage(systemName: "brazilianrealsign.circle.fill"), for: .normal)
-         view.setTitle("Transferir", for: .normal)
-         view.backgroundColor = .systemGray5
+        view.layer.cornerRadius = 5
+        view.setImage(UIImage(systemName: "brazilianrealsign.circle.fill"), for: .normal)
+        view.setTitle("Transferir", for: .normal)
+        view.backgroundColor = .systemGray5
         view.tintColor = .systemPink
         view.setTitleColor(.systemPink, for: .normal)
-         view.translatesAutoresizingMaskIntoConstraints = false
-         return view
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     private lazy var copyPastePixButton: UIButton = {
         let view = UIButton()
-         view.layer.cornerRadius = 5
-         view.setImage(UIImage(systemName: "doc.text.fill"), for: .normal)
-         view.setTitle("PIX Copia e Cola", for: .normal)
-         view.backgroundColor = .systemGray5
+        view.layer.cornerRadius = 5
+        view.setImage(UIImage(systemName: "doc.text.fill"), for: .normal)
+        view.setTitle("Pix Copia e Cola", for: .normal)
+        view.backgroundColor = .systemGray5
         view.tintColor = .systemPink
         view.titleLabel?.font = .systemFont(ofSize: 14)
         view.titleLabel?.numberOfLines = 2
         view.titleLabel?.textAlignment = .center
         view.setTitleColor(.systemPink, for: .normal)
-         view.translatesAutoresizingMaskIntoConstraints = false
-         return view
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     private lazy var addPixKeyButton: UIButton = {
         let view = UIButton()
-         view.layer.cornerRadius = 5
-         view.setImage(UIImage(systemName: "key.fill"), for: .normal)
-         view.setTitle("Cadastrar chave", for: .normal)
-         view.backgroundColor = .systemGray5
+        view.layer.cornerRadius = 5
+        view.setImage(UIImage(systemName: "key.fill"), for: .normal)
+        view.setTitle("Cadastrar Chave", for: .normal)
+        view.backgroundColor = .systemGray5
         view.tintColor = .systemPink
         view.setTitleColor(.systemPink, for: .normal)
         view.titleLabel?.font = .systemFont(ofSize: 14)
         view.titleLabel?.numberOfLines = 2
         view.titleLabel?.textAlignment = .center
         view.addTarget(self, action: #selector(performGoToRegisterPix), for: .touchUpInside)
-         view.translatesAutoresizingMaskIntoConstraints = false
-         return view
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     // MARK: - pixKey elements
     private lazy var yourKeysLabel: UILabel = {
-       let view = UILabel()
-        view.text = "Suas chaves do PIX:"
+        let view = UILabel()
+        view.text = "Suas chaves do Pix:"
         //view.textColor = .systemPink
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

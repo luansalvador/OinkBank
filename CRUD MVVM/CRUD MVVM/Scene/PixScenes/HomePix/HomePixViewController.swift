@@ -12,7 +12,7 @@ class HomePixViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Área PIX"
+        self.title = "Pix"
 
         // Do any additional setup after loading the view.
     }
@@ -134,7 +134,7 @@ class HomePixViewController: UIViewController {
        let view = UILabel()
         //view.textColor = .systemGray5
         view.font = .MyTheme.myKeysText
-        view.text = "Chave aleatória"
+        view.text = "Chave Aleatória"
         view.numberOfLines = -1
         view.textAlignment = .center
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -158,7 +158,7 @@ class HomePixViewController: UIViewController {
     private lazy var copyPasteLabel: UILabel = {
        let view = UILabel()
         view.font = .MyTheme.myKeysText
-        view.text = "Pix copia e cola"
+        view.text = "Pix Copia e Cola"
         view.numberOfLines = -1
         view.textAlignment = .center
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -217,7 +217,7 @@ class HomePixViewController: UIViewController {
        let view = UIButton()
         view.tintColor = .MyTheme.mainGreenButtonColor
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
-        view.setTitle("Minhas chaves PIX", for: .normal)
+        view.setTitle("Minhas Chaves Pix", for: .normal)
         view.titleLabel?.font = .MyTheme.defaultText
         view.backgroundColor = .tintColor
         view.layer.cornerRadius = 5

@@ -31,12 +31,12 @@ struct OptionData{
 final class HomeViewModel {
     // MARK: - init
     var optionInformation: [OptionData] = [
-           .init(imageTile: "ic_cartao", optionTitle: "Meus cartões"),
+           .init(imageTile: "ic_cartao", optionTitle: "Meus Cartões"),
            .init(imageTile: "ic_emprestimo", optionTitle: "Empréstimos"),
-           .init(imageTile: "ic_celular", optionTitle: "Recarga de celular"),
+           .init(imageTile: "ic_celular", optionTitle: "Recarga de Celular"),
            .init(imageTile: "ic_fourshopping", optionTitle: "BankShopping"),
            .init(imageTile: "ic_seguro", optionTitle: "Seguro"),
-           .init(imageTile: "ic_editar_dados", optionTitle: "Editar dados"),
+           .init(imageTile: "ic_editar_dados", optionTitle: "Editar Dados"),
            .init(imageTile: "ic_sair", optionTitle: "Sair")
        ]
 

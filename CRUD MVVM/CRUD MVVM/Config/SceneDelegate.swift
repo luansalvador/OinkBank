@@ -64,6 +64,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.viewControllers = [rootViewController]
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.MyTheme.boldTitleText]
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

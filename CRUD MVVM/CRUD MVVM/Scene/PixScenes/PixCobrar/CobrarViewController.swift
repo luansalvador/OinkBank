@@ -19,6 +19,7 @@ class ChargeViewController: UIViewController {
         title = "Cobrar"
         
     }
+    
     private lazy var label: UILabel = {
         let view = UILabel()
         view.text = "Qual valor você quer receber"
@@ -36,6 +37,7 @@ class ChargeViewController: UIViewController {
         view.addTarget(self, action: #selector(myTextFieldDidChange), for: .editingChanged)
         return view
     }()
+    
     private lazy var notValuebutton: UIButton = {
         let view = UIButton(frame: .zero)
         view.setTitle("Não especificar valor", for: .normal)
@@ -45,6 +47,7 @@ class ChargeViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
     private lazy var button: UIButton = {
         let view = UIButton(frame: .zero)
         view.setTitle("Confirmar", for: .normal)
@@ -56,12 +59,13 @@ class ChargeViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
     init() {
         super.init(nibName: nil, bundle: nil)
         setupView()
         setupConstraints()
-        
     }
+    
     @objc private func continueButtonTapped() {
         
         if (textField.text == "")  {
@@ -76,6 +80,7 @@ class ChargeViewController: UIViewController {
             performGoToConfirm()
         }
     }
+    
     @objc private func notValueButtonTapped() {
         textField.text = "0,00"
     }
@@ -105,13 +110,13 @@ class ChargeViewController: UIViewController {
             self.button.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             self.button.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
             self.button.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
-            
-            
         ])
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     private func performGoToConfirm() {
         let confirmViewController = ConfirmViewController()
         self.navigationController?.pushViewController(confirmViewController, animated: true)
@@ -127,34 +132,34 @@ class ChargeViewController: UIViewController {
 }
 
 extension String {
-
-        // formatting text for currency textField
-        func currencyInputFormatting() -> String {
+    
+    // formatting text for currency textField
+    func currencyInputFormatting() -> String {
         
-            var number: NSNumber!
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .currencyAccounting
-            //formatter.currencySymbol = "$"
-            formatter.maximumFractionDigits = 2
-            formatter.minimumFractionDigits = 2
+        var number: NSNumber!
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currencyAccounting
+        //formatter.currencySymbol = "$"
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
         
-            var amountWithPrefix = self
+        var amountWithPrefix = self
         
-            // remove from String: "$", ".", ","
-            let regex = try! NSRegularExpression(pattern: "[^0-9]", options: .caseInsensitive)
-            amountWithPrefix = regex.stringByReplacingMatches(in: amountWithPrefix, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count), withTemplate: "")
+        // remove from String: "$", ".", ","
+        let regex = try! NSRegularExpression(pattern: "[^0-9]", options: .caseInsensitive)
+        amountWithPrefix = regex.stringByReplacingMatches(in: amountWithPrefix, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count), withTemplate: "")
         
-            let double = (amountWithPrefix as NSString).doubleValue
-            number = NSNumber(value: (double / 100))
+        let double = (amountWithPrefix as NSString).doubleValue
+        number = NSNumber(value: (double / 100))
         
-            // if first number is 0 or all numbers were deleted
-            guard number != 0 as NSNumber else {
-                return ""
-            }
-        
-            return formatter.string(from: number)!
+        // if first number is 0 or all numbers were deleted
+        guard number != 0 as NSNumber else {
+            return ""
         }
+        
+        return formatter.string(from: number)!
     }
+}
 
 
 

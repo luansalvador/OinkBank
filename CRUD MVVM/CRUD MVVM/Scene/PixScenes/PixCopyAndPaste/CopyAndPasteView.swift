@@ -14,7 +14,7 @@ class CopyAndPasteView: UIView {
   
     private lazy var label: UILabel = {
         let view = UILabel()
-        view.text = "Insira o Pix Copia e Cola"
+        view.text = "Insira o Pix copia e cola"
         view.font = .MyTheme.defaultText
         view.textColor = .MyTheme.defaultTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -25,6 +25,8 @@ class CopyAndPasteView: UIView {
         let view = UITextField()
         view.placeholder = "Pix Copia e Cola"
         view.font = .MyTheme.defaultText
+        view.clearsOnBeginEditing = true
+        view.clearButtonMode = .whileEditing
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -42,15 +44,6 @@ class CopyAndPasteView: UIView {
         return button
     }()
     
-    private lazy var deleteTextButton: UIButton = {
-        let view = UIButton(frame: .zero)
-        view.setImage(UIImage.init(named:"deleteButton"), for: .normal)
-      
-        view.addTarget(self, action: #selector(performDelete), for: .touchUpInside)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     init() {
         super.init(frame: .zero)
         setupView()
@@ -66,7 +59,6 @@ class CopyAndPasteView: UIView {
         self.addSubview(label)
         self.addSubview(textField)
         self.addSubview(button)
-        self.addSubview(deleteTextButton)
     }
     
     private func setupConstraints() {
@@ -82,13 +74,6 @@ class CopyAndPasteView: UIView {
             self.button.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             self.button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             self.button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            
-            
-            self.deleteTextButton.topAnchor.constraint(equalTo: self.label.bottomAnchor, constant: 16),
-            self.deleteTextButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            self.deleteTextButton.centerYAnchor.constraint(equalTo: self.textField.centerYAnchor),
-            self.deleteTextButton.widthAnchor.constraint(equalToConstant: 20),
-            self.deleteTextButton.heightAnchor.constraint(equalTo: self.deleteTextButton.widthAnchor)
         ])
     }
     

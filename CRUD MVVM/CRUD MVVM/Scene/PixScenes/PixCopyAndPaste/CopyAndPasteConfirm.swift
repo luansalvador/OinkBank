@@ -93,7 +93,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.numberOfLines = 2
-        lb.text = "Confirme os dados de quem ira receber o pix:"
+        lb.text = "Confirme os dados do beneficiário:"
         lb.font = UIFont.MyTheme.defaultText
         lb.textColor = .MyTheme.defaultTextColor
         lb.textAlignment = .center
@@ -168,7 +168,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-            self.confirmLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
+            self.confirmLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 16),
             self.confirmLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
             self.confirmLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
             self.valueLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
