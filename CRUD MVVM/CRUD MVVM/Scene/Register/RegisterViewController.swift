@@ -333,8 +333,6 @@ extension RegisterViewController:  UITextFieldDelegate{
     }
 }
 
-
-
 //MARK: = Delegate protocol
 extension RegisterViewController: RegisterViewModelDelegate {
     func onSuccessPushView() {
