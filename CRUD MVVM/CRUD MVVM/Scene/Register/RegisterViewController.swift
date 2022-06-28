@@ -325,6 +325,8 @@ extension RegisterViewController:  UITextFieldDelegate{
         switch textField?.tag{
         case textFieldData.cpfTextField.rawValue:
             textField?.text = textField?.text?.formatMask(mask: "###.###.###-##")
+        case textFieldData.netWorthTextField.rawValue:
+            textField?.text = textField?.text?.currencyInputFormattingRegister()
         default:
             break
         }
