@@ -12,7 +12,7 @@ class EditDataViewController: UIViewController, UITableViewDataSource, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Editar cadastro"
+        title = "Editar Cadastro"
 
         // Do any additional setup after loading the view.
         // Present modaly in botton
