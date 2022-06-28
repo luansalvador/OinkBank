@@ -11,7 +11,7 @@ class ConfirmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = UIColor.MyTheme.backgroundColor
         
         title = "Código de cobrança"
     }
@@ -48,9 +48,9 @@ class ConfirmViewController: UIViewController {
     
     private lazy var button: UIButton = {
         let view = UIButton(frame: .zero)
-        view.setTitle("CONFIRMAR", for: .normal)
+        view.setTitle("Confirmar", for: .normal)
         view.backgroundColor = .MyTheme.mainBlueColor
-        view.setTitleColor(UIColor.MyTheme.whiteTextColor, for: .normal)
+        view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.layer.cornerRadius = 9
         view.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -100,15 +100,15 @@ class ConfirmViewController: UIViewController {
             
             qrCodeImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             qrCodeImageView.topAnchor.constraint(equalTo: confirmLabel.bottomAnchor, constant: 20),
-            qrCodeImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75),
+            qrCodeImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.65),
             qrCodeImageView.heightAnchor.constraint(equalTo: qrCodeImageView.widthAnchor),
             
-            self.confirmLabel.topAnchor.constraint(equalTo: self.firstLabel.bottomAnchor, constant: 20),
+            self.confirmLabel.topAnchor.constraint(equalTo: self.firstLabel.bottomAnchor, constant: 10),
             self.confirmLabel.leadingAnchor.constraint(equalTo: self.firstLabel.leadingAnchor),
-            self.confirmLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            self.confirmLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
             
-            self.copyButton.leadingAnchor.constraint(equalTo: self.confirmLabel.trailingAnchor, constant: 8),
-            self.copyButton.bottomAnchor.constraint(equalTo: self.confirmLabel.bottomAnchor),
+            self.copyButton.leadingAnchor.constraint(equalTo: self.confirmLabel.trailingAnchor, constant: 10),
+            self.copyButton.centerYAnchor.constraint(equalTo: self.confirmLabel.centerYAnchor),
             
             self.button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
             self.button.leadingAnchor.constraint(equalTo: self.firstLabel.leadingAnchor),
