@@ -95,7 +95,7 @@ extension EditDataViewController {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        65
+        78
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -106,6 +106,7 @@ extension EditDataViewController {
             //textfielddata
             cell.editTextField.tag = indexPath.row
             cell.editTextField.delegate = self
+            cell.editTextField.isUserInteractionEnabled = false
             
             let cellTitle = viewModel.cellTitle[indexPath.row]
             let textFieldText = viewModel.showInfo(row: indexPath.row)
@@ -130,7 +131,7 @@ extension EditDataViewController {
             //textfielddata
             cell.editTextField.tag = indexPath.row
             
-            if cell.editTextField.tag == 1 {
+            if cell.editTextField.tag == 0 || cell.editTextField.tag == 1 {
                 cell.editTextField.isUserInteractionEnabled = false
             }
             else {

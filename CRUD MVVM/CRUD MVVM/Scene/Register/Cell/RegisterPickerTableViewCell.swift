@@ -27,11 +27,8 @@ final class RegisterPickerTableViewCell: UITableViewCell {
     //textfield
     lazy var registerTextField: UITextField = {
        let view = UITextField()
-        view.textAlignment = .center
-        view.textColor = UIColor.MyTheme.mainBlueColor
-        view.text = "Selecionar"
-        view.font = UIFont.MyTheme.defaultText
-        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        view.textAlignment = .left
+        view.placeholder = "R$"
         view.inputView = Picker
         view.inputAccessoryView = toolBar
         view.layer.cornerRadius = 5
@@ -113,15 +110,15 @@ final class RegisterPickerTableViewCell: UITableViewCell {
         contentView.addSubview(tipLabel)
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            titleLabel.widthAnchor.constraint(equalToConstant: 110),
-            titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+//            titleLabel.widthAnchor.constraint(equalToConstant: 110),
+            titleLabel.bottomAnchor.constraint(equalTo: registerTextField.topAnchor, constant: 5),
             
-            registerTextField.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 10),
-            registerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            registerTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            registerTextField.heightAnchor.constraint(equalToConstant: 30),
+            registerTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            registerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+//            registerTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+//            registerTextField.heightAnchor.constraint(equalToConstant: 30),
             
             tipLabel.widthAnchor.constraint(equalTo: registerTextField.widthAnchor),
             tipLabel.centerXAnchor.constraint(equalTo: registerTextField.centerXAnchor),

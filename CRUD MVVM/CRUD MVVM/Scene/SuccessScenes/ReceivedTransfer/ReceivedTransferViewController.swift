@@ -46,22 +46,13 @@ class ReceivedTransferViewController: UIViewController {
     
     //MARK: - Button
     
-    lazy var backButton:UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Voltar", for: .normal)
-        button.titleLabel?.font = UIFont.MyTheme.defaultText
-        button.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
-        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        button.layer.cornerRadius = 5
-        button.addTarget(self, action: #selector(self.back), for: .touchUpInside)
-        return button
-    }()
+    private lazy var backButton: UIButton = UIButton.defaultButton(title: "Voltar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(back))
+    
     
     //MARK: - Button Action
     
     @objc func back(sender:UIButton){
-        print("teste")
+        
     }
     
     //MARK: - viewWillAppear
@@ -69,7 +60,7 @@ class ReceivedTransferViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
     }
-    
+
     //MARK: - loadView
     
     override func loadView() {
@@ -83,7 +74,7 @@ class ReceivedTransferViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .MyTheme.backgroundColor
 
     }
     

@@ -273,6 +273,8 @@ final class RegisterViewModel {
             return false
         }
     }
+    
+    
 }
 
 //MARK: - CPF validation

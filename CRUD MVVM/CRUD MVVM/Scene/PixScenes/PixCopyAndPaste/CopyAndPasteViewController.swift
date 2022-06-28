@@ -12,11 +12,11 @@ class CopyAndPastViewController: UIViewController {
     let copyAndPastView = CopyAndPasteView()
     let pixCopyAndPastViewModel = PixCopyAndPasteViewModel()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Copia e Cola"
         setupView()
-        
-        title = "Pix copia e cola"
     }
     
     private func setupView() {

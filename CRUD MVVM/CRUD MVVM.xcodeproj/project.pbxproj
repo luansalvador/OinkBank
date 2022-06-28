@@ -11,6 +11,7 @@
 		0E17111F28410354006E8BFD /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17111E28410354006E8BFD /* ConfirmViewController.swift */; };
 		0EE5BE9A284016170074B27B /* CobrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5BE99284016170074B27B /* CobrarViewController.swift */; };
 		27441930285A36E80050ADA2 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744192F285A36E80050ADA2 /* ButtonExtension.swift */; };
+		28BB0AC12864DF6200503A08 /* RegisterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */; };
 		30A55E772841310C00C86045 /* CopyAndPasteConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A55E762841310C00C86045 /* CopyAndPasteConfirm.swift */; };
 		900479F5283D36BE005D7208 /* HomePixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900479F4283D36BE005D7208 /* HomePixViewController.swift */; };
 		900479FA283D5C21005D7208 /* MyKeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900479F9283D5C21005D7208 /* MyKeysViewController.swift */; };
@@ -120,6 +121,7 @@
 		0E17111E28410354006E8BFD /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		0EE5BE99284016170074B27B /* CobrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobrarViewController.swift; sourceTree = "<group>"; };
 		2744192F285A36E80050ADA2 /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeaderView.swift; sourceTree = "<group>"; };
 		30A55E762841310C00C86045 /* CopyAndPasteConfirm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteConfirm.swift; sourceTree = "<group>"; };
 		900479F4283D36BE005D7208 /* HomePixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePixViewController.swift; sourceTree = "<group>"; };
 		900479F9283D5C21005D7208 /* MyKeysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeysViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +254,14 @@
 				2744192F285A36E80050ADA2 /* ButtonExtension.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		28BB0ABF2864DF0D00503A08 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		30D6A7842862431D00CA6EA1 /* TranferFail */ = {
@@ -583,6 +593,7 @@
 		E6832F7F28218165009BCC19 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				28BB0ABF2864DF0D00503A08 /* Header */,
 				E6832F84282181EA009BCC19 /* Footer */,
 				E6832F83282181DC009BCC19 /* Cell */,
 				E68B14D2281AA5CF00A8F50B /* RegisterViewModel.swift */,
@@ -898,6 +909,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E68B14CE281AA51B00A8F50B /* RegisterViewController.swift in Sources */,
+				28BB0AC12864DF6200503A08 /* RegisterHeaderView.swift in Sources */,
 				900F941F2837C212005FF369 /* RegisterPixKeyViewModel.swift in Sources */,
 				E61FDA4B2822D15100252EB7 /* EditDataHeaderView.swift in Sources */,
 				D3927419282554200037F3E8 /* RegisterPickerTableViewCell.swift in Sources */,

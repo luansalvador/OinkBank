@@ -21,18 +21,50 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene:  windowScene)
         
-//        let rootViewController = LoginViewController()
+
+//        let rootViewController = ConfirmViewController()
+//        let rootViewController = CopyAndPasteConfirmViewController()
+ //       let rootViewController = ChargeViewController()
+    
+ 
+        let rootViewController = LoginViewController()
+
+
+
+//        let rootViewController = EditDataViewController()
+
+        //let rootViewController = RegisterSucessViewController()
+       
+
+        //let rootViewController = Error404ViewController()
+        //let rootViewController = UnexpectedErrorViewController()
+        //let rootViewController = ReceivedTransferViewController()
+
+
+ //       let rootViewController = CopyAndPastViewController()
+
+ //       let rootViewController = HomeViewController()
+
+
+
 //        let rootViewController = Error404ViewController()
-//        let rootViewController = UnexpectedErrorViewController()
-//        let rootViewController = ReceivedTransferViewController()
-        
+      
+//       let rootViewController = ReceivedTransferViewController()
+//
 //        let rootViewController = TransferFailViewController()
+
+       //let rootViewController = TransactionSuccessViewController()
+      //  let rootViewController = RegisterSucessViewController()
+
 //        let rootViewController = TransactionSuccessViewController()
-        let rootViewController = RegisterSucessViewController()
+
+
+
         
         let navigationController = UINavigationController()
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.viewControllers = [rootViewController]
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.MyTheme.boldTitleText]
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
