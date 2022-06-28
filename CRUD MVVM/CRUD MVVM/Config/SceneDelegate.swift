@@ -24,10 +24,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 //        let rootViewController = ConfirmViewController()
 //        let rootViewController = CopyAndPasteConfirmViewController()
-        let rootViewController = ChargeViewController()
+ //       let rootViewController = ChargeViewController()
     
  
-//        let rootViewController = LoginViewController()
+        let rootViewController = LoginViewController()
 
 
 

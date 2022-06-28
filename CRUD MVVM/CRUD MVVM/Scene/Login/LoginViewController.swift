@@ -91,7 +91,7 @@ class LoginViewController: UIViewController {
         view.borderStyle = .none
         view.placeholder = "1-9"
         view.backgroundColor = .clear
-        view.textColor = .MyTheme.mainBlueColor
+        view.textColor = .MyTheme.defaultTextColor
         
         view.translatesAutoresizingMaskIntoConstraints = false
         //view.keyboardType = .decimalPad
@@ -104,7 +104,7 @@ class LoginViewController: UIViewController {
         view.borderStyle = .none
         view.placeholder = "1-9"
         view.backgroundColor = .clear
-        view.textColor = .MyTheme.mainBlueColor
+        view.textColor = .MyTheme.defaultTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
         //view.keyboardType = .decimalPad
         view.layer.cornerRadius = 5
@@ -125,7 +125,7 @@ class LoginViewController: UIViewController {
         let view = UITextField()
         view.placeholder = "******"
         view.backgroundColor = .clear
-        view.textColor = .MyTheme.mainBlueColor
+        view.textColor = .MyTheme.defaultTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isSecureTextEntry = true
         return view

@@ -78,7 +78,7 @@ class Error404View: UIView {
             self.error404Image.topAnchor.constraint(equalTo: self.subtitleLabel.bottomAnchor, constant: 20),
             self.error404Image.leadingAnchor.constraint(equalTo: self.subtitleLabel.leadingAnchor),
             
-            self.vrau.topAnchor.constraint(equalTo: self.error404Image.bottomAnchor), /*constant: -15),*/
+            self.vrau.topAnchor.constraint(equalTo: self.error404Image.bottomAnchor), 
             self.vrau.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.vrau.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.vrau.bottomAnchor.constraint(equalTo: self.bottomAnchor),

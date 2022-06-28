@@ -84,7 +84,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
         lb.numberOfLines = 1
         lb.text = "R$ 0,00"
         lb.font = UIFont.MyTheme.boldTitleText
-        lb.textColor = .MyTheme.mainBlueColor
+        lb.textColor = .MyTheme.defaultTextColor
         lb.textAlignment = .center
         return lb
     }()
@@ -103,7 +103,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
     lazy var confirmButton:UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Confirmar pix", for: .normal)
+        button.setTitle("Confirmar Pix", for: .normal)
         button.titleLabel?.font = UIFont.MyTheme.defaultText
         button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
