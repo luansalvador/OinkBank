@@ -34,6 +34,7 @@ final class EditDataDatePickerTableViewCell: UITableViewCell {
         view.rightView = accessoryAlertImageView
         view.rightViewMode = .always
         
+    
         return view
     }()
     
@@ -52,6 +53,8 @@ final class EditDataDatePickerTableViewCell: UITableViewCell {
         view.tintColor = .MyTheme.defaultTextColor
         view.preferredDatePickerStyle = .wheels
         view.translatesAutoresizingMaskIntoConstraints = false
+        
+        
         return view
     }()
     

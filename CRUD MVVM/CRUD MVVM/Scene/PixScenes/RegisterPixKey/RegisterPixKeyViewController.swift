@@ -105,7 +105,7 @@ class RegisterPixKeyViewController: UIViewController {
     }()
     //MARK: - Teste
      lazy var yourKeyTextField: UITextField = {
-        let view = CustomUITextField()
+        let view = NoPasteTextField()
         view.text = ""
         view.tag = 1
         view.delegate = self
@@ -316,22 +316,9 @@ extension RegisterPixKeyViewController: RegisterPixKeyViewModelDelegate {
     
 }
 
-extension RegisterPixKeyViewController: UITextFieldDelegate{
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        additionalCellTextFieldSetup(textField)
-    }
-    
-    func additionalCellTextFieldSetup(_ textField: UITextField?) {
-        switch textField?.tag{
-        case 1:
-            textField?.text = textField?.text?.formatMask(mask: "(##)#####-####)")
-        default:
-            break
-        }
-    }
-    
-}
+
+
+
 
 
 

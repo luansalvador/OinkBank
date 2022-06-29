@@ -24,21 +24,20 @@ final class RegisterDatePickerTableViewCell: UITableViewCell {
     }()
     //textfield
     lazy var registerTextField: UITextField = {
-       let view = UITextField()
+        
+        let secondstoYears: Double = 567648000 + 345600
+        let confirmAge = Date(timeIntervalSinceNow: -secondstoYears)
+        datePicker.maximumDate = confirmAge
+        
+        let view = NoPasteTextField()
         view.textAlignment = .left
-//        view.textColor = UIColor.MyTheme.mainBlueColor
-//        view.text = "00/00/0000"
-        view.placeholder = "00/00/0000"
         view.font = UIFont.MyTheme.defaultText
-//        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
         view.inputView = datePicker
         view.inputAccessoryView = toolBar
         view.layer.cornerRadius = 5
         view.translatesAutoresizingMaskIntoConstraints = false
-        
         view.rightView = accessoryAlertImageView
         view.rightViewMode = .always
-        
         return view
     }()
     
@@ -114,13 +113,11 @@ final class RegisterDatePickerTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-//            titleLabel.widthAnchor.constraint(equalToConstant: 110),
             titleLabel.bottomAnchor.constraint(equalTo: registerTextField.topAnchor, constant: 5),
             
             registerTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             registerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-//            registerTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-//            registerTextField.heightAnchor.constraint(equalToConstant: 30),
+
             
             tipLabel.widthAnchor.constraint(equalTo: registerTextField.widthAnchor),
             tipLabel.centerXAnchor.constraint(equalTo: registerTextField.centerXAnchor),

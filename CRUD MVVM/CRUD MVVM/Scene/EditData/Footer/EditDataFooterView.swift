@@ -13,7 +13,7 @@ class EditDataFooterView: UIView {
     static let height: CGFloat = 100
     
     // MARK: - UIElements
-    private lazy var confirmEditButton: UIButton = UIButton.defaultButton(title: "Confirmar edição", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performEdit))
+    private lazy var confirmEditButton: UIButton = UIButton.defaultButton(title: "Confirmar Edição", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performEdit))
     
     private lazy var deleteRegisterButton: UIButton = {
        let view = UIButton()
