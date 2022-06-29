@@ -10,7 +10,14 @@
 		0E17111D28410337006E8BFD /* PixChargeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17111C28410337006E8BFD /* PixChargeViewModel.swift */; };
 		0E17111F28410354006E8BFD /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17111E28410354006E8BFD /* ConfirmViewController.swift */; };
 		0EE5BE9A284016170074B27B /* CobrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5BE99284016170074B27B /* CobrarViewController.swift */; };
-		27441930285A36E80050ADA2 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744192F285A36E80050ADA2 /* ButtonExtension.swift */; };
+		2720C21C286C89D50023323F /* Extension+NoPasteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */; };
+		2720C21E286C8ACD0023323F /* Extension+LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */; };
+		27441930285A36E80050ADA2 /* Extension+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744192F285A36E80050ADA2 /* Extension+Buttons.swift */; };
+		27EA01DF286B7FB8003FB4B3 /* Extension+CurrencyMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA01DE286B7FB8003FB4B3 /* Extension+CurrencyMask.swift */; };
+		27EA01E1286B810B003FB4B3 /* Extension+FormatMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA01E0286B810B003FB4B3 /* Extension+FormatMask.swift */; };
+		27EA01E3286B81A1003FB4B3 /* Extension+CpfValidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA01E2286B81A1003FB4B3 /* Extension+CpfValidate.swift */; };
+		27EA01E7286B83A0003FB4B3 /* Extension+PhoneMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA01E6286B83A0003FB4B3 /* Extension+PhoneMask.swift */; };
+		28BB0AC12864DF6200503A08 /* RegisterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */; };
 		30A55E772841310C00C86045 /* CopyAndPasteConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A55E762841310C00C86045 /* CopyAndPasteConfirm.swift */; };
 		900479F5283D36BE005D7208 /* HomePixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900479F4283D36BE005D7208 /* HomePixViewController.swift */; };
 		900479FA283D5C21005D7208 /* MyKeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900479F9283D5C21005D7208 /* MyKeysViewController.swift */; };
@@ -22,13 +29,12 @@
 		900F941F2837C212005FF369 /* RegisterPixKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900F941E2837C212005FF369 /* RegisterPixKeyViewModel.swift */; };
 		9010130F282E89F400C709FA /* Clients+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9010130D282E89F400C709FA /* Clients+CoreDataClass.swift */; };
 		90101310282E89F400C709FA /* Clients+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9010130E282E89F400C709FA /* Clients+CoreDataProperties.swift */; };
-		90101694284E370E001F76AB /* CustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90101693284E370E001F76AB /* CustomUITextField.swift */; };
-		9017574C285A4689006791CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9017574B285A4689006791CA /* Constants.swift */; };
+		9017574C285A4689006791CA /* Extension+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9017574B285A4689006791CA /* Extension+Constants.swift */; };
 		901D0D7728353C670095155D /* Pix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D0D7628353C670095155D /* Pix.swift */; };
 		901D0D7A28354C810095155D /* AllPix+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D0D7828354C810095155D /* AllPix+CoreDataClass.swift */; };
 		901D0D7B28354C810095155D /* AllPix+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D0D7928354C810095155D /* AllPix+CoreDataProperties.swift */; };
 		901D0D7D28354DB20095155D /* CoreDataPixService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D0D7C28354DB20095155D /* CoreDataPixService.swift */; };
-		9097C397285218FB00701562 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9097C396285218FB00701562 /* Fonts.swift */; };
+		9097C397285218FB00701562 /* Extension+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9097C396285218FB00701562 /* Extension+Fonts.swift */; };
 		9097C3AA2852810000701562 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9097C39A2852810000701562 /* Nunito-Medium.ttf */; };
 		9097C3AB2852810000701562 /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9097C39B2852810000701562 /* Nunito-ExtraBoldItalic.ttf */; };
 		9097C3AC2852810000701562 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9097C39C2852810000701562 /* Nunito-ExtraBold.ttf */; };
@@ -74,7 +80,7 @@
 		D3927421282582ED0037F3E8 /* EditDataPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3927420282582ED0037F3E8 /* EditDataPickerTableViewCell.swift */; };
 		E61FDA482822CA0800252EB7 /* EditDataFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61FDA472822CA0800252EB7 /* EditDataFooterView.swift */; };
 		E61FDA4B2822D15100252EB7 /* EditDataHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61FDA4A2822D15100252EB7 /* EditDataHeaderView.swift */; };
-		E68B14CC281AA30E00A8F50B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68B14CB281AA30E00A8F50B /* Colors.swift */; };
+		E68B14CC281AA30E00A8F50B /* Extension+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68B14CB281AA30E00A8F50B /* Extension+Colors.swift */; };
 		E68B14CE281AA51B00A8F50B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68B14CD281AA51B00A8F50B /* RegisterViewController.swift */; };
 		E68B14D3281AA5CF00A8F50B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68B14D2281AA5CF00A8F50B /* RegisterViewModel.swift */; };
 		E68B14D5281AA66800A8F50B /* RegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68B14D4281AA66800A8F50B /* RegisterTableViewCell.swift */; };
@@ -119,7 +125,14 @@
 		0E17111C28410337006E8BFD /* PixChargeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixChargeViewModel.swift; sourceTree = "<group>"; };
 		0E17111E28410354006E8BFD /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		0EE5BE99284016170074B27B /* CobrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobrarViewController.swift; sourceTree = "<group>"; };
-		2744192F285A36E80050ADA2 /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NoPasteTextField.swift"; sourceTree = "<group>"; };
+		2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+LineTextField.swift"; sourceTree = "<group>"; };
+		2744192F285A36E80050ADA2 /* Extension+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Buttons.swift"; sourceTree = "<group>"; };
+		27EA01DE286B7FB8003FB4B3 /* Extension+CurrencyMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CurrencyMask.swift"; sourceTree = "<group>"; };
+		27EA01E0286B810B003FB4B3 /* Extension+FormatMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+FormatMask.swift"; sourceTree = "<group>"; };
+		27EA01E2286B81A1003FB4B3 /* Extension+CpfValidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CpfValidate.swift"; sourceTree = "<group>"; };
+		27EA01E6286B83A0003FB4B3 /* Extension+PhoneMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+PhoneMask.swift"; sourceTree = "<group>"; };
+		28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeaderView.swift; sourceTree = "<group>"; };
 		30A55E762841310C00C86045 /* CopyAndPasteConfirm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteConfirm.swift; sourceTree = "<group>"; };
 		900479F4283D36BE005D7208 /* HomePixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePixViewController.swift; sourceTree = "<group>"; };
 		900479F9283D5C21005D7208 /* MyKeysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeysViewController.swift; sourceTree = "<group>"; };
@@ -131,13 +144,12 @@
 		900F941E2837C212005FF369 /* RegisterPixKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPixKeyViewModel.swift; sourceTree = "<group>"; };
 		9010130D282E89F400C709FA /* Clients+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clients+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9010130E282E89F400C709FA /* Clients+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clients+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		90101693284E370E001F76AB /* CustomUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUITextField.swift; sourceTree = "<group>"; };
-		9017574B285A4689006791CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9017574B285A4689006791CA /* Extension+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Constants.swift"; sourceTree = "<group>"; };
 		901D0D7628353C670095155D /* Pix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pix.swift; sourceTree = "<group>"; };
 		901D0D7828354C810095155D /* AllPix+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllPix+CoreDataClass.swift"; sourceTree = "<group>"; };
 		901D0D7928354C810095155D /* AllPix+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllPix+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		901D0D7C28354DB20095155D /* CoreDataPixService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPixService.swift; sourceTree = "<group>"; };
-		9097C396285218FB00701562 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		9097C396285218FB00701562 /* Extension+Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Fonts.swift"; sourceTree = "<group>"; };
 		9097C39A2852810000701562 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
 		9097C39B2852810000701562 /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		9097C39C2852810000701562 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -183,7 +195,7 @@
 		D3927420282582ED0037F3E8 /* EditDataPickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataPickerTableViewCell.swift; sourceTree = "<group>"; };
 		E61FDA472822CA0800252EB7 /* EditDataFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataFooterView.swift; sourceTree = "<group>"; };
 		E61FDA4A2822D15100252EB7 /* EditDataHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataHeaderView.swift; sourceTree = "<group>"; };
-		E68B14CB281AA30E00A8F50B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E68B14CB281AA30E00A8F50B /* Extension+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Colors.swift"; sourceTree = "<group>"; };
 		E68B14CD281AA51B00A8F50B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E68B14D2281AA5CF00A8F50B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		E68B14D4281AA66800A8F50B /* RegisterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewCell.swift; sourceTree = "<group>"; };
@@ -246,12 +258,29 @@
 			path = PixCobrar;
 			sourceTree = "<group>";
 		};
-		2744192E285A36B70050ADA2 /* Components */ = {
+		27EA01DD286B7F78003FB4B3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2744192F285A36E80050ADA2 /* ButtonExtension.swift */,
+				27EA01DE286B7FB8003FB4B3 /* Extension+CurrencyMask.swift */,
+				27EA01E0286B810B003FB4B3 /* Extension+FormatMask.swift */,
+				27EA01E2286B81A1003FB4B3 /* Extension+CpfValidate.swift */,
+				27EA01E6286B83A0003FB4B3 /* Extension+PhoneMask.swift */,
+				2744192F285A36E80050ADA2 /* Extension+Buttons.swift */,
+				E68B14CB281AA30E00A8F50B /* Extension+Colors.swift */,
+				9097C396285218FB00701562 /* Extension+Fonts.swift */,
+				9017574B285A4689006791CA /* Extension+Constants.swift */,
+				2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */,
+				2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */,
 			);
-			path = Components;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		28BB0ABF2864DF0D00503A08 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		30D6A7842862431D00CA6EA1 /* TranferFail */ = {
@@ -333,7 +362,6 @@
 		900F94192837C1AE005FF369 /* RegisterPixKey */ = {
 			isa = PBXGroup;
 			children = (
-				90101693284E370E001F76AB /* CustomUITextField.swift */,
 				900F941C2837C1FE005FF369 /* RegisterPixKeyViewController.swift */,
 				900F941E2837C212005FF369 /* RegisterPixKeyViewModel.swift */,
 			);
@@ -583,6 +611,7 @@
 		E6832F7F28218165009BCC19 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				28BB0ABF2864DF0D00503A08 /* Header */,
 				E6832F84282181EA009BCC19 /* Footer */,
 				E6832F83282181DC009BCC19 /* Cell */,
 				E68B14D2281AA5CF00A8F50B /* RegisterViewModel.swift */,
@@ -639,10 +668,7 @@
 		E68B14CA281AA2FF00A8F50B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2744192E285A36B70050ADA2 /* Components */,
-				E68B14CB281AA30E00A8F50B /* Colors.swift */,
-				9097C396285218FB00701562 /* Fonts.swift */,
-				9017574B285A4689006791CA /* Constants.swift */,
+				27EA01DD286B7F78003FB4B3 /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -898,6 +924,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E68B14CE281AA51B00A8F50B /* RegisterViewController.swift in Sources */,
+				28BB0AC12864DF6200503A08 /* RegisterHeaderView.swift in Sources */,
 				900F941F2837C212005FF369 /* RegisterPixKeyViewModel.swift in Sources */,
 				E61FDA4B2822D15100252EB7 /* EditDataHeaderView.swift in Sources */,
 				D3927419282554200037F3E8 /* RegisterPickerTableViewCell.swift in Sources */,
@@ -905,18 +932,24 @@
 				D326CB4B2836B2390030AB89 /* PixKeyDetailViewModel.swift in Sources */,
 				D3917D1E282BE65C00988F02 /* LoginViewController.swift in Sources */,
 				C9CE78682847A91A0001AD09 /* PixCopyAndPasteViewModel.swift in Sources */,
+				27EA01E3286B81A1003FB4B3 /* Extension+CpfValidate.swift in Sources */,
 				C9EA70542840037600AE6393 /* CopyAndPasteViewController.swift in Sources */,
-				9017574C285A4689006791CA /* Constants.swift in Sources */,
+				9017574C285A4689006791CA /* Extension+Constants.swift in Sources */,
+				2720C21C286C89D50023323F /* Extension+NoPasteTextField.swift in Sources */,
 				90047A03283D690D005D7208 /* MyKeysHeaderView.swift in Sources */,
 				D3917D29282C252200988F02 /* HomeHeaderView.swift in Sources */,
 				900F941D2837C1FE005FF369 /* RegisterPixKeyViewController.swift in Sources */,
 				0E17111F28410354006E8BFD /* ConfirmViewController.swift in Sources */,
 				E68B14E3281AAFE900A8F50B /* ShowDataHeaderView.swift in Sources */,
+				27EA01E7286B83A0003FB4B3 /* Extension+PhoneMask.swift in Sources */,
 				E68B14E5281AB7DB00A8F50B /* ShowDataViewModel.swift in Sources */,
 				D3917D20282BE79300988F02 /* LoginViewModel.swift in Sources */,
+				27EA01DF286B7FB8003FB4B3 /* Extension+CurrencyMask.swift in Sources */,
 				E61FDA482822CA0800252EB7 /* EditDataFooterView.swift in Sources */,
-				9097C397285218FB00701562 /* Fonts.swift in Sources */,
+				9097C397285218FB00701562 /* Extension+Fonts.swift in Sources */,
 				30A55E772841310C00C86045 /* CopyAndPasteConfirm.swift in Sources */,
+				2720C21E286C8ACD0023323F /* Extension+LineTextField.swift in Sources */,
+				27EA01E1286B810B003FB4B3 /* Extension+FormatMask.swift in Sources */,
 				D326CB4428368F7F0030AB89 /* PixHomeTableViewCell.swift in Sources */,
 				900479FC283D5C30005D7208 /* MyKeysViewModel.swift in Sources */,
 				90AD79F82860C50700B7150B /* UnexpectedErrorViewController.swift in Sources */,
@@ -934,7 +967,7 @@
 				D3927417282553DE0037F3E8 /* RegisterDatePickerTableViewCell.swift in Sources */,
 				E68B14D9281AA68C00A8F50B /* RegisterFooterView.swift in Sources */,
 				901D0D7B28354C810095155D /* AllPix+CoreDataProperties.swift in Sources */,
-				E68B14CC281AA30E00A8F50B /* Colors.swift in Sources */,
+				E68B14CC281AA30E00A8F50B /* Extension+Colors.swift in Sources */,
 				900479FF283D5CC7005D7208 /* MyKeysTableViewCell.swift in Sources */,
 				B89E0891285A3B36006D6AA0 /* TransferFailViewController.swift in Sources */,
 				E6B237092821EE9D008F206A /* EditDataTableViewCell.swift in Sources */,
@@ -947,7 +980,6 @@
 				E6C7CA51281A955700D44104 /* Client.swift in Sources */,
 				D392741F282582870037F3E8 /* EditDataDatePickerTableViewCell.swift in Sources */,
 				E68B14E1281AAFD500A8F50B /* ShowDataTableViewCell.swift in Sources */,
-				90101694284E370E001F76AB /* CustomUITextField.swift in Sources */,
 				E6B237062821EB60008F206A /* EditDataViewController.swift in Sources */,
 				E6C7CA1B281A940200D44104 /* SceneDelegate.swift in Sources */,
 				D3917D27282C250D00988F02 /* HomeViewController.swift in Sources */,
@@ -962,7 +994,7 @@
 				90AD79FA2860C50700B7150B /* Error404View.swift in Sources */,
 				E68B14DF281AAEE100A8F50B /* ShowDataViewController.swift in Sources */,
 				90047A05283D691F005D7208 /* MyKeysFooterView.swift in Sources */,
-				27441930285A36E80050ADA2 /* ButtonExtension.swift in Sources */,
+				27441930285A36E80050ADA2 /* Extension+Buttons.swift in Sources */,
 				901D0D7728353C670095155D /* Pix.swift in Sources */,
 				D326CB4628368FA00030AB89 /* PixHomeHeaderView.swift in Sources */,
 			);

@@ -13,17 +13,7 @@ class EditDataFooterView: UIView {
     static let height: CGFloat = 100
     
     // MARK: - UIElements
-    private lazy var confirmEditButton: UIButton = {
-       let view = UIButton()
-        view.setTitle("Confirmar edição", for: .normal)
-        view.backgroundColor = .MyTheme.mainBlueColor
-        view.tintColor = .MyTheme.backgroundColor
-        view.titleLabel?.font = .MyTheme.defaultText
-        view.addTarget(self, action: #selector(performEdit), for: .touchUpInside)
-        view.layer.cornerRadius = 5
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private lazy var confirmEditButton: UIButton = UIButton.defaultButton(title: "Confirmar Edição", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performEdit))
     
     private lazy var deleteRegisterButton: UIButton = {
        let view = UIButton()
@@ -56,12 +46,13 @@ class EditDataFooterView: UIView {
     
     func setupLayoutConstraints(){
         NSLayoutConstraint.activate([
-            confirmEditButton.topAnchor.constraint(equalTo: self.topAnchor, constant:  15),
-            confirmEditButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
-            confirmEditButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            confirmEditButton.topAnchor.constraint(equalTo: self.topAnchor, constant:  16),
+            confirmEditButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            confirmEditButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
-            deleteRegisterButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            deleteRegisterButton.topAnchor.constraint(equalTo: confirmEditButton.bottomAnchor, constant: 10)
+            deleteRegisterButton.leadingAnchor.constraint(equalTo: confirmEditButton.leadingAnchor),
+            deleteRegisterButton.trailingAnchor.constraint(equalTo: confirmEditButton.trailingAnchor),
+            deleteRegisterButton.topAnchor.constraint(equalTo: confirmEditButton.bottomAnchor, constant: 16)
         ])
     }
     

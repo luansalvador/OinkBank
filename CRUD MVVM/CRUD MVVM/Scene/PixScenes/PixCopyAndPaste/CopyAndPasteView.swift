@@ -11,11 +11,11 @@ class CopyAndPasteView: UIView {
     
     var continueAction: (() -> Void)?
     var deleteAction: (() -> Void)?
-    
+  
     private lazy var label: UILabel = {
         let view = UILabel()
-        view.text = "Insira o Pix Copia e Cola"
-        view.font = .MyTheme.boldTitleText
+        view.text = "Insira o Pix copia e cola"
+        view.font = .MyTheme.defaultText
         view.textColor = .MyTheme.defaultTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -24,28 +24,24 @@ class CopyAndPasteView: UIView {
     private lazy var textField: UITextField = {
         let view = UITextField()
         view.placeholder = "Pix Copia e Cola"
+        view.font = .MyTheme.defaultText
+        view.clearsOnBeginEditing = true
+        view.clearButtonMode = .whileEditing
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private lazy var button: UIButton = {
-        let view = UIButton(frame: .zero)
-        view.setTitle("CONTINUAR", for: .normal)
-        view.backgroundColor = .MyTheme.mainBlueColor
-        view.setTitleColor(UIColor.MyTheme.whiteTextColor, for: .normal)
-        view.layer.cornerRadius = 9
-        view.addTarget(self, action: #selector(performConfirm), for: .touchUpInside)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    private lazy var deleteTextButton: UIButton = {
-        let view = UIButton(frame: .zero)
-        view.tintColor = .MyTheme.mainBlueColor
-        view.setImage(UIImage.init(named:"ic_cancel"), for: .normal)
-        view.addTarget(self, action: #selector(performDelete), for: .touchUpInside)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Continuar", for: .normal)
+        button.titleLabel?.font = UIFont.MyTheme.defaultText
+        button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
+        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(self.performConfirm), for: .touchUpInside)
+        
+        return button
     }()
     
     init() {
@@ -63,32 +59,26 @@ class CopyAndPasteView: UIView {
         self.addSubview(label)
         self.addSubview(textField)
         self.addSubview(button)
-        self.addSubview(deleteTextButton)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            self.label.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30),
-            self.label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.label.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 16),
+            self.label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            self.label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
-            self.textField.topAnchor.constraint(equalTo: self.label.bottomAnchor, constant: 20),
-            self.textField.leadingAnchor.constraint(equalTo: self.label.leadingAnchor),
-            self.textField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
+            self.textField.topAnchor.constraint(equalTo: self.label.bottomAnchor, constant: 16),
+            self.textField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            self.textField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
-            self.button.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50),
-            self.button.leadingAnchor.constraint(equalTo: self.label.leadingAnchor),
-            self.button.trailingAnchor.constraint(equalTo: self.label.trailingAnchor),
-            
-            self.deleteTextButton.centerYAnchor.constraint(equalTo: self.textField.centerYAnchor),
-            self.deleteTextButton.leadingAnchor.constraint(equalTo: self.textField.trailingAnchor, constant: 8),
-            self.deleteTextButton.widthAnchor.constraint(equalToConstant: 37),
-            self.deleteTextButton.heightAnchor.constraint(equalToConstant: 37)
+            self.button.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            self.button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            self.button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
         ])
     }
     
     private func setupAditionalConfig() {
-        self.backgroundColor = .white
+        self.backgroundColor = .systemBackground
     }
     
     @objc private func performConfirm() {

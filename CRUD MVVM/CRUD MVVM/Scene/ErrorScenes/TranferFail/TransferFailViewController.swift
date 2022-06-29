@@ -35,17 +35,8 @@ class TransferFailViewController: UIViewController {
         return view
     }()
     //MARK: - Botão
-    private lazy var backButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Voltar", for: .normal)
-        button.titleLabel?.font = UIFont.MyTheme.defaultText
-        button.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
-        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        button.layer.cornerRadius = 5
-        button.addTarget(self, action: #selector(TapBack), for: .touchUpInside)
-        return button
-    }()
+    private lazy var backButton: UIButton = UIButton.defaultButton(title: "Voltar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(TapBack))
+    
     
     //MARK: - Button Actions
     @objc func TapBack() {
@@ -65,7 +56,7 @@ class TransferFailViewController: UIViewController {
             setupView()
             setupConstraints()
             self.navigationController?.isNavigationBarHidden = true
-            view.backgroundColor = .white
+            view.backgroundColor = .MyTheme.backgroundColor
     }
     }
     //MARK: - SetupView
@@ -80,7 +71,7 @@ class TransferFailViewController: UIViewController {
     //MARK: - Constraints
         func setupConstraints(){
         NSLayoutConstraint.activate([
-            errorLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            errorLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 16),
             errorLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 16),
             errorLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -16),
             

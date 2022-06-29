@@ -13,6 +13,7 @@ class TransactionSuccessViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
+        label.textColor = .MyTheme.defaultTextColor
         label.text = "Transação Concluída!"
         label.font = .MyTheme.boldTitleText
         return label
@@ -22,6 +23,7 @@ class TransactionSuccessViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
+        label.textColor = .MyTheme.defaultTextColor
         label.text = "Sua transação foi efetuada com sucesso."
         label.font = .MyTheme.defaultText
         return label
@@ -34,8 +36,11 @@ class TransactionSuccessViewController: UIViewController {
         return view
     }()
     
+
+
     private lazy var continueButton: UIButton = UIButton.defaultButton(title: "Continuar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(tappedButton))
         
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +75,9 @@ class TransactionSuccessViewController: UIViewController {
     private func setupConstraints(){
         NSLayoutConstraint.activate([
             
+
             self.topLabelTitle.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,constant: 16),
+
             self.topLabelTitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
             self.topLabelTitle.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
             

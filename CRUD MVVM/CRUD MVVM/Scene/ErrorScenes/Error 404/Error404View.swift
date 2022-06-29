@@ -29,17 +29,8 @@ class Error404View: UIView {
         return view
     }()
     
-    private lazy var tryAgainButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Tentar Novamente", for: .normal)
-        button.titleLabel?.font = UIFont.MyTheme.defaultText
-        button.setTitleColor(UIColor.MyTheme.defaultTextColor, for: .normal)
-        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
-        button.layer.cornerRadius = 5
-        button.addTarget(self, action: #selector(performTryAgain), for: .touchUpInside)
-        return button
-    }()
+    private lazy var tryAgainButton: UIButton = UIButton.defaultButton(title: "Tentar Novamente", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performTryAgain))
+        
     
     private lazy var error404Image: UIImageView = {
         let view = UIImageView()
@@ -87,7 +78,7 @@ class Error404View: UIView {
             self.error404Image.topAnchor.constraint(equalTo: self.subtitleLabel.bottomAnchor, constant: 20),
             self.error404Image.leadingAnchor.constraint(equalTo: self.subtitleLabel.leadingAnchor),
             
-            self.vrau.topAnchor.constraint(equalTo: self.error404Image.bottomAnchor), /*constant: -15),*/
+            self.vrau.topAnchor.constraint(equalTo: self.error404Image.bottomAnchor), 
             self.vrau.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.vrau.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.vrau.bottomAnchor.constraint(equalTo: self.bottomAnchor),

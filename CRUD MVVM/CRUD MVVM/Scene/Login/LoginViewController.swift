@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .MyTheme.backgroundColor
-        //UIColor.MyTheme.mainPinkColor
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
@@ -91,7 +91,7 @@ class LoginViewController: UIViewController {
         view.borderStyle = .none
         view.placeholder = "1-9"
         view.backgroundColor = .clear
-        view.textColor = .MyTheme.mainBlueColor
+        view.textColor = .MyTheme.defaultTextColor
         
         view.translatesAutoresizingMaskIntoConstraints = false
         //view.keyboardType = .decimalPad
@@ -104,7 +104,7 @@ class LoginViewController: UIViewController {
         view.borderStyle = .none
         view.placeholder = "1-9"
         view.backgroundColor = .clear
-        view.textColor = .MyTheme.mainBlueColor
+        view.textColor = .MyTheme.defaultTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
         //view.keyboardType = .decimalPad
         view.layer.cornerRadius = 5
@@ -115,7 +115,6 @@ class LoginViewController: UIViewController {
     private lazy var passwordLabel: UILabel = {
         let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
-        //.MyTheme.whiteTextColor
         view.font = .MyTheme.defaultText
         view.text = "Senha"
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -126,7 +125,7 @@ class LoginViewController: UIViewController {
         let view = UITextField()
         view.placeholder = "******"
         view.backgroundColor = .clear
-        view.textColor = .MyTheme.mainBlueColor
+        view.textColor = .MyTheme.defaultTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isSecureTextEntry = true
         return view
@@ -273,17 +272,6 @@ extension LoginViewController: LoginViewModelDelegate {
     }
 }
 
-extension UIView {
-    
-    func addBottomLineWithColor(color: UIColor, width: CGFloat) {
-        
-        let bottomBorderLine = CALayer()
-        bottomBorderLine.backgroundColor = color.cgColor
-        bottomBorderLine.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: width)
-        self.layer.addSublayer(bottomBorderLine)
-        
-        
-    }
-}
+
 
 
