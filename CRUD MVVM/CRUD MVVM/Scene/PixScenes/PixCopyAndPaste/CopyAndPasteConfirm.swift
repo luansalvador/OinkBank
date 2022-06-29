@@ -123,19 +123,9 @@ class CopyAndPasteConfirmViewController: UIViewController {
             let succesViewController = TransferFailViewController()
             self.navigationController?.pushViewController(succesViewController, animated: true)
         }
-        
-//        self.navigationController?.pushViewController(HomePixViewController, animated: true)
-//        print("teste")
-//        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
-//        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
-        
     }
     
-//    func teste() {
-//
-//        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
-//        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
-//    }
+
     
     override func loadView() {
         super.loadView()
@@ -193,15 +183,4 @@ class CopyAndPasteConfirmViewController: UIViewController {
     
 }
 
-//extension CopyAndPasteConfirmViewController: PixCopyAndPasteViewModelDelegate {
-//
-//
-//    func displayAlert(message: String, title: String, handler: UIAlertAction?) {
-//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//        let actionAlert = UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction) in self.teste() })
-//        alert.addAction(actionAlert)
-//        self.present(alert, animated: true)
-//    }
-//
-//
-//}
+
