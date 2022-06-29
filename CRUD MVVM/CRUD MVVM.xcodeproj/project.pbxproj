@@ -12,6 +12,7 @@
 		0EE5BE9A284016170074B27B /* CobrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5BE99284016170074B27B /* CobrarViewController.swift */; };
 		2720C21C286C89D50023323F /* Extension+NoPasteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */; };
 		2720C21E286C8ACD0023323F /* Extension+LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */; };
+		2720C220286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21F286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift */; };
 		27441930285A36E80050ADA2 /* Extension+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744192F285A36E80050ADA2 /* Extension+Buttons.swift */; };
 		27EA01DF286B7FB8003FB4B3 /* Extension+CurrencyMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA01DE286B7FB8003FB4B3 /* Extension+CurrencyMask.swift */; };
 		27EA01E1286B810B003FB4B3 /* Extension+FormatMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA01E0286B810B003FB4B3 /* Extension+FormatMask.swift */; };
@@ -127,6 +128,7 @@
 		0EE5BE99284016170074B27B /* CobrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobrarViewController.swift; sourceTree = "<group>"; };
 		2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NoPasteTextField.swift"; sourceTree = "<group>"; };
 		2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+LineTextField.swift"; sourceTree = "<group>"; };
+		2720C21F286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+LoginAgencyAndAgencyMask.swift"; sourceTree = "<group>"; };
 		2744192F285A36E80050ADA2 /* Extension+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Buttons.swift"; sourceTree = "<group>"; };
 		27EA01DE286B7FB8003FB4B3 /* Extension+CurrencyMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CurrencyMask.swift"; sourceTree = "<group>"; };
 		27EA01E0286B810B003FB4B3 /* Extension+FormatMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+FormatMask.swift"; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				9017574B285A4689006791CA /* Extension+Constants.swift */,
 				2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */,
 				2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */,
+				2720C21F286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -966,6 +969,7 @@
 				90AD79E32860B77600B7150B /* TransactionSuccessViewController.swift in Sources */,
 				D3927417282553DE0037F3E8 /* RegisterDatePickerTableViewCell.swift in Sources */,
 				E68B14D9281AA68C00A8F50B /* RegisterFooterView.swift in Sources */,
+				2720C220286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift in Sources */,
 				901D0D7B28354C810095155D /* AllPix+CoreDataProperties.swift in Sources */,
 				E68B14CC281AA30E00A8F50B /* Extension+Colors.swift in Sources */,
 				900479FF283D5CC7005D7208 /* MyKeysTableViewCell.swift in Sources */,
