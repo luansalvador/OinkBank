@@ -90,11 +90,12 @@ class LoginViewController: UIViewController {
         let view = UITextField()
         view.borderStyle = .none
         view.placeholder = "1-9"
+        view.tag = 1
+        view.delegate = self
         view.backgroundColor = .clear
         view.textColor = .MyTheme.defaultTextColor
-        
         view.translatesAutoresizingMaskIntoConstraints = false
-        //view.keyboardType = .decimalPad
+        view.keyboardType = .decimalPad
         view.layer.cornerRadius = 5
         return view
     }()
@@ -103,10 +104,12 @@ class LoginViewController: UIViewController {
         let view = UITextField()
         view.borderStyle = .none
         view.placeholder = "1-9"
+        view.tag = 2
+        view.delegate = self
         view.backgroundColor = .clear
         view.textColor = .MyTheme.defaultTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
-        //view.keyboardType = .decimalPad
+        view.keyboardType = .decimalPad
         view.layer.cornerRadius = 5
         return view
     }()
