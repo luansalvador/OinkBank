@@ -144,6 +144,7 @@ extension RegisterViewController:  UITextFieldDelegate{
         additionalCellTextFieldSetup(textField)
     }
     
+    
     //MARK: - TextFieldDidEndEditing verifications
     func textFieldDidEndEditing(_ textField: UITextField) {
         let indexPath = IndexPath(row: textField.tag, section: 0)
@@ -314,7 +315,6 @@ extension RegisterViewController:  UITextFieldDelegate{
             
         case textFieldData.confirmPasswordTextField.rawValue:
             viewModel.newClientCOnfirmPassword = textField.text ?? ""
-            
         default:
             break
         }
@@ -327,6 +327,10 @@ extension RegisterViewController:  UITextFieldDelegate{
             textField?.text = textField?.text?.formatMask(mask: "###.###.###-##")
         case textFieldData.netWorthTextField.rawValue:
             textField?.text = textField?.text?.currencyInputFormatting()
+        case textFieldData.emailTextField.rawValue:
+            textField?.tag = 10
+        case textFieldData.emailTextField.rawValue:
+            textField?.delegate = self
         default:
             break
         }
