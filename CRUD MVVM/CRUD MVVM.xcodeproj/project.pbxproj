@@ -18,6 +18,7 @@
 		27EA01E1286B810B003FB4B3 /* Extension+FormatMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA01E0286B810B003FB4B3 /* Extension+FormatMask.swift */; };
 		27EA01E3286B81A1003FB4B3 /* Extension+CpfValidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA01E2286B81A1003FB4B3 /* Extension+CpfValidate.swift */; };
 		27EA01E7286B83A0003FB4B3 /* Extension+PhoneMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA01E6286B83A0003FB4B3 /* Extension+PhoneMask.swift */; };
+		27FF5EC1286E097600636BB3 /* Extension+StringLowercased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF5EC0286E097600636BB3 /* Extension+StringLowercased.swift */; };
 		28BB0AC12864DF6200503A08 /* RegisterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */; };
 		30A55E772841310C00C86045 /* CopyAndPasteConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A55E762841310C00C86045 /* CopyAndPasteConfirm.swift */; };
 		900479F5283D36BE005D7208 /* HomePixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900479F4283D36BE005D7208 /* HomePixViewController.swift */; };
@@ -134,6 +135,7 @@
 		27EA01E0286B810B003FB4B3 /* Extension+FormatMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+FormatMask.swift"; sourceTree = "<group>"; };
 		27EA01E2286B81A1003FB4B3 /* Extension+CpfValidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CpfValidate.swift"; sourceTree = "<group>"; };
 		27EA01E6286B83A0003FB4B3 /* Extension+PhoneMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+PhoneMask.swift"; sourceTree = "<group>"; };
+		27FF5EC0286E097600636BB3 /* Extension+StringLowercased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+StringLowercased.swift"; sourceTree = "<group>"; };
 		28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeaderView.swift; sourceTree = "<group>"; };
 		30A55E762841310C00C86045 /* CopyAndPasteConfirm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteConfirm.swift; sourceTree = "<group>"; };
 		900479F4283D36BE005D7208 /* HomePixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePixViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */,
 				2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */,
 				2720C21F286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift */,
+				27FF5EC0286E097600636BB3 /* Extension+StringLowercased.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -956,6 +959,7 @@
 				D326CB4428368F7F0030AB89 /* PixHomeTableViewCell.swift in Sources */,
 				900479FC283D5C30005D7208 /* MyKeysViewModel.swift in Sources */,
 				90AD79F82860C50700B7150B /* UnexpectedErrorViewController.swift in Sources */,
+				27FF5EC1286E097600636BB3 /* Extension+StringLowercased.swift in Sources */,
 				90101310282E89F400C709FA /* Clients+CoreDataProperties.swift in Sources */,
 				E6B237042821EB45008F206A /* EditDataViewModel.swift in Sources */,
 				90AD79FB2860C50700B7150B /* ReceivedTransferViewController.swift in Sources */,
