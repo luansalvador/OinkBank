@@ -18,7 +18,6 @@ class HomeHeaderView: UIView {
     private lazy var iconImageView: UIImageView = {
         let view = UIImageView()
         view.tintColor = .MyTheme.blueColor
-        let view = UIImageView()
         view.image = UIImage(named: "ic_profile")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
