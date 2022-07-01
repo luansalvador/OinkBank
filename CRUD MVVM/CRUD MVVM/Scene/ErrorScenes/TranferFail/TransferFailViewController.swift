@@ -5,7 +5,7 @@ class TransferFailViewController: UIViewController {
     //MARK: - Labels Texts
     private lazy var errorLabel:UILabel = {
         let view = UILabel()
-        view.text = "Erro na transação!"
+        view.text = NSLocalizedString("Erro na transação!", comment: "")
         view.numberOfLines = 0
         view.font = UIFont.MyTheme.defaultText.withSize(24)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -13,7 +13,7 @@ class TransferFailViewController: UIViewController {
     }()
     private lazy var infoLabel:UILabel = {
         let view = UILabel()
-        view.text = "No momento, não foi possível efetuar a transação. Tente novamente mais tarde ou entre em contato conosco."
+        view.text = NSLocalizedString("No momento, não foi possível efetuar a transação. Tente novamente mais tarde ou entre em contato conosco.", comment: "")
         view.numberOfLines = 0
         view.font = UIFont.MyTheme.defaultText.withSize(17)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +28,7 @@ class TransferFailViewController: UIViewController {
         return view
     }()
     //MARK: - Botão
-    private lazy var backButton: UIButton = UIButton.defaultButton(title: "Voltar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(TapBack))
+    private lazy var backButton: UIButton = UIButton.defaultButton(title: NSLocalizedString("Voltar", comment: ""), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(TapBack))
     
     
     //MARK: - Button Actions

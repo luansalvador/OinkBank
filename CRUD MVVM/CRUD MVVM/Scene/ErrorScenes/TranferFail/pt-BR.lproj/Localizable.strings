@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  CRUD MVVM
+
+  Created by user217685 on 7/1/22.
+  
+*/
+"Erro na transação!" = "Erro na transação!";
+"No momento, não foi possível efetuar a transação. Tente novamente mais tarde ou entre em contato conosco." = "No momento, não foi possível efetuar a transação. Tente novamente mais tarde ou entre em contato conosco.";
+"Voltar" = "Voltar";"
