@@ -5,7 +5,7 @@ class MyKeysViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Minhas chaves PIX"
+        title = String(format: NSLocalizedString("Minhas chaves PIX", comment: " "))
         view.backgroundColor = .systemBackground
         
         viewModel.verifyPix()
