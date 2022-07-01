@@ -41,9 +41,11 @@ class LoginViewController: UIViewController {
         let attrs2 = [NSAttributedString.Key.font : UIFont.MyTheme.boldTitleText, NSAttributedString.Key.foregroundColor : UIColor.black]
         let attrs3 = [NSAttributedString.Key.font : UIFont.MyTheme.boldTitleText, NSAttributedString.Key.foregroundColor : UIColor.white]
         
-        let atritutedString1 = NSMutableAttributedString(string: "Seja bem-vindo ao ", attributes: attrs1 as [NSAttributedString.Key : Any])
-        let atritutedString2 = NSMutableAttributedString(string: "\nOinkBank ", attributes: attrs2 as [NSAttributedString.Key : Any])
-        let atritutedString3 = NSMutableAttributedString(string: ", seu \nmais novo banco.", attributes: attrs3 as [NSAttributedString.Key : Any])
+        //"Alguma descrição".localized()
+        
+        let atritutedString1 = NSMutableAttributedString(string: "welcome".loginLocalized(), attributes: attrs1 as [NSAttributedString.Key : Any])
+        let atritutedString2 = NSMutableAttributedString(string: "bankName".loginLocalized(), attributes: attrs2 as [NSAttributedString.Key : Any])
+        let atritutedString3 = NSMutableAttributedString(string: "newBank".loginLocalized() /*", seu \nmais novo banco."*/, attributes: attrs3 as [NSAttributedString.Key : Any])
         
         
         atritutedString1.append(atritutedString2)
@@ -70,7 +72,7 @@ class LoginViewController: UIViewController {
         view.textColor = .MyTheme.defaultTextColor
         //.MyTheme.whiteTextColor
         view.font = .MyTheme.defaultText
-        view.text = "Agência"
+        view.text = "agency".loginLocalized()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -79,7 +81,7 @@ class LoginViewController: UIViewController {
         let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
         //.MyTheme.whiteTextColor
-        view.text = "Conta com dígito"
+        view.text = "account".loginLocalized()
         view.font = .MyTheme.defaultText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -116,7 +118,7 @@ class LoginViewController: UIViewController {
         let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
         view.font = .MyTheme.defaultText
-        view.text = "Senha"
+        view.text = "password".loginLocalized()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -133,14 +135,14 @@ class LoginViewController: UIViewController {
     
     // MARK: - login button
     
-        private lazy var loginButton: UIButton = UIButton.defaultButton(title: "Entrar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performLogin))
+    private lazy var loginButton: UIButton = UIButton.defaultButton(title: "login".loginLocalized(), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performLogin))
     
     //MARK: -register button
     private lazy var registerButton: UIButton = {
         let view = UIButton()
         view.tintColor = .MyTheme.defaultTextColor
         view.setTitleColor(.tintColor, for: .normal)
-        view.setTitle("Não tem conta? Cadastre-se", for: .normal)
+        view.setTitle("createAccount".loginLocalized(), for: .normal)
         view.titleLabel?.font = .MyTheme.defaultText
         view.layer.cornerRadius = 5
         view.addTarget(self, action: #selector(registerTapButton), for: .touchUpInside)
@@ -220,15 +222,15 @@ class LoginViewController: UIViewController {
             agencyLabel.bottomAnchor.constraint(equalTo: agencyTextField.topAnchor,constant: -16),
             
             accountLabel.topAnchor.constraint(equalTo: agencyLabel.topAnchor),
-            accountLabel.leadingAnchor.constraint(equalTo: view.centerXAnchor),
+            accountLabel.leadingAnchor.constraint(equalTo: accountTextField.leadingAnchor),
             
             agencyTextField.topAnchor.constraint(equalTo: agencyLabel.bottomAnchor, constant: 16),
             agencyTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 16),
             agencyTextField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4),
             
             accountTextField.topAnchor.constraint(equalTo: agencyTextField.topAnchor),
-            accountTextField.leadingAnchor.constraint(equalTo: agencyTextField.trailingAnchor,constant: 16),
             accountTextField.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            accountTextField.widthAnchor.constraint(equalTo: agencyTextField.widthAnchor),
             
             passwordLabel.topAnchor.constraint(equalTo: agencyTextField.bottomAnchor,constant: 16),
             passwordLabel.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor),
@@ -271,6 +273,18 @@ extension LoginViewController: LoginViewModelDelegate {
         self.navigationController?.pushViewController(homeViewController, animated: true)
     }
 }
+
+extension String {
+    
+    func loginLocalized() -> String {
+        return NSLocalizedString(self,
+                                 tableName: "LoginLocalizable",
+                                 bundle: .main,
+                                 value: self,
+                                 comment: self)
+    }
+}
+
 
 
 

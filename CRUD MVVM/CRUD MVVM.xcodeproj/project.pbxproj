@@ -58,6 +58,7 @@
 		90AD79FB2860C50700B7150B /* ReceivedTransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AD79F72860C50700B7150B /* ReceivedTransferViewController.swift */; };
 		B8437A9F2858E75400F272D5 /* RegisterSucessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8437A9E2858E75400F272D5 /* RegisterSucessViewController.swift */; };
 		B89E0891285A3B36006D6AA0 /* TransferFailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E0890285A3B36006D6AA0 /* TransferFailViewController.swift */; };
+		C91FF8CE286F21F900034F91 /* LoginLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C91FF8CD286F21F900034F91 /* LoginLocalizable.strings */; };
 		C9CE78682847A91A0001AD09 /* PixCopyAndPasteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE78672847A91A0001AD09 /* PixCopyAndPasteViewModel.swift */; };
 		C9EA70522840036200AE6393 /* CopyAndPasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA70512840036200AE6393 /* CopyAndPasteView.swift */; };
 		C9EA70542840037600AE6393 /* CopyAndPasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA70532840037600AE6393 /* CopyAndPasteViewController.swift */; };
@@ -173,6 +174,7 @@
 		90AD79F72860C50700B7150B /* ReceivedTransferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedTransferViewController.swift; sourceTree = "<group>"; };
 		B8437A9E2858E75400F272D5 /* RegisterSucessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSucessViewController.swift; sourceTree = "<group>"; };
 		B89E0890285A3B36006D6AA0 /* TransferFailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFailViewController.swift; sourceTree = "<group>"; };
+		C91FF8CD286F21F900034F91 /* LoginLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LoginLocalizable.strings; sourceTree = "<group>"; };
 		C9CE78672847A91A0001AD09 /* PixCopyAndPasteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixCopyAndPasteViewModel.swift; sourceTree = "<group>"; };
 		C9EA70512840036200AE6393 /* CopyAndPasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteView.swift; sourceTree = "<group>"; };
 		C9EA70532840037600AE6393 /* CopyAndPasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteViewController.swift; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 			children = (
 				D3917D1F282BE79300988F02 /* LoginViewModel.swift */,
 				D3917D1D282BE65C00988F02 /* LoginViewController.swift */,
+				C91FF8CD286F21F900034F91 /* LoginLocalizable.strings */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -897,6 +900,7 @@
 				9097C3AA2852810000701562 /* Nunito-Medium.ttf in Resources */,
 				9097C3AB2852810000701562 /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				9097C3B72852810000701562 /* Nunito-Italic.ttf in Resources */,
+				C91FF8CE286F21F900034F91 /* LoginLocalizable.strings in Resources */,
 				9097C3B32852810000701562 /* Nunito-Black.ttf in Resources */,
 				9097C3B42852810000701562 /* Nunito-ExtraLight.ttf in Resources */,
 			);
