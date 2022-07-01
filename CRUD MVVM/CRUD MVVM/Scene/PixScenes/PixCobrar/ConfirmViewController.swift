@@ -1,10 +1,3 @@
-//
-//  confirmViewController.swift
-//  CRUD MVVM
-//
-//  Created by user220270 on 5/27/22.
-//
-
 import UIKit
 
 class ConfirmViewController: UIViewController {
@@ -121,8 +114,7 @@ class ConfirmViewController: UIViewController {
     private func performGoToConfirm() {
         let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
         self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
-//        let homePixViewController = HomePixViewController()
-//        self.navigationController?.pushViewController(homePixViewController, animated: true)
+        
     }
     
     public func configLabel(text: String) {

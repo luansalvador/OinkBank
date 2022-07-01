@@ -1,10 +1,3 @@
-//
-//  RegisterHeaderView.swift
-//  CRUD MVVM
-//
-//  Created by user220256 on 6/23/22.
-//
-
 import UIKit
 
 class RegisterHeaderView: UIView {

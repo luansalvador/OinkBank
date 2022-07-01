@@ -1,10 +1,3 @@
-//
-//  PixKeyDetailViewModel.swift
-//  CRUD MVVM
-//
-//  Created by Ancarinha on 19/05/22.
-//
-
 import Foundation
 protocol PixKeyDetailViewModelDelegate: AnyObject {
     func onSuccessDismiss()
@@ -23,8 +16,7 @@ protocol PixKeyDetailViewModeling {
 }
 
 final class PixKeyDetailViewModel {
-    //let pixService = CoreDataPixService()
-    
+
     weak var delegate: PixKeyDetailViewModelDelegate?
     weak var reloadDelegate: MyKeysViewModelReloadDelegate?
     
@@ -38,7 +30,6 @@ final class PixKeyDetailViewModel {
     var updatePix: Pix = allPix[loginIndex]
     
     func verifyPixKey(){
-        //verify which pixKey was selected
         if editPixIndex == 0 {
             pixKeyType = "CPF"
             pixKey = allPix[loginIndex].cpfKey
@@ -72,7 +63,6 @@ final class PixKeyDetailViewModel {
             if pixKeyType == "Chave aleatória"{
                 updatePix.randomKey = "Cadastrar Nova Chave"
                 allPix[loginIndex] = updatePix
-                //pixService.updateClientPix(editClientPix: updatePix)
                 reloadUpdateAllPixKeys()
                 dismissView()
             }
@@ -80,7 +70,6 @@ final class PixKeyDetailViewModel {
             if pixKeyType == "Telefone"{
                 updatePix.phoneKey = "Cadastrar Nova Chave"
                 allPix[loginIndex] = updatePix
-                //pixService.updateClientPix(editClientPix: updatePix)
                 reloadUpdateAllPixKeys()
                 dismissView()
             }
@@ -88,7 +77,6 @@ final class PixKeyDetailViewModel {
             if pixKeyType == "E-mail"{
                 updatePix.emailKey = "Cadastrar Nova Chave"
                 allPix[loginIndex] = updatePix
-                //pixService.updateClientPix(editClientPix: updatePix)
                 reloadUpdateAllPixKeys()
                 dismissView()
             }

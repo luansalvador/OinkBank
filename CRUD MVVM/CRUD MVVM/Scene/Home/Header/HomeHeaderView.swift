@@ -1,10 +1,3 @@
-//
-//  HomeHeaderView.swift
-//  CRUD MVVM
-//
-//  Created by Ancarinha on 11/05/22.
-//
-
 import UIKit
 
 class HomeHeaderView: UIView {
@@ -15,7 +8,7 @@ class HomeHeaderView: UIView {
     //MARK: - UIElements
     //MARK: - greetings, icon
     private lazy var greetingsLabel: UILabel = {
-       let view = UILabel()
+        let view = UILabel()
         view.text = "Olá TESTE"
         view.font = UIFont.MyTheme.boldTitleText
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -23,7 +16,7 @@ class HomeHeaderView: UIView {
     }()
     
     private lazy var iconImageView: UIImageView = {
-       let view = UIImageView()
+        let view = UIImageView()
         view.tintColor = .MyTheme.mainBlueColor
         view.image = UIImage(named: "ic_profile")
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -40,7 +33,7 @@ class HomeHeaderView: UIView {
     }()
     
     private lazy var balanceTitleLabel: UILabel = {
-       let view = UILabel()
+        let view = UILabel()
         view.text = "Saldo:"
         view.font = UIFont.MyTheme.homeHeaderText
         view.textColor = UIColor.MyTheme.defaultTextColor
@@ -49,16 +42,16 @@ class HomeHeaderView: UIView {
     }()
     
     private lazy var balanceAmountLabel: UILabel = {
-         let view = UILabel()
-         view.text = "R$999,99"
+        let view = UILabel()
+        view.text = "R$999,99"
         view.font = UIFont.MyTheme.homeHeaderText
-         view.textColor = UIColor.MyTheme.defaultTextColor
-         view.translatesAutoresizingMaskIntoConstraints = false
-         return view
+        view.textColor = UIColor.MyTheme.defaultTextColor
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     private lazy var hideBalanceButton: UIButton = {
-       let view = UIButton()
+        let view = UIButton()
         let image = UIImage(named: "ic_eye_visibility")
         view.tintColor = UIColor.MyTheme.defaultTextColor
         view.setImage(image, for: .normal)
@@ -83,7 +76,7 @@ class HomeHeaderView: UIView {
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
-         return view
+        return view
     }()
     
     private lazy var pixButton: UIButton = {
@@ -100,8 +93,8 @@ class HomeHeaderView: UIView {
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.addTarget(self, action: #selector(performPix), for: .touchUpInside)
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
-         view.translatesAutoresizingMaskIntoConstraints = false
-         return view
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     private lazy var transferButton: UIButton = {
@@ -119,7 +112,7 @@ class HomeHeaderView: UIView {
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(performLogOut), for: .touchUpInside)
-         return view
+        return view
     }()
     
     //MARK: Agency and account
@@ -203,7 +196,7 @@ class HomeHeaderView: UIView {
             hideBalanceButton.topAnchor.constraint(equalTo: cardImageView.topAnchor, constant: 10),
             hideBalanceButton.trailingAnchor.constraint(equalTo: cardImageView.trailingAnchor, constant: -10),
             
-                                                                                        
+            
             payBillsButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.29),
             payBillsButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             payBillsButton.heightAnchor.constraint(equalToConstant: 50),
@@ -245,7 +238,6 @@ class HomeHeaderView: UIView {
     }
     
     @objc func performLogOut(){
-        // on transfer button, remove later
-        //viewModel?.popToRoot()
+        
     }
 }

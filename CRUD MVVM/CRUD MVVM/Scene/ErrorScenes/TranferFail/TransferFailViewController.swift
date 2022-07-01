@@ -1,10 +1,3 @@
-//
-//  CadastroConcluido.swift
-//  CRUD MVVM
-//
-//  Created by user217685 on 6/14/22.
-//
-
 import UIKit
 import Foundation
 
@@ -17,7 +10,7 @@ class TransferFailViewController: UIViewController {
         view.font = UIFont.MyTheme.defaultText.withSize(24)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
-        }()
+    }()
     private lazy var infoLabel:UILabel = {
         let view = UILabel()
         view.text = "No momento, não foi possível efetuar a transação. Tente novamente mais tarde ou entre em contato conosco."
@@ -25,7 +18,7 @@ class TransferFailViewController: UIViewController {
         view.font = UIFont.MyTheme.defaultText.withSize(17)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
-        }()
+    }()
     //MARK: - Images Views
     
     private lazy var pigImageTransferFail: UIImageView = {
@@ -43,24 +36,24 @@ class TransferFailViewController: UIViewController {
         let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
         self.navigationController!.popToViewController(viewControllers[viewControllers.count - 5], animated: true)
     }
-   
+    
     
     //MARK: - viewdidload
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let presentationController = presentationController as? UISheetPresentationController {
-                presentationController.detents = [
-                    .large()
-                ]
+            presentationController.detents = [
+                .large()
+            ]
             setupView()
             setupConstraints()
             self.navigationController?.isNavigationBarHidden = true
             view.backgroundColor = .MyTheme.backgroundColor
-    }
+        }
     }
     //MARK: - SetupView
-        func setupView(){
+    func setupView(){
         view.addSubview(errorLabel)
         view.addSubview(infoLabel)
         view.addSubview(pigImageTransferFail)
@@ -69,7 +62,7 @@ class TransferFailViewController: UIViewController {
         
     }
     //MARK: - Constraints
-        func setupConstraints(){
+    func setupConstraints(){
         NSLayoutConstraint.activate([
             errorLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 16),
             errorLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 16),
@@ -89,7 +82,7 @@ class TransferFailViewController: UIViewController {
             
         ])
     }
-   
+    
 }
 
 

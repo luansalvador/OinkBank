@@ -1,14 +1,7 @@
-//
-//  cobrarViewModel.swift
-//  CRUD MVVM
-//
-//  Created by user220270 on 5/27/22.
-//
-
 import Foundation
 
 class PixChargeViewModel {
-  
+    
     public func generateCopyPaste(value: String, clientCPF: String) -> String{
         let arrayValueChanged = value.components(separatedBy: "R$")
         

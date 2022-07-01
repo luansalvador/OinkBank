@@ -1,17 +1,10 @@
-//
-//  CopyAndPastView.swift
-//  CRUD MVVM
-//
-//  Created by user220212 on 5/26/22.
-//
-
 import UIKit
 
 class CopyAndPasteView: UIView {
     
     var continueAction: (() -> Void)?
     var deleteAction: (() -> Void)?
-  
+    
     private lazy var label: UILabel = {
         let view = UILabel()
         view.text = "Insira o Pix copia e cola"
@@ -88,7 +81,7 @@ class CopyAndPasteView: UIView {
     @objc private func performDelete() {
         self.deleteAction?()
     }
-
+    
     public func configureTextField(text: String) {
         self.textField.text = text
     }
