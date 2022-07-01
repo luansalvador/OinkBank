@@ -1,10 +1,3 @@
-//
-//  LoginViewModel.swift
-//  CRUD MVVM
-//
-//  Created by Ancarinha on 11/05/22.
-//
-
 import Foundation
 
 protocol LoginViewModelDelegate: AnyObject {

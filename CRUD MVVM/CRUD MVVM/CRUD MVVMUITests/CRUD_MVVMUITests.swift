@@ -1,10 +1,3 @@
-//
-//  CRUD_MVVMUITests.swift
-//  CRUD MVVMUITests
-//
-//  Created by user210203 on 4/28/22.
-//
-
 import XCTest
 
 class CRUD_MVVMUITests: XCTestCase {

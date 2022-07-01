@@ -1,21 +1,14 @@
-//
-//  MyKeysHeaderView.swift
-//  CRUD MVVM
-//
-//  Created by user217586 on 5/24/22.
-//
-
 import UIKit
 
 class MyKeysHeaderView: UIView {
-
+    
     static let Height: CGFloat = 40
     
     weak var viewModel: MyKeysViewModel?
     
     //MARK: - UIElements
     private lazy var descriptionLabel: UILabel = {
-       let view = UILabel()
+        let view = UILabel()
         view.text = "Visualize, adicione ou exclua chaves Pix:"
         view.font = .MyTheme.defaultBoldText
         view.numberOfLines = -1
@@ -48,5 +41,5 @@ class MyKeysHeaderView: UIView {
             descriptionLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
         ])
     }
-
+    
 }

@@ -1,10 +1,3 @@
-//
-//  ReceivedTransfer.swift
-//  CRUD MVVM
-//
-//  Created by user217584 on 20/06/22.
-//
-
 import Foundation
 import UIKit
 
@@ -60,7 +53,7 @@ class ReceivedTransferViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
     }
-
+    
     //MARK: - loadView
     
     override func loadView() {
@@ -75,7 +68,7 @@ class ReceivedTransferViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .MyTheme.backgroundColor
-
+        
     }
     
     //MARK: - Func addSubviews
@@ -91,19 +84,19 @@ class ReceivedTransferViewController: UIViewController {
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-        self.titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 16),
-        self.titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
-        
-        self.subtitleLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor),
-        self.subtitleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
-        self.subtitleLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
-        
-        self.happyPigImage.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 60),
-        self.happyPigImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-        
-        self.backButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-        self.backButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
-        self.backButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            self.titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            self.titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            
+            self.subtitleLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor),
+            self.subtitleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            self.subtitleLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            
+            self.happyPigImage.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 60),
+            self.happyPigImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            
+            self.backButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            self.backButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            self.backButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
         ])
     }
     

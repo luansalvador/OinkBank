@@ -1,10 +1,3 @@
-//
-//  Extension+LoginMask.swift
-//  CRUD MVVM
-//
-//  Created by user220831 on 6/29/22.
-//
-
 import Foundation
 import UIKit
 
@@ -14,12 +7,11 @@ extension LoginViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         let currentText = textField.text ?? ""
-
+        
         guard let stringRange = Range(range, in: currentText) else { return false }
-
+        
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
-
-        // limit for characters
+        
         return updatedText.count <= 6
     }
     

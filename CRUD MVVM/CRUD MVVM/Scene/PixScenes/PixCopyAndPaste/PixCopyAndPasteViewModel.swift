@@ -1,10 +1,3 @@
-//
-//  PixCopyAndPastViewModel.swift
-//  CRUD MVVM
-//
-//  Created by user220212 on 6/1/22.
-//
-
 import Foundation
 import UIKit
 
@@ -28,7 +21,6 @@ final class PixCopyAndPasteViewModel {
     public func verifyValuesFromCopyPastePix(copyPastePix: String) {
         let copyPasteArray = copyPastePix.components(separatedBy: "//")
         
-        //verify if it's in a valid format
         let isValidCopyPaste = isValidCopyPastePix(copyPasteArray: copyPasteArray)
         
         if isValidCopyPaste == true {
@@ -42,7 +34,6 @@ final class PixCopyAndPasteViewModel {
         }
     }
     
-    //verify if the format of copypastepix is correct -> 4 elements separated by "//"
     private func isValidCopyPastePix (copyPasteArray: [String]) -> Bool{
         if copyPasteArray.count != 4 {
             return false
@@ -86,7 +77,7 @@ final class PixCopyAndPasteViewModel {
             return true
             
         } else {
-//            displayAlert(message: "Verifique se seu saldo é suficiente ou se não está tentando fazer a transferência para a mesma conta.", title: "Algo deu errado", handler: nil)
+            
             return false
         }
     }

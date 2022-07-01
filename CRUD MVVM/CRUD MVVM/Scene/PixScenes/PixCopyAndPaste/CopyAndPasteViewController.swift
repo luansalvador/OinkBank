@@ -1,10 +1,3 @@
-//
-//  CopyAndPastViewController.swift
-//  CRUD MVVM
-//
-//  Created by user220212 on 5/26/22.
-//
-
 import UIKit
 
 class CopyAndPastViewController: UIViewController {
@@ -28,7 +21,7 @@ class CopyAndPastViewController: UIViewController {
     private func clickedContinue() {
         let CopyAndPastConfirm = CopyAndPasteConfirmViewController()
         pixCopyAndPastViewModel.verifyValuesFromCopyPastePix(copyPastePix: copyAndPastView.getText())
-
+        
         self.navigationController?.pushViewController(CopyAndPastConfirm, animated: true)
     }
     

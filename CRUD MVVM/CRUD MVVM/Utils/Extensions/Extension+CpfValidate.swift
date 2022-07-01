@@ -1,10 +1,3 @@
-//
-//  Extension+CpfValidate.swift
-//  CRUD MVVM
-//
-//  Created by user220831 on 6/28/22.
-//
-
 import Foundation
 import UIKit
 
@@ -24,6 +17,6 @@ extension StringProtocol {
         let numbers = compactMap(\.wholeNumberValue)
         guard numbers.count == 11 && Set(numbers).count != 1 else { return false }
         return numbers.prefix(9).digitoCPF == numbers[9] &&
-               numbers.prefix(10).digitoCPF == numbers[10]
+        numbers.prefix(10).digitoCPF == numbers[10]
     }
 }

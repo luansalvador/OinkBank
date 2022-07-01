@@ -1,10 +1,3 @@
-//
-//  MyKeysTableViewCell.swift
-//  CRUD MVVM
-//
-//  Created by user217586 on 5/24/22.
-//
-
 import Foundation
 import UIKit
 
@@ -14,10 +7,9 @@ class MyKeysTableViewCell: UITableViewCell {
     
     //MARK: - UIElements
     private lazy var keyImageView: UIImageView = {
-       let view = UIImageView()
+        let view = UIImageView()
         view.tintColor = .MyTheme.mainBlueColor
         view.image = UIImage(systemName: "key")
-        //view.backgroundColor = .systemGray5
         view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -34,7 +26,7 @@ class MyKeysTableViewCell: UITableViewCell {
     }()
     
     private lazy var keyLabel: UILabel = {
-       let view = UILabel()
+        let view = UILabel()
         view.text = "key teste"
         view.font = .MyTheme.defaultText
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -79,12 +71,6 @@ class MyKeysTableViewCell: UITableViewCell {
             keyLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             keyLabel.leadingAnchor.constraint(equalTo: keyImageView.trailingAnchor, constant: 40)
             
-//            keyTypeLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-//            keyTypeLabel.leadingAnchor.constraint(equalTo: keyImageView.trailingAnchor, constant: 10),
-//            keyTypeLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.35),
-//
-//            keyLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-//            keyLabel.leadingAnchor.constraint(equalTo: keyTypeLabel.trailingAnchor, constant: 10)
         ])
     }
 }

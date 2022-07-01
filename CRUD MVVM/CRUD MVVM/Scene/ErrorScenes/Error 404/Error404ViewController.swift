@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  CRUD MVVM
-//
-//  Created by user220212 on 6/14/22.
-//
-
 import UIKit 
 
 class Error404ViewController: UIViewController {

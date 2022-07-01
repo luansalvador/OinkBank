@@ -1,10 +1,3 @@
-//
-//  CadastroConcluido.swift
-//  CRUD MVVM
-//
-//  Created by user217685 on 6/14/22.
-//
-
 import UIKit
 import Foundation
 
@@ -17,14 +10,14 @@ class RegisterSucessViewController: UIViewController {
         view.font = UIFont.MyTheme.defaultText.withSize(24)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
-        }()
+    }()
     private lazy var infoLabel:UILabel = {
         let view = UILabel()
         view.text = "Seus dados de acesso:"
         view.font = UIFont.MyTheme.defaultText.withSize(17)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
-        }()
+    }()
     //MARK: - Images Views
     private lazy var infosAccount: UILabel = {
         let view = UILabel()
@@ -43,33 +36,32 @@ class RegisterSucessViewController: UIViewController {
     }()
     //MARK: - Botão
     private lazy var sucessButton: UIButton = UIButton.defaultButton(title: "Entrar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(sucessEnterButton))
-        
-
+    
+    
     
     
     
     //MARK: - Button Actions
     @objc func sucessEnterButton() {
-        //navigationController?.popToRootViewController(animated: true)
         let homeViewController = HomeViewController()
         navigationController?.pushViewController(homeViewController, animated: true)
     }
-   
+    
     
     //MARK: - viewdidload
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let presentationController = presentationController as? UISheetPresentationController {
-                presentationController.detents = [
-                    .large()
-                ]
+            presentationController.detents = [
+                .large()
+            ]
             
             setupView()
             setupConstraints()
             self.additionalSetup()
-           
-    }
+            
+        }
     }
     
     private func additionalSetup(){
@@ -79,7 +71,7 @@ class RegisterSucessViewController: UIViewController {
     
     
     //MARK: - SetupView
-        func setupView(){
+    func setupView(){
         
         view.addSubview(sucessLabel)
         view.addSubview(infoLabel)
@@ -90,7 +82,7 @@ class RegisterSucessViewController: UIViewController {
         
     }
     //MARK: - Constraints
-        func setupConstraints(){
+    func setupConstraints(){
         NSLayoutConstraint.activate([
             sucessLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 20),
             sucessLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 16),
@@ -111,6 +103,6 @@ class RegisterSucessViewController: UIViewController {
             
         ])
     }
-   
+    
 }
 

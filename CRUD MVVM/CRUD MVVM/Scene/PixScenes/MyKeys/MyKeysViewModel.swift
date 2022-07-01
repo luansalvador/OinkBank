@@ -1,10 +1,3 @@
-//
-//  MyKeysViewModel.swift
-//  CRUD MVVM
-//
-//  Created by user217586 on 5/24/22.
-//
-
 import Foundation
 
 //MARK: - protocols
@@ -36,7 +29,7 @@ struct OptionKeyData {
 }
 
 
-    let optionSelected: String = ""
+let optionSelected: String = ""
 
 final class MyKeysViewModel {
     weak var delegate: MyKeysViewModelDelegate?
@@ -50,14 +43,13 @@ final class MyKeysViewModel {
     
     
     
-   
+    
     
     
     //MARK: - verifyPix
     func verifyPix(){
         print(allPix)
         print(allPix[loginIndex])
-        //verify each pix key
         if allPix[loginIndex].cpfKey != "" {
             optionKeyInformation[0].keyText = allPix[loginIndex].cpfKey
         }
