@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  CRUD MVVM
+
+  Created by user217584 on 01/07/22.
+  
+*/
+
+"Bem-vindo" = "Seja bem-vindo ao OinkBank, cadastro realizado com sucesso!";
+"Seus dados" = "Seus dados de acesso:";
+"Conta" = "•Conta: %@-%@ \n•Agência: 1-9";
+"Entrar" = "Entrar";

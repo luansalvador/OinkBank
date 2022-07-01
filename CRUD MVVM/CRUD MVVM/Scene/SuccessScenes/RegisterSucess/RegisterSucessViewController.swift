@@ -5,7 +5,7 @@ class RegisterSucessViewController: UIViewController {
     //MARK: - Labels Texts
     private lazy var sucessLabel:UILabel = {
         let view = UILabel()
-        view.text = "Seja bem-vindo ao OinkBank, cadastro realizado com sucesso!"
+        view.text = String(format: NSLocalizedString("Bem-vindo", comment: ""))
         view.numberOfLines = 3
         view.font = UIFont.MyTheme.defaultText.withSize(24)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -13,7 +13,7 @@ class RegisterSucessViewController: UIViewController {
     }()
     private lazy var infoLabel:UILabel = {
         let view = UILabel()
-        view.text = "Seus dados de acesso:"
+        view.text = String(format: NSLocalizedString("Seus dados", comment: ""))
         view.font = UIFont.MyTheme.defaultText.withSize(17)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -21,9 +21,10 @@ class RegisterSucessViewController: UIViewController {
     //MARK: - Images Views
     private lazy var infosAccount: UILabel = {
         let view = UILabel()
+        let account = String(clients[loginIndex].account)
+        let digit = String(clients[loginIndex].verifyDigit)
         view.numberOfLines = 2
-        view.text = "•Conta: 1-2 \n•Agência: 1-9"
-        view.text = "•Conta: \(String(clients[loginIndex].account))-\(String(clients[loginIndex].verifyDigit)) \n•Agência: 1-9"
+        view.text = String(format: NSLocalizedString("Conta", comment: ""), account, digit)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -35,7 +36,7 @@ class RegisterSucessViewController: UIViewController {
         return view
     }()
     //MARK: - Botão
-    private lazy var sucessButton: UIButton = UIButton.defaultButton(title: "Entrar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(sucessEnterButton))
+    private lazy var sucessButton: UIButton = UIButton.defaultButton(title: String(format: NSLocalizedString("Entrar", comment: "")), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(sucessEnterButton))
     
     
     
