@@ -1,10 +1,3 @@
-//
-//  PixHomeViewModel.swift
-//  CRUD MVVM
-//
-//  Created by Ancarinha on 19/05/22.
-//
-
 import Foundation
 
 //MARK: - protocols
@@ -27,13 +20,6 @@ protocol PixHomeViewModeling {
     
     func pushToRegisterPix()
 }
-
-////MARK: - optionData
-//struct OptionKeyData {
-//    let imageTitle: String
-//    let keyTitle: String
-//    var keyText: String
-//}
 
 //MARK: - class
 final class PixHomeViewModel {

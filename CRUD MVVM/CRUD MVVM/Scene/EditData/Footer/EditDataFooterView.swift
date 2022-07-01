@@ -1,10 +1,3 @@
-//
-//  EditDataFooterView.swift
-//  CRUD MVVM
-//
-//  Created by user210203 on 5/4/22.
-//
-
 import UIKit
 
 class EditDataFooterView: UIView {
@@ -16,7 +9,7 @@ class EditDataFooterView: UIView {
     private lazy var confirmEditButton: UIButton = UIButton.defaultButton(title: "Confirmar Edição", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performEdit))
     
     private lazy var deleteRegisterButton: UIButton = {
-       let view = UIButton()
+        let view = UIButton()
         view.setTitle("Excluir", for: .normal)
         view.backgroundColor = .MyTheme.backgroundColor
         view.titleLabel?.font = .MyTheme.defaultText

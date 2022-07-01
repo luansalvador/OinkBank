@@ -1,10 +1,3 @@
-//
-//  Error404View.swift
-//  CRUD MVVM
-//
-//  Created by user220212 on 6/14/22.
-//
-
 import UIKit
 
 class Error404View: UIView {
@@ -30,7 +23,7 @@ class Error404View: UIView {
     }()
     
     private lazy var tryAgainButton: UIButton = UIButton.defaultButton(title: "Tentar Novamente", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performTryAgain))
-        
+    
     
     private lazy var error404Image: UIImageView = {
         let view = UIImageView()
@@ -86,7 +79,7 @@ class Error404View: UIView {
             self.tryAgainButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor,constant: -16),
             self.tryAgainButton.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 16),
             self.tryAgainButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -16),
-
+            
         ])
     }
     

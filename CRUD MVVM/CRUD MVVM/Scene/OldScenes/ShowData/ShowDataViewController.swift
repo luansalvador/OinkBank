@@ -1,10 +1,3 @@
-//
-//  ShowDataViewController.swift
-//  CRUD MVVM
-//
-//  Created by user210203 on 4/28/22.
-//
-
 import UIKit
 
 class ShowDataViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UISearchBarDelegate {
@@ -22,7 +15,7 @@ class ShowDataViewController: UIViewController, UITableViewDelegate, UITableView
     let tableView = UITableView(frame: .zero, style: .plain)
     
     private func setupTableView(){
-        //table view
+        
         self.view.addSubview(tableView)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -58,9 +51,9 @@ extension ShowDataViewController {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ShowDataHeaderView()
         
-        //search bar
+        
         header.searchBar.delegate = self
-    
+        
         return header
     }
     
@@ -85,7 +78,6 @@ extension ShowDataViewController {
         let editDataViewModel = EditDataViewModel(reloadDelegate: self)
         let editDataViewController = EditDataViewController(viewModel: editDataViewModel)
         self.present(editDataViewController, animated: true)
-        //self.navigationController?.pushViewController(editDataViewController, animated: true)
     }
     
     // MARK: - Cell, SetupCell, TextfieldData

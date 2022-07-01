@@ -1,10 +1,3 @@
-//
-//  CopyAndPasteConfirm.swift
-//  CRUD MVVM
-//
-//  Created by user217584 on 27/05/22.
-//
-
 import Foundation
 import UIKit
 
@@ -125,7 +118,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
         }
     }
     
-
+    
     
     override func loadView() {
         super.loadView()

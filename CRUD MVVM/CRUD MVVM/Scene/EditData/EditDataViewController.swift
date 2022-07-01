@@ -1,27 +1,18 @@
-//
-//  EditDataViewController.swift
-//  CRUD MVVM
-//
-//  Created by user210203 on 5/3/22.
-//
-
 import UIKit
 
 class EditDataViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     let viewModel: EditDataViewModel
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Editar Cadastro"
-
-        // Do any additional setup after loading the view.
-        // Present modaly in botton
+        
         if let presentationController = presentationController as? UISheetPresentationController {
-                presentationController.detents = [
-                    .medium(),
-                    .large()
-                ]
-            }
+            presentationController.detents = [
+                .medium(),
+                .large()
+            ]
+        }
         setupTableView()
     }
     
@@ -43,7 +34,6 @@ class EditDataViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.dataSource = self
         tableView.delegate = self
         
-        //cell
         tableView.register(EditDataTableViewCell.self, forCellReuseIdentifier: EditDataTableViewCell.reuseId)
         tableView.register(EditDataDatePickerTableViewCell.self, forCellReuseIdentifier: EditDataDatePickerTableViewCell.reuseId)
         tableView.register(EditDataPickerTableViewCell.self, forCellReuseIdentifier: EditDataPickerTableViewCell.reuseId)
@@ -82,10 +72,10 @@ extension EditDataViewController {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = EditDataHeaderView()
         header.viewModel = viewModel
-
+        
         return header
     }
-
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         EditDataHeaderView.height
     }
@@ -103,7 +93,6 @@ extension EditDataViewController {
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: EditDataDatePickerTableViewCell.reuseId, for: indexPath) as? EditDataDatePickerTableViewCell else {
                 return UITableViewCell()}
-            //textfielddata
             cell.editTextField.tag = indexPath.row
             cell.editTextField.delegate = self
             cell.editTextField.isUserInteractionEnabled = false
@@ -116,7 +105,6 @@ extension EditDataViewController {
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: EditDataPickerTableViewCell.reuseId, for: indexPath) as? EditDataPickerTableViewCell else {
                 return UITableViewCell()}
-            //textfielddata
             cell.editTextField.tag = indexPath.row
             cell.editTextField.delegate = self
             
@@ -128,7 +116,6 @@ extension EditDataViewController {
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: EditDataTableViewCell.reuseId, for: indexPath) as? EditDataTableViewCell else {
                 return UITableViewCell()}
-            //textfielddata
             cell.editTextField.tag = indexPath.row
             
             if cell.editTextField.tag == 0 || cell.editTextField.tag == 1 {
@@ -163,9 +150,8 @@ extension EditDataViewController {
         let cell = tableView.cellForRow(at: indexPath) as? EditDataTableViewCell
         
         switch textField.tag{
-        // name
         case 0:
-             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
+            let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
             
             if verify == false {
                 cell?.tipLabel.text = "Campo obrigatório"
@@ -175,7 +161,6 @@ extension EditDataViewController {
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
-        //cpf
         case 1:
             if textField.text == "" {
                 cell?.tipLabel.text = "Campo obrigatório"
@@ -194,7 +179,6 @@ extension EditDataViewController {
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
-        //date
         case 2:
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: viewModel.editClientBirthDate)
             
@@ -208,7 +192,6 @@ extension EditDataViewController {
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
-        //email
         case 3:
             if textField.text == "" {
                 cell?.tipLabel.text = "Campo obrigatório"
@@ -227,10 +210,9 @@ extension EditDataViewController {
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
-            //monthlyIncome
         case 4:
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: viewModel.editClientMonthlyIncome)
-                
+            
             if verify == false {
                 let cell = tableView.cellForRow(at: indexPath) as? EditDataPickerTableViewCell
                 cell?.tipLabel.text = "Campo obrigatório"
@@ -241,7 +223,6 @@ extension EditDataViewController {
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
-        //netWorth
         case 5:
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
             
@@ -258,7 +239,6 @@ extension EditDataViewController {
         }
     }
     
-    // ENUM
     enum textFieldData: Int{
         case nameTextField
         case cpfTextField
@@ -268,7 +248,6 @@ extension EditDataViewController {
         case netWorthTextField
     }
     
-    // Value Changed
     @objc func valueChanged(_ textField: UITextField){
         switch textField.tag{
         case textFieldData.nameTextField.rawValue:
@@ -296,23 +275,23 @@ extension EditDataViewController {
     
     func createPickerView(sender: UITextField){
         let datePickerView : UIDatePicker = UIDatePicker()
-
+        
         datePickerView.datePickerMode = UIDatePicker.Mode.date
         sender.inputView = datePickerView
         datePickerView.tag = sender.tag
         datePickerView.addTarget(self, action: #selector(datePickerValueChanged(caller:)), for: UIControl.Event.valueChanged)
     }
-
+    
     @objc func datePickerValueChanged(caller: UIDatePicker){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.none
-
+        
         let indexRow = 3
-
+        
         let indexPath = IndexPath(row: indexRow, section: 0)
         let cell = tableView.cellForRow(at: indexPath) as! EditDataTableViewCell
-
+        
         cell.editTextField.text = dateFormatter.string(from: caller.date)
     }
 }

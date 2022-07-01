@@ -1,10 +1,3 @@
-//
-//  LoginViewController.swift
-//  CRUD MVVM
-//
-//  Created by Ancarinha on 11/05/22.
-//
-
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -64,11 +57,9 @@ class LoginViewController: UIViewController {
     }()
     
     
-    //Label
     private lazy var agencyLabel: UILabel = {
         let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
-        //.MyTheme.whiteTextColor
         view.font = .MyTheme.defaultText
         view.text = "Agência"
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -78,14 +69,12 @@ class LoginViewController: UIViewController {
     private lazy var accountLabel: UILabel = {
         let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
-        //.MyTheme.whiteTextColor
         view.text = "Conta com dígito"
         view.font = .MyTheme.defaultText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    //TextField
     private lazy var agencyTextField: UITextField = {
         let view = UITextField()
         view.borderStyle = .none
@@ -136,7 +125,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - login button
     
-        private lazy var loginButton: UIButton = UIButton.defaultButton(title: "Entrar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performLogin))
+    private lazy var loginButton: UIButton = UIButton.defaultButton(title: "Entrar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performLogin))
     
     //MARK: -register button
     private lazy var registerButton: UIButton = {

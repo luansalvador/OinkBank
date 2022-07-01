@@ -1,10 +1,3 @@
-//
-//  cobrarViewController.swift
-//  CRUD MVVM
-//
-//  Created by user220270 on 5/26/22.
-//
-
 import UIKit
 
 class ChargeViewController: UIViewController {
@@ -73,8 +66,7 @@ class ChargeViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: .default))
             self.present(alert, animated: true, completion: nil)
         }else{
-            //cobrarViewModel.generateCopyPaste(value: self.textField.text ?? "", clientCPF: clients[loginIndex].cpf)
-            //cobrarViewModel.verifyValuesFromCopyPastePix(copyPastePix: cobrarViewModel.generateCopyPaste(value: self.textField.text ?? "", clientCPF: clients[loginIndex].cpf))
+            
             PixChargeViewModel.copyPasteKey = cobrarViewModel.generateCopyPaste(value: self.textField.text ?? "", clientCPF: clients[loginIndex].cpf)
             confirmViewController.configLabel(text: PixChargeViewModel.copyPasteKey)
             performGoToConfirm()
@@ -124,7 +116,7 @@ class ChargeViewController: UIViewController {
     
     //MARK: - MoneyMask
     @objc func myTextFieldDidChange(_ textField: UITextField) {
-
+        
         if let amountString = textField.text?.currencyInputFormatting() {
             textField.text = amountString
         }

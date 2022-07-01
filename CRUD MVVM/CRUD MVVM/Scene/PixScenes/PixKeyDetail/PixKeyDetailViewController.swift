@@ -1,10 +1,3 @@
-//
-//  PixKeyDetailViewController.swift
-//  CRUD MVVM
-//
-//  Created by Ancarinha on 19/05/22.
-//
-
 import UIKit
 
 class PixKeyDetailViewController: UIViewController {
@@ -15,8 +8,7 @@ class PixKeyDetailViewController: UIViewController {
 
         title = "Detalhes da chave PIX"
 
-        // Do any additional setup after loading the view.
-        // Present modaly in botton
+
         if let presentationController = presentationController as? UISheetPresentationController {
                 presentationController.detents = [
                     .medium(),
@@ -38,7 +30,6 @@ class PixKeyDetailViewController: UIViewController {
         return view
     }()
     
-    //key type
     private lazy var keyTypeDescriptionLabel: UILabel = {
        let view = UILabel()
         view.text = "Tipo de chave:"
@@ -55,7 +46,6 @@ class PixKeyDetailViewController: UIViewController {
         return view
     }()
     
-    //key
     private lazy var yourKeyDescriptionLabel: UILabel = {
        let view = UILabel()
         view.text = "Sua chave:"

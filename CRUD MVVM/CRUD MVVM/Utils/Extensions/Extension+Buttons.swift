@@ -1,17 +1,10 @@
-//
-//  ButtonExtension.swift
-//  CRUD MVVM
-//
-//  Created by user220831 on 6/15/22.
-//
-
 import Foundation
 import UIKit
 
 extension UIButton {
-
+    
     static func defaultButton(title: String,font: UIFont = .MyTheme.defaultText, target: Any? = nil, selector: Selector? = nil) -> UIButton {
-
+        
         let view = UIButton()
         view.backgroundColor = UIColor.MyTheme.greenColor
         view.setTitleColor(.MyTheme.blackColor, for: .normal)
@@ -23,7 +16,7 @@ extension UIButton {
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
-
+        
     }
     
     static func transparentButton(title: String,font: UIFont = .MyTheme.defaultText, target: Any? = nil, selector: Selector? = nil) -> UIButton {
@@ -37,6 +30,6 @@ extension UIButton {
         view.titleLabel?.numberOfLines = 0
         
         return view
-
+        
     }
 }

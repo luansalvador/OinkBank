@@ -1,10 +1,3 @@
-//
-//  EditDataTableViewCell.swift
-//  CRUD MVVM
-//
-//  Created by user210203 on 5/3/22.
-//
-
 import Foundation
 import UIKit
 
@@ -34,7 +27,7 @@ final class EditDataDatePickerTableViewCell: UITableViewCell {
         view.rightView = accessoryAlertImageView
         view.rightViewMode = .always
         
-    
+        
         return view
     }()
     
@@ -60,11 +53,9 @@ final class EditDataDatePickerTableViewCell: UITableViewCell {
     
     // MARK: - alert elements
     lazy var accessoryAlertImageView: UIImageView = {
-        //added on registertextfield
         let view = UIImageView()
         view.tintColor = .MyTheme.deleteTextColor
         let image = UIImage(named: "registerTextFieldAlertImage")
-        //let image = UIImage(systemName: "key")
         view.image = image
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isHidden = true
@@ -84,7 +75,6 @@ final class EditDataDatePickerTableViewCell: UITableViewCell {
     //MARK: = Cell lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        //constraints
         setupConstraints()
     }
     

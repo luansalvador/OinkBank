@@ -1,14 +1,7 @@
-//
-//  RegisterViewController.swift
-//  CRUD MVVM
-//
-//  Created by user210203 on 4/28/22.
-//
-
 import UIKit
 
 class RegisterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    // view model's type, declaration on init
+    
     let viewModel: RegisterViewModel
     
     override func viewDidLoad() {
@@ -24,7 +17,6 @@ class RegisterViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: - setup TableView
     let tableView = UITableView(frame: .zero, style: .grouped)
     private func setupTableView(){
-        //table view
         
         self.view.addSubview(tableView)
         
@@ -97,7 +89,6 @@ extension RegisterViewController {
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: RegisterDatePickerTableViewCell.reuseId, for: indexPath) as? RegisterDatePickerTableViewCell else {
                 return UITableViewCell()}
-            //textfielddata
             cell.registerTextField.tag = indexPath.row
             cell.registerTextField.delegate = self
             let info = viewModel.registerInformation[indexPath.row]
@@ -107,7 +98,6 @@ extension RegisterViewController {
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: RegisterPickerTableViewCell.reuseId, for: indexPath) as? RegisterPickerTableViewCell else {
                 return UITableViewCell()}
-            //textfielddata
             cell.registerTextField.tag = indexPath.row
             cell.registerTextField.delegate = self
             let info = viewModel.registerInformation[indexPath.row]
@@ -117,7 +107,6 @@ extension RegisterViewController {
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: RegisterTableViewCell.reuseId, for: indexPath) as? RegisterTableViewCell else {
                 return UITableViewCell()}
-            //textfielddata
             cell.registerTextField.tag = indexPath.row
             cell.registerTextField.delegate = self
             let info = viewModel.registerInformation[indexPath.row]
@@ -151,9 +140,8 @@ extension RegisterViewController:  UITextFieldDelegate{
         let cell = tableView.cellForRow(at: indexPath) as? RegisterTableViewCell
         
         switch textField.tag{
-        // name
         case 0:
-             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
+            let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
             
             if verify == false {
                 cell?.tipLabel.text = "Campo obrigatório"
@@ -163,7 +151,7 @@ extension RegisterViewController:  UITextFieldDelegate{
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
-        //cpf
+            
         case 1:
             if textField.text == "" {
                 cell?.tipLabel.text = "Campo obrigatório"
@@ -182,7 +170,6 @@ extension RegisterViewController:  UITextFieldDelegate{
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
-        //date
         case 2:
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: viewModel.newClientBirthDate)
             
@@ -196,7 +183,6 @@ extension RegisterViewController:  UITextFieldDelegate{
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
-        //email
         case 3:
             if textField.text == "" {
                 cell?.tipLabel.text = "Campo obrigatório"
@@ -215,10 +201,9 @@ extension RegisterViewController:  UITextFieldDelegate{
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
-            //monthlyIncome
         case 4:
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: viewModel.newClientMonthlyIncome)
-                
+            
             if verify == false {
                 let cell = tableView.cellForRow(at: indexPath) as? RegisterPickerTableViewCell
                 cell?.tipLabel.text = "Campo obrigatório"
@@ -229,7 +214,7 @@ extension RegisterViewController:  UITextFieldDelegate{
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
-        //netWorth
+            
         case 5:
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
             
@@ -241,7 +226,7 @@ extension RegisterViewController:  UITextFieldDelegate{
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
-        //password
+            
         case 6:
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
             
@@ -253,7 +238,7 @@ extension RegisterViewController:  UITextFieldDelegate{
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
-        //confirmPassword
+            
         case 7:
             if textField.text != viewModel.newClientPassword {
                 cell?.tipLabel.text = "Senhas não correspondem"
@@ -277,7 +262,6 @@ extension RegisterViewController:  UITextFieldDelegate{
         }
     }
     
-    //MARK: - Enum textfields
     enum textFieldData: Int{
         case nameTextField
         case cpfTextField

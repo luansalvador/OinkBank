@@ -1,16 +1,8 @@
-//
-//  EditDataViewModel.swift
-//  CRUD MVVM
-//
-//  Created by user210203 on 5/3/22.
-//
-
 import Foundation
 import UIKit
 
 //MARK: - Protocols
 protocol EditDataViewModelDelegate: AnyObject {
-    //Necessary to display alert/reloadData on View Controller
     func displayAlert(title: String, message: String)
     func displayAlertWithDismissAction(title: String, message: String)
     func displayAlertWithAction(title: String, message: String)
@@ -21,7 +13,6 @@ protocol EditDataViewModelDelegate: AnyObject {
 
 protocol EditDataViewModeling {
     var delegate: EditDataViewModelDelegate? { get set }
-    //reloadDelegate
     var reloadDelegate: ShowDataViewModelReloadDelegate? { get }
     
     func displayAlert(title: String, message: String)
@@ -34,7 +25,6 @@ protocol EditDataViewModeling {
 }
 
 final class EditDataViewModel {
-    //let service = CoreDataService()
     weak var delegate: EditDataViewModelDelegate?
     weak var reloadDelegate: ShowDataViewModelReloadDelegate?
     
@@ -74,7 +64,7 @@ final class EditDataViewModel {
     
     func updateClient(){
         let updateClient = Client(name: editClientName, cpf: editClientCpf, birthDate: editClientBirthDate, email: editClientEmail, monthlyIncome: editClientMonthlyIncome, netWorth: editClientNetWorth, password: editClientPassword, balance: Double(editClientBalance) , account: editClientAccount, verifyDigit: editClientVerifyDigit)
-//        let verify = verifyTf()
+        
         let verifyEmail = verifyEmail(email: updateClient.email)
         print(updateClient.cpf)
         let verifyCpf = verifyCpf(cpf: updateClient.cpf)
@@ -82,7 +72,6 @@ final class EditDataViewModel {
         
         if verifyEmail == true && verifyCpf == true{
             clients[editIndex] = updateClient
-            //service.updateClient(editClient: updateClient)
             
             reloadUpdateAllRegister()
             displayAlertWithDismissAction(title: "Sucesso", message: "Atualização realizada")
@@ -98,8 +87,7 @@ final class EditDataViewModel {
         
         for i in 0...valuesTyped.count-1{
             if valuesTyped[i] == "" || valuesTyped[i]  == "0.0"{
-                //mudar depois ALERTA
-//                self.delegate?.displayAlert(title: "Erro", message: "Preencha todos os Campos")
+                
                 return false
             }
         }
@@ -110,14 +98,14 @@ final class EditDataViewModel {
         let cpfVerify = cpf.isValidCPF
         
         if cpf != clients[editIndex].cpf {
-//            self.delegate?.displayAlert(title: "Erro", message: "Não é possível editar CPF")
+            
             return false
         }
         
         if cpfVerify == true {
             return true
         } else {
-//            self.delegate?.displayAlert(title: "Erro", message: "CPF Inválido")
+            
             return false
         }
     }
@@ -132,7 +120,7 @@ final class EditDataViewModel {
         if validate == true {
             return true
         } else {
-//            self.delegate?.displayAlert(title: "Erro", message: "E-mail Inválido")
+            
             return false
         }
     }
@@ -146,27 +134,22 @@ final class EditDataViewModel {
         print(maxAge)
         
         if date >= minAge || date <= maxAge {
-//            self.delegate?.displayAlert(title: "Erro", message: "Idade Inválida, a idade mínima é 18 anos e a máxima 120 anos")
-            editClientBirthDate = ""
-            //return false
+            
         } else {
-            //return true
+            
         }
     }
     
     //MARK: - Delete
     func deleteClient(){
         clients.remove(at: editIndex)
-        //service.deleteClient()
-        //reloadUpdateAllRegister()
-        //dismissView()
         pushToIntro()
     }
     
     //MARK: - TextFieldVerifications
     func verifyTextFieldRealTime(index: Int, value: String) -> Bool {
         switch index {
-        // name
+            
         case 0:
             if value == "" {
                 return false
@@ -174,7 +157,7 @@ final class EditDataViewModel {
             else {
                 return true
             }
-        //cpf
+            
         case 1:
             let verifyCpf = verifyCpf(cpf: value)
             
@@ -184,7 +167,7 @@ final class EditDataViewModel {
             else {
                 return false
             }
-        // date
+            
         case 2:
             if value == "" || value == "Selecionar"{
                 return false
@@ -192,7 +175,7 @@ final class EditDataViewModel {
             else {
                 return true
             }
-        //email
+            
         case 3:
             let verifyEmail = verifyEmail(email: value)
             
@@ -202,7 +185,7 @@ final class EditDataViewModel {
             else {
                 return false
             }
-        // monthly income
+            
         case 4:
             if value == "" || value == "Selecionar"{
                 return false
@@ -210,7 +193,7 @@ final class EditDataViewModel {
             else {
                 return true
             }
-        //netWorth
+            
         case 5:
             if value == "" {
                 return false
@@ -218,7 +201,7 @@ final class EditDataViewModel {
             else {
                 return true
             }
-        //password
+            
         case 6:
             if value == "" {
                 return false
@@ -226,7 +209,7 @@ final class EditDataViewModel {
             else {
                 return true
             }
-        //confirmPassword
+            
         case 7:
             if value == "" {
                 return false
@@ -252,7 +235,6 @@ extension EditDataViewModel: EditDataViewModeling {
     }
     
     func reloadUpdateAllRegister() {
-        //reload delegate, other viewController
         self.reloadDelegate?.updateAllRegister()
     }
     

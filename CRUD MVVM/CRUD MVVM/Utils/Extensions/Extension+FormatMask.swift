@@ -1,10 +1,3 @@
-//
-//  Extension+FormatMask.swift
-//  CRUD MVVM
-//
-//  Created by user220831 on 6/28/22.
-//
-
 import Foundation
 import UIKit
 
