@@ -288,7 +288,6 @@
 			isa = PBXGroup;
 			children = (
 				B89E0890285A3B36006D6AA0 /* TransferFailViewController.swift */,
-				B8C6BD69286F5F9F0014FCB2 /* Localizable.strings */,
 			);
 			path = TranferFail;
 			sourceTree = "<group>";
@@ -427,6 +426,7 @@
 		90AD79E52860B81F00B7150B /* ErrorScenes */ = {
 			isa = PBXGroup;
 			children = (
+				B8C6BD69286F5F9F0014FCB2 /* Localizable.strings */,
 				30D6A7842862431D00CA6EA1 /* TranferFail */,
 				90AD79F32860C50700B7150B /* Error 404 */,
 				90AD79F12860C50700B7150B /* UnexpectedError */,

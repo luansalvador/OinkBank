@@ -9,7 +9,7 @@ class UnexpectedErrorViewController: UIViewController {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.numberOfLines = 1
-        lb.text = "Oooopss..."
+        lb.text = NSLocalizedString("Oooopss...", comment: "")
         lb.font = .MyTheme.boldTitleText
         lb.textColor = .MyTheme.defaultTextColor
         lb.textAlignment = .left
@@ -20,7 +20,7 @@ class UnexpectedErrorViewController: UIViewController {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.numberOfLines = 2
-        lb.text = "Parece que ocorreu um erro inesperado em nosso sistema."
+        lb.text = NSLocalizedString("Parece que ocorreu um erro inesperado em nosso sistema.", comment: "")
         lb.font = .MyTheme.defaultText
         lb.textColor = .MyTheme.defaultTextColor
         lb.textAlignment = .left
@@ -39,17 +39,7 @@ class UnexpectedErrorViewController: UIViewController {
     
     //MARK: - Button
     
-    lazy var backButton:UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Voltar", for: .normal)
-        button.titleLabel?.font = UIFont.MyTheme.defaultText
-        button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
-        button.backgroundColor = UIColor.MyTheme.greenColor
-        button.layer.cornerRadius = 5
-        button.addTarget(self, action: #selector(self.back), for: .touchUpInside)
-        return button
-    }()
+    private lazy var backButton: UIButton = UIButton.defaultButton(title: NSLocalizedString("Voltar", comment: ""), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(back))
     
     //MARK: - Button Action
     

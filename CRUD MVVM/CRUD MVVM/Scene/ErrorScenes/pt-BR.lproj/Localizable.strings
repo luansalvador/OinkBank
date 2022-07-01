@@ -5,9 +5,14 @@
   Created by user217685 on 7/1/22.
   
 */
+// MARK: TransferFail
 "Erro na transação!" = "Erro na transação!";
 "No momento, não foi possível efetuar a transação. Tente novamente mais tarde ou entre em contato conosco." = "No momento, não foi possível efetuar a transação. Tente novamente mais tarde ou entre em contato conosco.";
 "Voltar" = "Voltar";
+// MARK: Error 404
 "Esses não são os porcos \nque você estava procurando!" = "Esses não são os porcos \nque você estava procurando!";
 "Caso precise, entre em contato \ncom o suporte." = "Caso precise, entre em contato \ncom o suporte.";
 "Tentar Novamente" = "Tentar Novamente";
+// MARK: UnexpectedError
+"Oooopss..." = "Oooopss...";
+"Parece que ocorreu um erro inesperado em nosso sistema." = "Parece que ocorreu um erro inesperado em nosso sistema.";

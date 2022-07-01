@@ -10,7 +10,12 @@
 "No momento, não foi possível efetuar a transação. Tente novamente mais tarde ou entre em contato conosco." = "The transaction could not be carried out at this time. please try again later or contact us.";
 "Voltar" = "Back";
 // MARK: Error 404
-"Esses não são os porcos \nque você estava procurando!" = "Those aren't the pigs \Nyou were looking for!";
+"Esses não são os porcos \nque você estava procurando!" = "Those aren't the pigs you were looking for!";
 "Caso precise, entre em contato \ncom o suporte." = "If you need to, contact support.";
 "Tentar Novamente" = "Try Again";
+
+// MARK: UnexpectedError
+"Oooopss..." = "Oooopss...";
+"Parece que ocorreu um erro inesperado em nosso sistema." = "It looks like an error has occurred
+unexpected in our system.";
 
