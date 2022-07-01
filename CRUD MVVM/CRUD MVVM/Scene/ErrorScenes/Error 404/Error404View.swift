@@ -6,7 +6,7 @@ class Error404View: UIView {
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel()
-        view.text = "Esses não são os porcos \nque você estava procurando!"
+        view.text = NSLocalizedString("Esses não são os porcos \nque você estava procurando!", comment: "")
         view.numberOfLines = 0
         view.font = UIFont.MyTheme.homeHeaderText
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -15,14 +15,14 @@ class Error404View: UIView {
     
     private lazy var subtitleLabel: UILabel = {
         let view = UILabel()
-        view.text = "Caso precise, entre em contato \ncom o suporte."
+        view.text = NSLocalizedString("Caso precise, entre em contato \ncom o suporte.", comment: "")
         view.numberOfLines = 0
         view.font = UIFont.MyTheme.defaultText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    private lazy var tryAgainButton: UIButton = UIButton.defaultButton(title: "Tentar Novamente", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performTryAgain))
+    private lazy var tryAgainButton: UIButton = UIButton.defaultButton(title: NSLocalizedString("Tentar Novamente", comment: ""), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performTryAgain))
     
     
     private lazy var error404Image: UIImageView = {

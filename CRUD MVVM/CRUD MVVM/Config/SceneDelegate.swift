@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 
  
-        let rootViewController = TransferFailViewController()
+        let rootViewController = Error404ViewController()
 
 
         
