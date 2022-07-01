@@ -11,21 +11,21 @@ class RegisterPixKeyViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if editPixIndex == 0{
-            selectOptionTextField.text = "CPF"
+            selectOptionTextField.text = String(format: NSLocalizedString("CPF", comment: " "))
             viewModel?.optionSelected = "CPF"
             yourKeyTextField.text = viewModel?.verifySelection()
             
         }
         
         if editPixIndex == 1{
-            selectOptionTextField.text = "Chave Aleatória"
+            selectOptionTextField.text = String(format: NSLocalizedString("Chave Aleatória", comment: " "))
             viewModel?.optionSelected = "Chave Aleatória"
             yourKeyTextField.text = viewModel?.verifySelection()
             
         }
         
         if editPixIndex == 2{
-            selectOptionTextField.text = "Telefone"
+            selectOptionTextField.text = String(format: NSLocalizedString("Telefone", comment: " "))
             viewModel?.optionSelected = "Telefone"
             yourKeyTextField.text = viewModel?.verifySelection()
             
@@ -40,7 +40,7 @@ class RegisterPixKeyViewController: UIViewController {
         }
         
         if editPixIndex == 3{
-            selectOptionTextField.text = "E-mail"
+            selectOptionTextField.text = String(format: NSLocalizedString("E-mail", comment: " "))
             viewModel?.optionSelected = "E-mail"
             yourKeyTextField.text = viewModel?.verifySelection()
             
@@ -69,7 +69,7 @@ class RegisterPixKeyViewController: UIViewController {
     //MARK: - UIElements
     private lazy var descriptionLabel: UILabel = {
         let view = UILabel()
-        view.text = "Cadastrar uma chave PIX"
+        view.text = String(format: NSLocalizedString("Cadastrar uma chave PIX", comment: " "))
         view.font = .MyTheme.boldTitleText
         view.numberOfLines = -1
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -78,7 +78,7 @@ class RegisterPixKeyViewController: UIViewController {
     
     private lazy var keyTypeDescriptionLabel: UILabel = {
         let view = UILabel()
-        view.text = "Selecione o tipo de chave desejada:"
+        view.text = String(format: NSLocalizedString( "Selecione o tipo de chave desejada:", comment: " "))
         view.font = .MyTheme.defaultText
         view.numberOfLines = -1
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -87,7 +87,7 @@ class RegisterPixKeyViewController: UIViewController {
     
     lazy var yourKeyDescriptionLabel: UILabel = {
         let view = UILabel()
-        view.text = "Sua Chave:"
+        view.text = String(format: NSLocalizedString("Sua Chave:", comment: " "))
         view.font = .MyTheme.defaultText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -109,7 +109,7 @@ class RegisterPixKeyViewController: UIViewController {
     private lazy var registerPixKeyButton: UIButton = {
         let view = UIButton()
         view.backgroundColor = .MyTheme.blueColor
-        view.setTitle("Cadastrar", for: .normal)
+        view.setTitle(NSLocalizedString("Cadastrar", comment: " "),for: .normal)
         view.setTitleColor(UIColor.MyTheme.backgroundColor, for: .normal)
         view.titleLabel?.font = .MyTheme.defaultText
         view.layer.cornerRadius = 5
@@ -144,7 +144,7 @@ class RegisterPixKeyViewController: UIViewController {
         let view = UITextField()
          view.textAlignment = .center
          view.textColor = .MyTheme.blueColor
-         view.text = "Selecionar"
+         view.text = String(format: NSLocalizedString("Selecionar", comment: " "))
          view.backgroundColor = .MyTheme.greenColor
          view.inputView = Picker
          view.inputAccessoryView = toolBar

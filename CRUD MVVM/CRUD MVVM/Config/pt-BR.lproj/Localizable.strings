@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  CRUD MVVM
+
+  Created by user220270 on 7/1/22.
+  
+*/
+"CPF" = "CPF1";
+"Chave Aleatória" = "Chave Aleatória1";
+"Telefone" =  "Telefone1";
+"E-mail" = "E-mail1";
+"Cadastrar uma chave PIX" = "Cadastrar uma chave PIX1";
+"Selecione o tipo de chave desejada:" = "Selecione o tipo de chave desejada:1";
+"Sua Chave:" = "Sua Chave:1";
+"Cadastrar" = "Cadastrar1";
+"Selecionar" = "Selecionar1";
+
