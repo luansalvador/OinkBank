@@ -126,7 +126,7 @@ class RegisterPixKeyViewController: UIViewController {
         
         if verify == true && verifyNumber == true{
             
-            let alert = UIAlertController(title: "Chave cadastrada", message: "",preferredStyle: .alert)
+            let alert = UIAlertController(title: String(format: NSLocalizedString("Chave cadastrada", comment: " ")), message: "",preferredStyle: .alert)
             let registerAlert = UIAlertAction(title: "Ok", style: .default){ (action)in  self.dismiss(animated: true)}
             alert.addAction(registerAlert)
             self.present(alert,animated: true)

@@ -40,7 +40,7 @@ class PixKeyDetailViewController: UIViewController {
     
     private lazy var keyTypeLabel: UILabel = {
        let view = UILabel()
-        view.text = "Chave Aleatória(teste)"
+        view.text = String(format: NSLocalizedString("Chave Aleatória", comment: " "))
         view.font = .MyTheme.defaultBoldText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

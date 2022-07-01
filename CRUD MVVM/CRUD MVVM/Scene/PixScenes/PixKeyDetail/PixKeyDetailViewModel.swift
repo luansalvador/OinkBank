@@ -85,22 +85,22 @@ final class PixKeyDetailViewModel {
     
     func verifyRegisterKey() -> Bool{
         if editPixIndex == 0 && pixKey == "Cadastrar Nova Chave"{
-            displayAlert(title: "Erro", message: "Chave CPF não possui cadastro")
+            displayAlert(title: "Erro", message: String(format: NSLocalizedString("Chave CPF não possui cadastro", comment: " ")))
             return false
         }
         
         if editPixIndex == 1 && pixKey == "Cadastrar Nova Chave"{
-            displayAlert(title: "Erro", message: "Chave aleatória não possui cadastro")
+            displayAlert(title: "Erro", message: String(format: NSLocalizedString("Chave aleatória não possui cadastro", comment: " ")))
             return false
         }
         
         if editPixIndex == 2 && pixKey == "Cadastrar Nova Chave"{
-            displayAlert(title: "Erro", message: "Chave telefone não possui cadastro")
+            displayAlert(title: "Erro", message: String(format: NSLocalizedString("Chave telefone não possui cadastro", comment: " ")))
             return false
         }
         
         if editPixIndex == 3 && pixKey == "Cadastrar Nova Chave"{
-            displayAlert(title: "Erro", message: "Chave e-mail não possui cadastro")
+            displayAlert(title: "Erro", message: String(format: NSLocalizedString("Chave e-mail não possui cadastro", comment: " ")))
             return false
         }
         

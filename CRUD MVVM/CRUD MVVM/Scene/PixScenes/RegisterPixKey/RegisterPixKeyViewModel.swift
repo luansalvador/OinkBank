@@ -199,7 +199,7 @@ final class RegisterPixKeyViewModel {
             
             if text.count != 14{
                 
-                displayAlert(title: "Erro", message: "Número de telefone inválido")
+                displayAlert(title: "Erro", message: String(format: NSLocalizedString("Número de telefone inválido", comment: " ")))
                 return false
                 
             }
@@ -224,7 +224,7 @@ final class RegisterPixKeyViewModel {
         if validate == true {
             return true
         } else {
-            self.delegate?.displayAlert(title: "Erro", message: "E-mail Inválido")
+            self.delegate?.displayAlert(title: "Erro", message: String(format: NSLocalizedString("E-mail Inválido", comment: " ")))
             return false
         }
     }
@@ -234,7 +234,7 @@ final class RegisterPixKeyViewModel {
         
         if text == "" || text == "Chave Teste"{
             
-            displayAlert(title: "Erro", message: "Por favor verifique todos os campos")
+            displayAlert(title: "Erro", message: String(format: NSLocalizedString("Por favor verifique todos os campos", comment: " ")))
             
             return false
             
