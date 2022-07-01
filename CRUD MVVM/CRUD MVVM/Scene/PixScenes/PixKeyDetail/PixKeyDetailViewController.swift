@@ -23,7 +23,7 @@ class PixKeyDetailViewController: UIViewController {
     //MARK: - UIElements
     private lazy var descriptionLabel: UILabel = {
        let view = UILabel()
-        view.text = "Visualizar sua chave PIX"
+        view.text = String(format: NSLocalizedString("Visualizar sua chave PIX", comment: " "))
         view.font = .MyTheme.boldTitleText
         view.numberOfLines = -1
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +32,7 @@ class PixKeyDetailViewController: UIViewController {
     
     private lazy var keyTypeDescriptionLabel: UILabel = {
        let view = UILabel()
-        view.text = "Tipo de chave:"
+        view.text = String(format: NSLocalizedString("Tipo de chave:", comment: " "))
         view.font = .MyTheme.defaultBoldText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -48,7 +48,7 @@ class PixKeyDetailViewController: UIViewController {
     
     private lazy var yourKeyDescriptionLabel: UILabel = {
        let view = UILabel()
-        view.text = "Sua chave:"
+        view.text = String(format: NSLocalizedString("Sua chave:", comment: " "))
         view.font = .MyTheme.defaultBoldText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -67,7 +67,7 @@ class PixKeyDetailViewController: UIViewController {
        let view = UIButton()
         view.backgroundColor = .MyTheme.blueColor
         view.setTitleColor(UIColor.MyTheme.backgroundColor, for: .normal)
-        view.setTitle("Excluir chave", for: .normal)
+        view.setTitle(NSLocalizedString("Excluir chave", comment: " "),for: .normal)
         view.layer.cornerRadius = 5
         view.addTarget(self, action: #selector(performDelete), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false

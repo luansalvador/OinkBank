@@ -9,7 +9,7 @@ class MyKeysHeaderView: UIView {
     //MARK: - UIElements
     private lazy var descriptionLabel: UILabel = {
         let view = UILabel()
-        view.text = "Visualize, adicione ou exclua chaves Pix:"
+        view.text = String(format: NSLocalizedString( "Visualize, adicione ou exclua chaves Pix:", comment: " "))
         view.font = .MyTheme.defaultBoldText
         view.numberOfLines = -1
         view.translatesAutoresizingMaskIntoConstraints = false
