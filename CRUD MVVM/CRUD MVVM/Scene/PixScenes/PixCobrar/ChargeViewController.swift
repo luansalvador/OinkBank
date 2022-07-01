@@ -126,11 +126,7 @@ class ChargeViewController: UIViewController {
 extension String {
     
     func chargePixLocalized() -> String {
-        return NSLocalizedString(self,
-                                 tableName: "ChargePixLocalizable",
-                                 bundle: .main,
-                                 value: self,
-                                 comment: self)
+       return localized(tableName: "ChargePixLocalizable")
     }
 }
 

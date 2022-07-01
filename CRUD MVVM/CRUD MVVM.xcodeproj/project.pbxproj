@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E17111D28410337006E8BFD /* PixChargeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17111C28410337006E8BFD /* PixChargeViewModel.swift */; };
 		0E17111F28410354006E8BFD /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17111E28410354006E8BFD /* ConfirmViewController.swift */; };
-		0EE5BE9A284016170074B27B /* CobrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5BE99284016170074B27B /* CobrarViewController.swift */; };
+		0EE5BE9A284016170074B27B /* ChargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5BE99284016170074B27B /* ChargeViewController.swift */; };
 		2720C21C286C89D50023323F /* Extension+NoPasteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */; };
 		2720C21E286C8ACD0023323F /* Extension+LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */; };
 		2720C220286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21F286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift */; };
@@ -59,7 +59,7 @@
 		B8437A9F2858E75400F272D5 /* RegisterSucessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8437A9E2858E75400F272D5 /* RegisterSucessViewController.swift */; };
 		B89E0891285A3B36006D6AA0 /* TransferFailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E0890285A3B36006D6AA0 /* TransferFailViewController.swift */; };
 		C91FF8CE286F21F900034F91 /* LoginLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C91FF8CD286F21F900034F91 /* LoginLocalizable.strings */; };
-		C91FF8D2286F5F8600034F91 /* ChargePixLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C91FF8D1286F5F8600034F91 /* ChargePixLocalizable.strings */; };
+		C91FF8D6286F73AA00034F91 /* ChargePixLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C91FF8D8286F73AA00034F91 /* ChargePixLocalizable.strings */; };
 		C9CE78682847A91A0001AD09 /* PixCopyAndPasteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE78672847A91A0001AD09 /* PixCopyAndPasteViewModel.swift */; };
 		C9EA70522840036200AE6393 /* CopyAndPasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA70512840036200AE6393 /* CopyAndPasteView.swift */; };
 		C9EA70542840037600AE6393 /* CopyAndPasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA70532840037600AE6393 /* CopyAndPasteViewController.swift */; };
@@ -123,7 +123,7 @@
 /* Begin PBXFileReference section */
 		0E17111C28410337006E8BFD /* PixChargeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixChargeViewModel.swift; sourceTree = "<group>"; };
 		0E17111E28410354006E8BFD /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
-		0EE5BE99284016170074B27B /* CobrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobrarViewController.swift; sourceTree = "<group>"; };
+		0EE5BE99284016170074B27B /* ChargeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeViewController.swift; sourceTree = "<group>"; };
 		2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NoPasteTextField.swift"; sourceTree = "<group>"; };
 		2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+LineTextField.swift"; sourceTree = "<group>"; };
 		2720C21F286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+LoginAgencyAndAgencyMask.swift"; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		B8437A9E2858E75400F272D5 /* RegisterSucessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSucessViewController.swift; sourceTree = "<group>"; };
 		B89E0890285A3B36006D6AA0 /* TransferFailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFailViewController.swift; sourceTree = "<group>"; };
 		C91FF8CD286F21F900034F91 /* LoginLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LoginLocalizable.strings; sourceTree = "<group>"; };
-		C91FF8D1286F5F8600034F91 /* ChargePixLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ChargePixLocalizable.strings; sourceTree = "<group>"; };
+		C91FF8D7286F73AA00034F91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ChargePixLocalizable.strings; sourceTree = "<group>"; };
 		C9CE78672847A91A0001AD09 /* PixCopyAndPasteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixCopyAndPasteViewModel.swift; sourceTree = "<group>"; };
 		C9EA70512840036200AE6393 /* CopyAndPasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteView.swift; sourceTree = "<group>"; };
 		C9EA70532840037600AE6393 /* CopyAndPasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteViewController.swift; sourceTree = "<group>"; };
@@ -249,10 +249,10 @@
 		0EE5BE98284015E10074B27B /* PixCobrar */ = {
 			isa = PBXGroup;
 			children = (
-				0EE5BE99284016170074B27B /* CobrarViewController.swift */,
+				0EE5BE99284016170074B27B /* ChargeViewController.swift */,
 				0E17111E28410354006E8BFD /* ConfirmViewController.swift */,
 				0E17111C28410337006E8BFD /* PixChargeViewModel.swift */,
-				C91FF8D1286F5F8600034F91 /* ChargePixLocalizable.strings */,
+				C91FF8D8286F73AA00034F91 /* ChargePixLocalizable.strings */,
 			);
 			path = PixCobrar;
 			sourceTree = "<group>";
@@ -851,7 +851,7 @@
 				9097C3AF2852810000701562 /* Nunito-Regular.ttf in Resources */,
 				9097C3B82852810000701562 /* Nunito-LightItalic.ttf in Resources */,
 				9097C3B22852810000701562 /* Nunito-BoldItalic.ttf in Resources */,
-				C91FF8D2286F5F8600034F91 /* ChargePixLocalizable.strings in Resources */,
+				C91FF8D6286F73AA00034F91 /* ChargePixLocalizable.strings in Resources */,
 				9097C3B62852810000701562 /* Nunito-BlackItalic.ttf in Resources */,
 				9097C3B92852810000701562 /* Nunito-MediumItalic.ttf in Resources */,
 				9097C3B02852810000701562 /* Nunito-SemiBold.ttf in Resources */,
@@ -925,7 +925,7 @@
 				E6B237042821EB45008F206A /* EditDataViewModel.swift in Sources */,
 				90AD79FB2860C50700B7150B /* ReceivedTransferViewController.swift in Sources */,
 				901D0D7A28354C810095155D /* AllPix+CoreDataClass.swift in Sources */,
-				0EE5BE9A284016170074B27B /* CobrarViewController.swift in Sources */,
+				0EE5BE9A284016170074B27B /* ChargeViewController.swift in Sources */,
 				C9EA70522840036200AE6393 /* CopyAndPasteView.swift in Sources */,
 				9010130F282E89F400C709FA /* Clients+CoreDataClass.swift in Sources */,
 				D3927421282582ED0037F3E8 /* EditDataPickerTableViewCell.swift in Sources */,
@@ -997,6 +997,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C91FF8D8286F73AA00034F91 /* ChargePixLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C91FF8D7286F73AA00034F91 /* en */,
+			);
+			name = ChargePixLocalizable.strings;
+			sourceTree = "<group>";
+		};
 		D349E66C2824717F00EACD33 /* LaunchScreen.storyboard.xml */ = {
 			isa = PBXVariantGroup;
 			children = (
