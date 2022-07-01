@@ -57,7 +57,7 @@ class LoginViewController: UIViewController {
     
     private lazy var rectangleImage: UIImageView = {
         let wallpapper = UIImageView()
-        wallpapper.tintColor = .MyTheme.mainBlueColor
+        wallpapper.tintColor = .MyTheme.blueColor
         wallpapper.translatesAutoresizingMaskIntoConstraints = false
         wallpapper.image = UIImage(named: "Rectangle")
         return wallpapper

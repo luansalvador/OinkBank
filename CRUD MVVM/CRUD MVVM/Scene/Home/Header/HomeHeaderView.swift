@@ -24,7 +24,7 @@ class HomeHeaderView: UIView {
     
     private lazy var iconImageView: UIImageView = {
        let view = UIImageView()
-        view.tintColor = .MyTheme.mainBlueColor
+        view.tintColor = .MyTheme.blueColor
         view.image = UIImage(named: "ic_profile")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -33,7 +33,7 @@ class HomeHeaderView: UIView {
     //MARK: - Card
     private lazy var cardImageView: UIImageView = {
         let view = UIImageView()
-        view.backgroundColor = UIColor.MyTheme.mainBlueColor
+        view.backgroundColor = UIColor.MyTheme.blueColor
         view.layer.cornerRadius = 7
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -78,7 +78,7 @@ class HomeHeaderView: UIView {
         view.setImage(image, for: .normal)
         view.setTitle("Pagar", for: .normal)
         view.titleLabel?.font = UIFont.MyTheme.defaultText
-        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        view.backgroundColor = UIColor.MyTheme.greenColor
         view.tintColor = UIColor.MyTheme.blackColor
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
@@ -95,7 +95,7 @@ class HomeHeaderView: UIView {
         view.setImage(image, for: .normal)
         view.setTitle("Pix", for: .normal)
         view.titleLabel?.font = UIFont.MyTheme.defaultText
-        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        view.backgroundColor = UIColor.MyTheme.greenColor
         view.tintColor = UIColor.MyTheme.blackColor
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.addTarget(self, action: #selector(performPix), for: .touchUpInside)
@@ -113,7 +113,7 @@ class HomeHeaderView: UIView {
         view.setImage(image, for: .normal)
         view.setTitle("Transferir", for: .normal)
         view.titleLabel?.font = UIFont.MyTheme.defaultText
-        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        view.backgroundColor = UIColor.MyTheme.greenColor
         view.tintColor = UIColor.MyTheme.blackColor
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)

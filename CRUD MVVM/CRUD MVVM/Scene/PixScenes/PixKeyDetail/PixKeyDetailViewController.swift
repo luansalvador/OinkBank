@@ -75,7 +75,7 @@ class PixKeyDetailViewController: UIViewController {
     //MARK: - deleteKey button
     private lazy var deleteKeyButton: UIButton = {
        let view = UIButton()
-        view.backgroundColor = .MyTheme.mainBlueColor
+        view.backgroundColor = .MyTheme.blueColor
         view.setTitleColor(UIColor.MyTheme.backgroundColor, for: .normal)
         view.setTitle("Excluir chave", for: .normal)
         view.layer.cornerRadius = 5

@@ -15,7 +15,7 @@ class MyKeysTableViewCell: UITableViewCell {
     //MARK: - UIElements
     private lazy var keyImageView: UIImageView = {
        let view = UIImageView()
-        view.tintColor = .MyTheme.mainBlueColor
+        view.tintColor = .MyTheme.blueColor
         view.image = UIImage(systemName: "key")
         //view.backgroundColor = .systemGray5
         view.layer.cornerRadius = 10
