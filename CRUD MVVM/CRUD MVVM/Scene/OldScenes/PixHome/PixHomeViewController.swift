@@ -1,19 +1,12 @@
-//
-//  PixHomeViewController.swift
-//  CRUD MVVM
-//
-//  Created by Ancarinha on 19/05/22.
-//
-
 import UIKit
 
 class PixHomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let viewModel: PixHomeViewModel
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "Área Pix"
         view.backgroundColor = .systemBackground
         
@@ -97,16 +90,11 @@ extension PixHomeViewController {
 //MARK: - delgate
 extension PixHomeViewController: PixHomeViewModelDelegate {
     func pushToRegisterPix() {
-//        let registerPixKeyViewModel = RegisterPixKeyViewModel(reloadDelegate: self)
-//        let registerPixKeyViewController = RegisterPixKeyViewController(viewModel: registerPixKeyViewModel)
-//        self.present(registerPixKeyViewController, animated: true)
+        
     }
     
     func pushToPixDetail() {
-        //present controller that needs reloadDelegate
-//        let pixKeyDetailViewModel = PixKeyDetailViewModel(reloadDelegate: self)
-//        let pixKeyDetailViewController = PixKeyDetailViewController(viewModel: pixKeyDetailViewModel)
-//        self.present(pixKeyDetailViewController, animated: true)
+        
     }
     
     func reloadData() {

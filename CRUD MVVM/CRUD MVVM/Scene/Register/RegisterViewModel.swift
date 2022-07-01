@@ -1,17 +1,9 @@
-//
-//  RegisterViewModel.swift
-//  CRUD MVVM
-//
-//  Created by user210203 on 4/28/22.
-//
-
 import Foundation
 import UIKit
 import CoreData
 
 //MARK: - Protocols
 protocol RegisterViewModelDelegate: AnyObject {
-    //Necessary to display alert/reloadData on View Controller
     func displayAlert(title: String, message: String)
     func displayAlertWithAction(title: String, message: String)
     func onSuccessPopView()
@@ -26,7 +18,6 @@ protocol RegisterViewModeling {
     func displayAlert(title: String, message: String)
     func displayAlertWithAction(title: String, message: String)
     func popViewController()
-    
     func pushToHome()
 }
 
@@ -36,11 +27,10 @@ struct RegisterData {
     let placeholder: String
     var keyboardType: UIKeyboardType = .default
     var isSecure: Bool = false
+    var autoCapitalization = UITextAutocapitalizationType.none
 }
 
 final class RegisterViewModel {
-    //private let service = CoreDataService()
-    //private let servicePix = CoreDataPixService()
     
     weak var delegate: RegisterViewModelDelegate?
     
@@ -49,7 +39,7 @@ final class RegisterViewModel {
         .init(title: "Nome", placeholder: "Ex.: João da Silva"),
         .init(title: "CPF", placeholder: "Ex.: 000.000.000-00", keyboardType: .numberPad),
         .init(title: "Data de Nascimento", placeholder: "Ex.: 01/01/2000"),
-        .init(title: "E-mail", placeholder: "Ex.: joao.silva@email.com"),
+        .init(title: "E-mail", placeholder: "Ex.: joao.silva@email.com", keyboardType: .emailAddress, autoCapitalization: UITextAutocapitalizationType.none),
         .init(title: "Renda Mensal", placeholder: "Ex.: 999,99", keyboardType: .numberPad),
         .init(title: "Patrimônio Liquido", placeholder: "Ex.: 999,99", keyboardType: .numberPad),
         .init(title: "Senha", placeholder: "Ex.: ******", keyboardType: .numberPad, isSecure: true),
@@ -80,20 +70,11 @@ final class RegisterViewModel {
         let verifyPassword = verifyPassword(password: newClientPassword, confirmPassword: newClientCOnfirmPassword)
         let verifyCpf = verifyCpf(cpf: newClientCpf)
         
-        // for tests below
-        //let verify = true
-        //let verifyEmail = true
         
         if verify == true && verifyEmail == true && verifyCpf == true && verifyPassword == true{
             clients.append(newClient)
-            //service.addClient(newClient: newClient)
             
             allPix.append(newClientPix)
-            //servicePix.addClientPix(newClientPix: newClientPix)
-            
-            //displayAlertWithAction(title: "Sucsso", message: "Cadastro concluído!")
-            //popViewController()
-            
             autoLogin()
             print(newClient)
         }
@@ -127,15 +108,14 @@ final class RegisterViewModel {
         
         for i in 0...clients.count-1{
             if newClientCpf == clients[i].cpf {
-                //self.delegate?.displayAlert(title: "Erro", message: "CPF já cadastrado")
                 return false
             }
         }
         
         if cpfVerify == true {
             return true
+            
         } else {
-            //self.delegate?.displayAlert(title: "Erro", message: "CPF Inválido")
             return false
         }
     }
@@ -150,7 +130,7 @@ final class RegisterViewModel {
         if validate == true {
             return true
         } else {
-            //self.delegate?.displayAlert(title: "Erro", message: "E-mail Inválido")
+            
             return false
         }
     }
@@ -166,9 +146,9 @@ final class RegisterViewModel {
         if date >= minAge || date <= maxAge {
             self.delegate?.displayAlert(title: "Erro", message: "Idade Inválida, a idade mínima é 18 anos e a máxima 120 anos")
             newClientBirthDate = ""
-            //return false
+            
         } else {
-            //return true
+            
         }
     }
     
@@ -183,7 +163,7 @@ final class RegisterViewModel {
     
     //MARK: - VerifyDigits
     private func verifyDigit(account: String) -> Int{
-        // cut string in parts, add to array and reverse array
+        
         var digits = account.compactMap{ $0.wholeNumberValue }
         digits.reverse()
         
@@ -201,7 +181,7 @@ final class RegisterViewModel {
     //MARK: - TextFieldVerifications
     func verifyTextFieldRealTime(index: Int, value: String) -> Bool {
         switch index {
-        // name
+            
         case 0:
             if value == "" {
                 return false
@@ -209,7 +189,7 @@ final class RegisterViewModel {
             else {
                 return true
             }
-        //cpf
+            
         case 1:
             let verifyCpf = verifyCpf(cpf: value)
             
@@ -219,7 +199,7 @@ final class RegisterViewModel {
             else {
                 return false
             }
-        // date
+            
         case 2:
             if value == "" || value == "Selecionar"{
                 return false
@@ -227,7 +207,7 @@ final class RegisterViewModel {
             else {
                 return true
             }
-        //email
+            
         case 3:
             let verifyEmail = verifyEmail(email: value)
             
@@ -237,7 +217,7 @@ final class RegisterViewModel {
             else {
                 return false
             }
-        // monthly income
+            
         case 4:
             if value == "" || value == "Selecionar"{
                 return false
@@ -245,7 +225,7 @@ final class RegisterViewModel {
             else {
                 return true
             }
-        //netWorth
+            
         case 5:
             if value == "" {
                 return false
@@ -253,7 +233,7 @@ final class RegisterViewModel {
             else {
                 return true
             }
-        //password
+            
         case 6:
             if value == "" {
                 return false
@@ -261,7 +241,7 @@ final class RegisterViewModel {
             else {
                 return true
             }
-        //confirmPassword
+            
         case 7:
             if value == "" {
                 return false

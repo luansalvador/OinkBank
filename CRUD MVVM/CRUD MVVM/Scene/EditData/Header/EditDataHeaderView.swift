@@ -1,19 +1,12 @@
-//
-//  EditDataHeaderView.swift
-//  CRUD MVVM
-//
-//  Created by user210203 on 5/4/22.
-//
-
 import UIKit
 
 class EditDataHeaderView: UIView {
     weak var viewModel: EditDataViewModel?
-
+    
     static let height: CGFloat = 40
     
     private lazy var titleLabel: UILabel = {
-       let view = UILabel()
+        let view = UILabel()
         view.text = "Edite seus dados cadastrados"
         view.font = .MyTheme.boldTitleText
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -45,7 +38,6 @@ class EditDataHeaderView: UIView {
     
     func setupView() {
         self.addSubview(titleLabel)
-        //self.addSubview(deleteButton)
     }
     
     func setupLayoutConstraints() {
@@ -53,9 +45,6 @@ class EditDataHeaderView: UIView {
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
             
-//            deleteButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-//            deleteButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-//            deleteButton.widthAnchor.constraint(equalToConstant:90)
         ])
     }
     

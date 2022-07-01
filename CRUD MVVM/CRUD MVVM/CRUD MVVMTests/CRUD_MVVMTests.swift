@@ -1,10 +1,3 @@
-//
-//  CRUD_MVVMTests.swift
-//  CRUD MVVMTests
-//
-//  Created by user210203 on 4/28/22.
-//
-
 import XCTest
 @testable import CRUD_MVVM
 

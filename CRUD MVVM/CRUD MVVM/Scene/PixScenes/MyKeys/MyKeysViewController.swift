@@ -1,17 +1,10 @@
-//
-//  MyKeysViewController.swift
-//  CRUD MVVM
-//
-//  Created by user217586 on 5/24/22.
-//
-
 import UIKit
 
 class MyKeysViewController: UIViewController {
     let viewModel: MyKeysViewModel
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "Minhas chaves PIX"
         view.backgroundColor = .systemBackground
         
@@ -22,7 +15,6 @@ class MyKeysViewController: UIViewController {
     // MARK: - setup TableView
     let tableView = UITableView(frame: .zero, style: .plain)
     private func setupTableView(){
-        //table view
         
         self.view.addSubview(tableView)
         
@@ -98,14 +90,12 @@ extension MyKeysViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MyKeysViewController: MyKeysViewModelDelegate {
     func pushToRegisterPix() {
-        //present controller that needs reloadDelegate
         let registerPixKeyViewModel = RegisterPixKeyViewModel(reloadDelegate: self)
         let registerPixKeyViewController = RegisterPixKeyViewController(viewModel: registerPixKeyViewModel)
         self.present(registerPixKeyViewController, animated: true)
     }
     
     func pushToPixDetail() {
-        //present controller that needs reloadDelegate
         let pixKeyDetailViewModel = PixKeyDetailViewModel(reloadDelegate: self)
         let pixKeyDetailViewController = PixKeyDetailViewController(viewModel: pixKeyDetailViewModel)
         self.present(pixKeyDetailViewController, animated: true)

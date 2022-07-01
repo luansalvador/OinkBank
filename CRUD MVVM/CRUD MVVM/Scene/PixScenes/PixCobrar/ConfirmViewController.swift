@@ -1,10 +1,3 @@
-//
-//  confirmViewController.swift
-//  CRUD MVVM
-//
-//  Created by user220270 on 5/27/22.
-//
-
 import UIKit
 
 class ConfirmViewController: UIViewController {
@@ -37,7 +30,7 @@ class ConfirmViewController: UIViewController {
     
     private lazy var qrCodeImageView: UIImageView = {
         let view = UIImageView()
-        view.backgroundColor = .MyTheme.mainBlueColor
+        view.backgroundColor = .MyTheme.blueColor
         view.layer.cornerRadius = 20
         view.tintColor = .MyTheme.whiteTextColor
         view.image = UIImage.init(systemName: "qrcode")
@@ -50,7 +43,7 @@ class ConfirmViewController: UIViewController {
         view.setTitle("Confirmar", for: .normal)
         view.titleLabel?.font = UIFont.MyTheme.defaultText
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
-        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        view.backgroundColor = UIColor.MyTheme.greenColor
         view.layer.cornerRadius = 5
         view.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -60,7 +53,7 @@ class ConfirmViewController: UIViewController {
     private lazy var copyButton: UIButton = {
         let view = UIButton(frame: .zero)
         view.setImage(UIImage.init(named: "ic_copiaecola"), for: .normal)
-        view.tintColor = .MyTheme.mainBlueColor
+        view.tintColor = .MyTheme.blueColor
         view.addTarget(self, action: #selector(copyValue), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -121,8 +114,7 @@ class ConfirmViewController: UIViewController {
     private func performGoToConfirm() {
         let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
         self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
-//        let homePixViewController = HomePixViewController()
-//        self.navigationController?.pushViewController(homePixViewController, animated: true)
+        
     }
     
     public func configLabel(text: String) {

@@ -1,10 +1,3 @@
-//
-//  UnexpectedError.swift
-//  CRUD MVVM
-//
-//  Created by user217584 on 20/06/22.
-//
-
 import Foundation
 import UIKit
 
@@ -52,7 +45,7 @@ class UnexpectedErrorViewController: UIViewController {
         button.setTitle("Voltar", for: .normal)
         button.titleLabel?.font = UIFont.MyTheme.defaultText
         button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
-        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        button.backgroundColor = UIColor.MyTheme.greenColor
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(self.back), for: .touchUpInside)
         return button
@@ -83,7 +76,7 @@ class UnexpectedErrorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
-
+        
     }
     
     //MARK: - Func addSubviews
@@ -99,21 +92,21 @@ class UnexpectedErrorViewController: UIViewController {
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-        self.titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 16),
-        self.titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
-        
-        self.subtitleLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor),
-        self.subtitleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
-        self.subtitleLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
-        
-        self.baconImage.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 280),
-        self.baconImage.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
-        self.baconImage.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -40),
-        self.baconImage.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -140),
-        
-        self.backButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-        self.backButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
-        self.backButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
+            self.titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            self.titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            
+            self.subtitleLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor),
+            self.subtitleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            self.subtitleLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            
+            self.baconImage.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 280),
+            self.baconImage.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
+            self.baconImage.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -40),
+            self.baconImage.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -140),
+            
+            self.backButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            self.backButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            self.backButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
         ])
     }
 }

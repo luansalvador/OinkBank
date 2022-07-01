@@ -1,10 +1,3 @@
-//
-//  cobrarViewController.swift
-//  CRUD MVVM
-//
-//  Created by user220270 on 5/26/22.
-//
-
 import UIKit
 
 class ChargeViewController: UIViewController {
@@ -42,7 +35,7 @@ class ChargeViewController: UIViewController {
         let view = UIButton(frame: .zero)
         view.setTitle("Não especificar valor", for: .normal)
         view.backgroundColor = .MyTheme.backgroundColor
-        view.setTitleColor(UIColor.MyTheme.mainBlueColor, for: .normal)
+        view.setTitleColor(UIColor.MyTheme.blueColor, for: .normal)
         view.addTarget(self, action: #selector(notValueButtonTapped), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -53,7 +46,7 @@ class ChargeViewController: UIViewController {
         view.setTitle("Confirmar", for: .normal)
         view.titleLabel?.font = UIFont.MyTheme.defaultText
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
-        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        view.backgroundColor = UIColor.MyTheme.greenColor
         view.layer.cornerRadius = 5
         view.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -73,8 +66,7 @@ class ChargeViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: .default))
             self.present(alert, animated: true, completion: nil)
         }else{
-            //cobrarViewModel.generateCopyPaste(value: self.textField.text ?? "", clientCPF: clients[loginIndex].cpf)
-            //cobrarViewModel.verifyValuesFromCopyPastePix(copyPastePix: cobrarViewModel.generateCopyPaste(value: self.textField.text ?? "", clientCPF: clients[loginIndex].cpf))
+            
             PixChargeViewModel.copyPasteKey = cobrarViewModel.generateCopyPaste(value: self.textField.text ?? "", clientCPF: clients[loginIndex].cpf)
             confirmViewController.configLabel(text: PixChargeViewModel.copyPasteKey)
             performGoToConfirm()
@@ -124,7 +116,7 @@ class ChargeViewController: UIViewController {
     
     //MARK: - MoneyMask
     @objc func myTextFieldDidChange(_ textField: UITextField) {
-
+        
         if let amountString = textField.text?.currencyInputFormatting() {
             textField.text = amountString
         }

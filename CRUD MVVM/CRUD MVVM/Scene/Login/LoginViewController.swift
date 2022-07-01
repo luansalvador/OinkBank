@@ -1,10 +1,3 @@
-//
-//  LoginViewController.swift
-//  CRUD MVVM
-//
-//  Created by Ancarinha on 11/05/22.
-//
-
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -59,18 +52,16 @@ class LoginViewController: UIViewController {
     
     private lazy var rectangleImage: UIImageView = {
         let wallpapper = UIImageView()
-        wallpapper.tintColor = .MyTheme.mainBlueColor
+        wallpapper.tintColor = .MyTheme.blueColor
         wallpapper.translatesAutoresizingMaskIntoConstraints = false
         wallpapper.image = UIImage(named: "Rectangle")
         return wallpapper
     }()
     
     
-    //Label
     private lazy var agencyLabel: UILabel = {
         let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
-        //.MyTheme.whiteTextColor
         view.font = .MyTheme.defaultText
         view.text = "agency".loginLocalized()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -80,6 +71,7 @@ class LoginViewController: UIViewController {
     private lazy var accountLabel: UILabel = {
         let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
+
         //.MyTheme.whiteTextColor
         view.text = "account".loginLocalized()
         view.font = .MyTheme.defaultText
@@ -87,16 +79,16 @@ class LoginViewController: UIViewController {
         return view
     }()
     
-    //TextField
     private lazy var agencyTextField: UITextField = {
         let view = UITextField()
         view.borderStyle = .none
         view.placeholder = "1-9"
+        view.tag = 1
+        view.delegate = self
         view.backgroundColor = .clear
         view.textColor = .MyTheme.defaultTextColor
-        
         view.translatesAutoresizingMaskIntoConstraints = false
-        //view.keyboardType = .decimalPad
+        view.keyboardType = .decimalPad
         view.layer.cornerRadius = 5
         return view
     }()
@@ -105,10 +97,12 @@ class LoginViewController: UIViewController {
         let view = UITextField()
         view.borderStyle = .none
         view.placeholder = "1-9"
+        view.tag = 2
+        view.delegate = self
         view.backgroundColor = .clear
         view.textColor = .MyTheme.defaultTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
-        //view.keyboardType = .decimalPad
+        view.keyboardType = .decimalPad
         view.layer.cornerRadius = 5
         return view
     }()
@@ -135,7 +129,10 @@ class LoginViewController: UIViewController {
     
     // MARK: - login button
     
+
     private lazy var loginButton: UIButton = UIButton.defaultButton(title: "login".loginLocalized(), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performLogin))
+
+
     
     //MARK: -register button
     private lazy var registerButton: UIButton = {

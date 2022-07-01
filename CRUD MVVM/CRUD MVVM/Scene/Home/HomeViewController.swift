@@ -1,16 +1,9 @@
-//
-//  HomeViewController.swift
-//  CRUD MVVM
-//
-//  Created by Ancarinha on 11/05/22.
-//
-
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let viewModel: HomeViewModel
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
@@ -19,7 +12,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         setupTableView()
         self.navigationItem.setHidesBackButton(true, animated: true)
         
-        //REMOVE LATER
         viewModel.fetchData()
         viewModel.fetchPixData()
     }
@@ -32,7 +24,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: - setup TableView
     let tableView = UITableView(frame: .zero, style: .grouped)
     private func setupTableView(){
-        //table view
         
         self.view.addSubview(tableView)
         
@@ -88,7 +79,7 @@ extension HomeViewController{
     func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
-   
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as? HomeTableViewCell else {
             return UITableViewCell()
@@ -109,12 +100,10 @@ extension HomeViewController{
         
         switch (indexPath.row){
         case 5:
-            //edit data
             editIndex = loginIndex
             let editDataViewModel = EditDataViewModel(reloadDelegate: self)
             let editDataViewController = EditDataViewController(viewModel: editDataViewModel)
             self.navigationController?.pushViewController(editDataViewController, animated: true)
-            //self.present(editDataViewController, animated: true)
             
         case 6:
             viewModel.popToRoot()

@@ -1,15 +1,8 @@
-//
-//  RegisterFooterView.swift
-//  CRUD MVVM
-//
-//  Created by user210203 on 4/28/22.
-//
-
 import Foundation
 import UIKit
 
 class RegisterFooterView: UIView {
-    // Reference of other class' ViewModel(RegisterViewModel) to this one. Definition on ViewController
+    
     weak var viewModel: RegisterViewModel?
     
     // MARK: - Attributes
@@ -63,7 +56,7 @@ class RegisterFooterView: UIView {
             termsAndConditionsButton.leadingAnchor.constraint(equalTo: toggleButton.trailingAnchor, constant: 16),
             termsAndConditionsButton.trailingAnchor.constraint(equalTo: registerButton.trailingAnchor),
             termsAndConditionsButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor, constant: -25),
-
+            
             registerButton.topAnchor.constraint(equalTo: self.toggleButton.bottomAnchor, constant: 16),
             registerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             registerButton.leadingAnchor.constraint(equalTo: toggleButton.leadingAnchor),
@@ -105,7 +98,7 @@ class RegisterFooterView: UIView {
     }
     
     @objc func termsButtonTapped(){
-       
+        
     }
     
     

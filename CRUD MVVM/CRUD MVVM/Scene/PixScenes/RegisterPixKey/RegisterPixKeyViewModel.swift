@@ -1,10 +1,3 @@
-//
-//  RegisterPixKeyViewModel.swift
-//  CRUD MVVM
-//
-//  Created by user217586 on 5/20/22.
-//
-
 import Foundation
 
 
@@ -50,7 +43,7 @@ final class RegisterPixKeyViewModel {
             
             return selectedCpf
             
-           
+            
         }else if optionSelected == "Chave Aleatória"{
             
             randomStringKey = randomString(length: 32)
@@ -62,23 +55,23 @@ final class RegisterPixKeyViewModel {
             
             
         }else if optionSelected == "Telefone"{
-        
+            
             selectedPhoneKey = cellPhonePixKey
             
-                
+            
             return selectedPhoneKey
-                
+            
         }else if optionSelected == "E-mail"{
             
             selectedEmailKey = emailPixKey
             
-                
-            return selectedEmailKey
-                
-            }
             
-            return ""
-
+            return selectedEmailKey
+            
+        }
+        
+        return ""
+        
         
     }
     
@@ -146,7 +139,7 @@ final class RegisterPixKeyViewModel {
     
     func registerPixKey(){
         
-    
+        
         let select = optionSelected
         
         
@@ -157,7 +150,6 @@ final class RegisterPixKeyViewModel {
             reloadDelegate?.updateAllKeys()
             dismissView()
             
-            //return true
             
         }
         
@@ -169,20 +161,18 @@ final class RegisterPixKeyViewModel {
             reloadDelegate?.updateAllKeys()
             dismissView()
             
-            //return true
             
         }
         
-         if select == "Telefone"{
-             
-             allPix[loginIndex].phoneKey = cellPhonePixKey
-             
-             print(cellPhonePixKey)
-             
-             reloadDelegate?.updateAllKeys()
-             dismissView()
-             
-             //return true
+        if select == "Telefone"{
+            
+            allPix[loginIndex].phoneKey = cellPhonePixKey
+            
+            print(cellPhonePixKey)
+            
+            reloadDelegate?.updateAllKeys()
+            dismissView()
+            
             
         }
         
@@ -195,13 +185,11 @@ final class RegisterPixKeyViewModel {
             reloadDelegate?.updateAllKeys()
             dismissView()
             
-            //return true
-           
-       }
-        
-        //return false
-        
+            
         }
+        
+        
+    }
     
     func verifyCellPhoneAndEmail(text: String) -> Bool{
         
@@ -210,7 +198,7 @@ final class RegisterPixKeyViewModel {
         if select == "Telefone"{
             
             if text.count != 14{
-            
+                
                 displayAlert(title: "Erro", message: "Número de telefone inválido")
                 return false
                 
@@ -222,7 +210,7 @@ final class RegisterPixKeyViewModel {
         }
         
         return true
-       
+        
         
     }
     
@@ -250,7 +238,7 @@ final class RegisterPixKeyViewModel {
             
             return false
             
-        
+            
         }
         
         return true
@@ -260,17 +248,17 @@ final class RegisterPixKeyViewModel {
     
     
     
-        
+    
     func randomString(length: Int) -> String {
-    let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
-    return String((0..<length).map{ _ in letters.randomElement()! })
+        let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+        return String((0..<length).map{ _ in letters.randomElement()! })
         
         
     }
     
-        
-    }
     
+}
+
 
 
 extension RegisterPixKeyViewModel: RegisterPixKeyViewModeling {

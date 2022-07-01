@@ -1,10 +1,3 @@
-//
-//  RegisterPixKeyViewController.swift
-//  CRUD MVVM
-//
-//  Created by user217586 on 5/20/22.
-//
-
 import UIKit
 import CloudKit
 
@@ -13,8 +6,8 @@ class RegisterPixKeyViewController: UIViewController {
     let viewModel: RegisterPixKeyViewModel?
     
     
-
-     lazy var pickerOptions: [String] = ["CPF", "Chave Aleatória", "Telefone", "E-mail"]
+    
+    lazy var pickerOptions: [String] = ["CPF", "Chave Aleatória", "Telefone", "E-mail"]
     
     override func viewDidAppear(_ animated: Bool) {
         if editPixIndex == 0{
@@ -38,7 +31,7 @@ class RegisterPixKeyViewController: UIViewController {
             
             yourKeyDescriptionLabel.text = viewModel?.phoneOptionSelectedLabelName()
             
-           
+            
             yourKeyTextField.tag = 1
             
             yourKeyTextField.placeholder = viewModel?.phoneOptionSelectedPlaceholder()
@@ -63,23 +56,19 @@ class RegisterPixKeyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        
-        // Do any additional setup after loading the view.
-        // Present modaly in botton
         if let presentationController = presentationController as? UISheetPresentationController {
-                presentationController.detents = [
-                    .medium(),
-                    .large()
-                ]
-            }
+            presentationController.detents = [
+                .medium(),
+                .large()
+            ]
+        }
         
         view.backgroundColor = .systemBackground
     }
-   
+    
     //MARK: - UIElements
     private lazy var descriptionLabel: UILabel = {
-       let view = UILabel()
+        let view = UILabel()
         view.text = "Cadastrar uma chave PIX"
         view.font = .MyTheme.boldTitleText
         view.numberOfLines = -1
@@ -104,7 +93,7 @@ class RegisterPixKeyViewController: UIViewController {
         return view
     }()
     //MARK: - Teste
-     lazy var yourKeyTextField: UITextField = {
+    lazy var yourKeyTextField: UITextField = {
         let view = NoPasteTextField()
         view.text = ""
         view.tag = 1
@@ -112,15 +101,14 @@ class RegisterPixKeyViewController: UIViewController {
         view.keyboardType = .numberPad
         view.borderStyle = .roundedRect
         view.isUserInteractionEnabled = false
-         view.textColor = .MyTheme.mainBlueColor
+        view.textColor = .MyTheme.blueColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    //RegisterKey button
     private lazy var registerPixKeyButton: UIButton = {
-       let view = UIButton()
-        view.backgroundColor = .MyTheme.mainBlueColor
+        let view = UIButton()
+        view.backgroundColor = .MyTheme.blueColor
         view.setTitle("Cadastrar", for: .normal)
         view.setTitleColor(UIColor.MyTheme.backgroundColor, for: .normal)
         view.titleLabel?.font = .MyTheme.defaultText
@@ -150,14 +138,14 @@ class RegisterPixKeyViewController: UIViewController {
         }
         
     }
-        
+    
     //MARK: - PickerView
-     lazy var selectOptionTextField: UITextField = {
+    lazy var selectOptionTextField: UITextField = {
         let view = UITextField()
          view.textAlignment = .center
-         view.textColor = .MyTheme.mainBlueColor
+         view.textColor = .MyTheme.blueColor
          view.text = "Selecionar"
-         view.backgroundColor = .MyTheme.mainGreenButtonColor
+         view.backgroundColor = .MyTheme.greenColor
          view.inputView = Picker
          view.inputAccessoryView = toolBar
          view.layer.cornerRadius = 5
@@ -237,7 +225,6 @@ class RegisterPixKeyViewController: UIViewController {
             registerPixKeyButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
             registerPixKeyButton.topAnchor.constraint(equalTo: yourKeyTextField.bottomAnchor, constant: 20),
             
-            //textfield with pickerview
             selectOptionTextField.centerYAnchor.constraint(equalTo: keyTypeDescriptionLabel.centerYAnchor),
             selectOptionTextField.leadingAnchor.constraint(equalTo: yourKeyDescriptionLabel.trailingAnchor),
             selectOptionTextField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5)
@@ -287,11 +274,11 @@ extension RegisterPixKeyViewController: UIPickerViewDelegate, UIPickerViewDataSo
         }
         else{
             
-        yourKeyTextField.isUserInteractionEnabled = false
-        let chooseOption: String = pickerOptions[row]
-        selectOptionTextField.text = chooseOption
-        viewModel?.optionSelected = chooseOption
-        
+            yourKeyTextField.isUserInteractionEnabled = false
+            let chooseOption: String = pickerOptions[row]
+            selectOptionTextField.text = chooseOption
+            viewModel?.optionSelected = chooseOption
+            
             
         }
     }
@@ -301,7 +288,7 @@ extension RegisterPixKeyViewController: UIPickerViewDelegate, UIPickerViewDataSo
 extension RegisterPixKeyViewController: RegisterPixKeyViewModelDelegate {
     func onSuccessDismiss() {
         
-       
+        
         
     }
     

@@ -1,17 +1,10 @@
-//
-//  CopyAndPastView.swift
-//  CRUD MVVM
-//
-//  Created by user220212 on 5/26/22.
-//
-
 import UIKit
 
 class CopyAndPasteView: UIView {
     
     var continueAction: (() -> Void)?
     var deleteAction: (() -> Void)?
-  
+    
     private lazy var label: UILabel = {
         let view = UILabel()
         view.text = "Insira o Pix copia e cola"
@@ -37,7 +30,7 @@ class CopyAndPasteView: UIView {
         button.setTitle("Continuar", for: .normal)
         button.titleLabel?.font = UIFont.MyTheme.defaultText
         button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
-        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        button.backgroundColor = UIColor.MyTheme.greenColor
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(self.performConfirm), for: .touchUpInside)
         
@@ -88,7 +81,7 @@ class CopyAndPasteView: UIView {
     @objc private func performDelete() {
         self.deleteAction?()
     }
-
+    
     public func configureTextField(text: String) {
         self.textField.text = text
     }

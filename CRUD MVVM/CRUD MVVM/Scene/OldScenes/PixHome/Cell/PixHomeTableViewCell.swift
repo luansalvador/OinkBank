@@ -1,10 +1,3 @@
-//
-//  PixHomeTableViewCell.swift
-//  CRUD MVVM
-//
-//  Created by Ancarinha on 19/05/22.
-//
-
 import UIKit
 
 class PixHomeTableViewCell: UITableViewCell {
@@ -13,7 +6,7 @@ class PixHomeTableViewCell: UITableViewCell {
     
     //MARK: - UIElements
     private lazy var keyImageView: UIImageView = {
-       let view = UIImageView()
+        let view = UIImageView()
         view.tintColor = .systemPink
         view.image = UIImage(systemName: "key")
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +21,7 @@ class PixHomeTableViewCell: UITableViewCell {
     }()
     
     private lazy var keyLabel: UILabel = {
-       let view = UILabel()
+        let view = UILabel()
         view.text = "key teste"
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
