@@ -10,7 +10,7 @@ final class HomeTableViewCell: UITableViewCell {
     
     private lazy var logoImageView: UIImageView = {
         let view = UIImageView()
-        view.tintColor = UIColor.MyTheme.mainBlueColor
+        view.tintColor = UIColor.MyTheme.blueColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -25,7 +25,7 @@ final class HomeTableViewCell: UITableViewCell {
     
     private lazy var arrowLabel: UILabel = {
         let view = UILabel()
-        view.textColor = UIColor.MyTheme.mainBlueColor
+        view.textColor = UIColor.MyTheme.blueColor
         view.text = ">"
         view.font = UIFont.MyTheme.defaultText
         view.translatesAutoresizingMaskIntoConstraints = false

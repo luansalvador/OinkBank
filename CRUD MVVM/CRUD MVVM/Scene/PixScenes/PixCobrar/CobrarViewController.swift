@@ -35,7 +35,7 @@ class ChargeViewController: UIViewController {
         let view = UIButton(frame: .zero)
         view.setTitle("Não especificar valor", for: .normal)
         view.backgroundColor = .MyTheme.backgroundColor
-        view.setTitleColor(UIColor.MyTheme.mainBlueColor, for: .normal)
+        view.setTitleColor(UIColor.MyTheme.blueColor, for: .normal)
         view.addTarget(self, action: #selector(notValueButtonTapped), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -46,7 +46,7 @@ class ChargeViewController: UIViewController {
         view.setTitle("Confirmar", for: .normal)
         view.titleLabel?.font = UIFont.MyTheme.defaultText
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
-        view.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        view.backgroundColor = UIColor.MyTheme.greenColor
         view.layer.cornerRadius = 5
         view.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false

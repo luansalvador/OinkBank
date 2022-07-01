@@ -101,14 +101,14 @@ class RegisterPixKeyViewController: UIViewController {
         view.keyboardType = .numberPad
         view.borderStyle = .roundedRect
         view.isUserInteractionEnabled = false
-        view.textColor = .MyTheme.mainBlueColor
+        view.textColor = .MyTheme.blueColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private lazy var registerPixKeyButton: UIButton = {
         let view = UIButton()
-        view.backgroundColor = .MyTheme.mainBlueColor
+        view.backgroundColor = .MyTheme.blueColor
         view.setTitle("Cadastrar", for: .normal)
         view.setTitleColor(UIColor.MyTheme.backgroundColor, for: .normal)
         view.titleLabel?.font = .MyTheme.defaultText
@@ -142,17 +142,17 @@ class RegisterPixKeyViewController: UIViewController {
     //MARK: - PickerView
     lazy var selectOptionTextField: UITextField = {
         let view = UITextField()
-        view.textAlignment = .center
-        view.textColor = .MyTheme.mainBlueColor
-        view.text = "Selecionar"
-        view.backgroundColor = .MyTheme.mainGreenButtonColor
-        view.inputView = Picker
-        view.inputAccessoryView = toolBar
-        view.layer.cornerRadius = 5
-        view.isSecureTextEntry = false
-        view.isUserInteractionEnabled = false
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+         view.textAlignment = .center
+         view.textColor = .MyTheme.blueColor
+         view.text = "Selecionar"
+         view.backgroundColor = .MyTheme.greenColor
+         view.inputView = Picker
+         view.inputAccessoryView = toolBar
+         view.layer.cornerRadius = 5
+         view.isSecureTextEntry = false
+         view.isUserInteractionEnabled = false
+         view.translatesAutoresizingMaskIntoConstraints = false
+         return view
     }()
     
     private lazy var toolBar: UIToolbar = {

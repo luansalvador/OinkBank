@@ -7,8 +7,9 @@ class MyKeysTableViewCell: UITableViewCell {
     
     //MARK: - UIElements
     private lazy var keyImageView: UIImageView = {
+
         let view = UIImageView()
-        view.tintColor = .MyTheme.mainBlueColor
+        view.tintColor = .MyTheme.blueColor
         view.image = UIImage(systemName: "key")
         view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false

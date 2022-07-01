@@ -45,7 +45,7 @@ class UnexpectedErrorViewController: UIViewController {
         button.setTitle("Voltar", for: .normal)
         button.titleLabel?.font = UIFont.MyTheme.defaultText
         button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
-        button.backgroundColor = UIColor.MyTheme.mainGreenButtonColor
+        button.backgroundColor = UIColor.MyTheme.greenColor
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(self.back), for: .touchUpInside)
         return button

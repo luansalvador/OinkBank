@@ -28,7 +28,7 @@ class HomePixViewController: UIViewController {
         view.layer.cornerRadius = 20
         view.tintColor = UIColor.MyTheme.blackColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.6, 0.6, 0.6)
-        view.backgroundColor = .MyTheme.mainGreenButtonColor
+        view.backgroundColor = .MyTheme.greenColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -49,7 +49,7 @@ class HomePixViewController: UIViewController {
         view.setImage(image, for: .normal)
         view.layer.cornerRadius = 20
         view.tintColor = UIColor.MyTheme.blackColor
-        view.backgroundColor = .MyTheme.mainGreenButtonColor
+        view.backgroundColor = .MyTheme.greenColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -71,7 +71,7 @@ class HomePixViewController: UIViewController {
         view.setImage(image, for: .normal)
         view.layer.cornerRadius = 20
         view.tintColor = UIColor.MyTheme.blackColor
-        view.backgroundColor = .MyTheme.mainGreenButtonColor
+        view.backgroundColor = .MyTheme.greenColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -93,7 +93,7 @@ class HomePixViewController: UIViewController {
         view.setImage(image, for: .normal)
         view.layer.cornerRadius = 20
         view.tintColor = UIColor.MyTheme.blackColor
-        view.backgroundColor = .MyTheme.mainGreenButtonColor
+        view.backgroundColor = .MyTheme.greenColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -116,7 +116,7 @@ class HomePixViewController: UIViewController {
         view.setImage(image, for: .normal)
         view.layer.cornerRadius = 20
         view.tintColor = UIColor.MyTheme.blackColor
-        view.backgroundColor = .MyTheme.mainGreenButtonColor
+        view.backgroundColor = .MyTheme.greenColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -140,7 +140,7 @@ class HomePixViewController: UIViewController {
         view.addTarget(self, action: #selector(performGoToCopyAndPaste), for: .touchUpInside)
         view.layer.cornerRadius = 20
         view.tintColor = UIColor.MyTheme.blackColor
-        view.backgroundColor = .MyTheme.mainGreenButtonColor
+        view.backgroundColor = .MyTheme.greenColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -163,7 +163,7 @@ class HomePixViewController: UIViewController {
         view.setImage(image, for: .normal)
         view.layer.cornerRadius = 20
         view.tintColor = UIColor.MyTheme.blackColor
-        view.backgroundColor = .MyTheme.mainGreenButtonColor
+        view.backgroundColor = .MyTheme.greenColor
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -186,7 +186,7 @@ class HomePixViewController: UIViewController {
         view.setImage(image, for: .normal)
         view.layer.cornerRadius = 20
         view.tintColor = UIColor.MyTheme.blackColor
-        view.backgroundColor = .MyTheme.mainGreenButtonColor
+        view.backgroundColor = .MyTheme.greenColor
         view.addTarget(self, action: #selector(performGoToCharge), for: .touchUpInside)
         view.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -206,7 +206,7 @@ class HomePixViewController: UIViewController {
     //MARK: - MyKeys button
     private lazy var myKeysButton: UIButton = {
         let view = UIButton()
-        view.tintColor = .MyTheme.mainGreenButtonColor
+        view.tintColor = .MyTheme.greenColor
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.setTitle("Minhas Chaves Pix", for: .normal)
         view.titleLabel?.font = .MyTheme.defaultText
