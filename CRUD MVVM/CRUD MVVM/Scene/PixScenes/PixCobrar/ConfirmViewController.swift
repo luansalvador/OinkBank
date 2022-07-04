@@ -6,12 +6,12 @@ class ConfirmViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.MyTheme.backgroundColor
         
-        title = "Código de cobrança"
+        title = "Código de cobrança".localized(tableName: "ConfirmCopyAndPasteLocalizable")
     }
     
     private lazy var firstLabel: UILabel = {
         let view = UILabel()
-        view.text = "Esse é seu pix copia e cola"
+        view.text = "Esse é seu pix copia e cola".localized(tableName: "ConfirmCopyAndPasteLocalizable")
         view.font = .MyTheme.boldTitleText
         view.textColor = .MyTheme.defaultTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -40,7 +40,7 @@ class ConfirmViewController: UIViewController {
     
     private lazy var button: UIButton = {
         let view = UIButton(frame: .zero)
-        view.setTitle("Confirmar", for: .normal)
+        view.setTitle("Confirmar".localized(tableName: "ConfirmCopyAndPasteLocalizable"), for: .normal)
         view.titleLabel?.font = UIFont.MyTheme.defaultText
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.backgroundColor = UIColor.MyTheme.greenColor
