@@ -1,0 +1,13 @@
+/*
+  localizableEmail.strings
+  CRUD MVVM
+
+  Created by user220270 on 7/1/22.
+  
+*/
+
+
+"Cadastrar uma chave PIX" = "Cadastrar uma chave PIX";
+"Selecione o tipo de chave desejada:" = "Selecione o tipo de chave desejada:";
+"Sua Chave:" = "Sua Chave:";
+"Cadastrar" = "Cadastrar";

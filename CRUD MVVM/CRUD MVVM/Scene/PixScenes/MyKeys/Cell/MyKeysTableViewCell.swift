@@ -18,7 +18,7 @@ class MyKeysTableViewCell: UITableViewCell {
     
     private lazy var keyTypeLabel: UILabel = {
         let view = UILabel()
-        view.text = "Chave Aleatoria"
+        view.text = "Chave Aleatória".localized(tableName: "LocalizableMyKeys")
         view.numberOfLines = -1
         view.font = .MyTheme.myKeysText
         view.textAlignment = .center

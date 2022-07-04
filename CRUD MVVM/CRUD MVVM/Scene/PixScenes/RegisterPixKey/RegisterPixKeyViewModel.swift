@@ -85,7 +85,7 @@ final class RegisterPixKeyViewModel {
         
         if select == "CPF" && select == "Chave Aleatória"{
             
-            registerpixcontroller.yourKeyDescriptionLabel.text = "Sua Chave:"
+            registerpixcontroller.yourKeyDescriptionLabel.text = String(format: NSLocalizedString("Sua Chave:", comment: " "))
             changedLabel = registerpixcontroller.yourKeyDescriptionLabel.text!
             
             return changedLabel
@@ -94,7 +94,7 @@ final class RegisterPixKeyViewModel {
         
         if select == "Telefone"{
             
-            registerpixcontroller.yourKeyDescriptionLabel.text = "Insira seu celular:"
+            registerpixcontroller.yourKeyDescriptionLabel.text = String(format: NSLocalizedString("Insira seu celular:", comment: " "))
             changedLabel = registerpixcontroller.yourKeyDescriptionLabel.text!
             
             return changedLabel
@@ -102,7 +102,7 @@ final class RegisterPixKeyViewModel {
         
         if select == "E-mail"{
             
-            registerpixcontroller.yourKeyDescriptionLabel.text = "Insira seu email:"
+            registerpixcontroller.yourKeyDescriptionLabel.text = String(format: NSLocalizedString("Insira seu email:", comment: " "))
             changedLabel = registerpixcontroller.yourKeyDescriptionLabel.text!
             
             return changedLabel
@@ -199,7 +199,7 @@ final class RegisterPixKeyViewModel {
             
             if text.count != 14{
                 
-                displayAlert(title: "Erro", message: "Número de telefone inválido")
+                displayAlert(title: "Erro", message: String(format: NSLocalizedString("Número de telefone inválido", comment: " ")))
                 return false
                 
             }
@@ -224,7 +224,7 @@ final class RegisterPixKeyViewModel {
         if validate == true {
             return true
         } else {
-            self.delegate?.displayAlert(title: "Erro", message: "E-mail Inválido")
+            self.delegate?.displayAlert(title: "Erro", message: "E-mail Inválido".localized(tableName: "LoginLocalizable"))
             return false
         }
     }
@@ -234,7 +234,7 @@ final class RegisterPixKeyViewModel {
         
         if text == "" || text == "Chave Teste"{
             
-            displayAlert(title: "Erro", message: "Por favor verifique todos os campos")
+            displayAlert(title: "Erro", message: "Por favor verifique todos os campos".localized(tableName: "LocalizableMyKeys"))
             
             return false
             

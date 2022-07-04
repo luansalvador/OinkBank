@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		0E17111D28410337006E8BFD /* PixChargeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17111C28410337006E8BFD /* PixChargeViewModel.swift */; };
 		0E17111F28410354006E8BFD /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17111E28410354006E8BFD /* ConfirmViewController.swift */; };
+
+		0E627F6E28732056005684D2 /* LocalizableMyKeys.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E627F6D28732056005684D2 /* LocalizableMyKeys.strings */; };
+
 		0EE5BE9A284016170074B27B /* ChargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5BE99284016170074B27B /* ChargeViewController.swift */; };
+
 		2720C21C286C89D50023323F /* Extension+NoPasteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */; };
 		2720C21E286C8ACD0023323F /* Extension+LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */; };
 		2720C220286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21F286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift */; };
@@ -124,7 +128,12 @@
 /* Begin PBXFileReference section */
 		0E17111C28410337006E8BFD /* PixChargeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixChargeViewModel.swift; sourceTree = "<group>"; };
 		0E17111E28410354006E8BFD /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+
+		0E627F6D28732056005684D2 /* LocalizableMyKeys.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LocalizableMyKeys.strings; sourceTree = "<group>"; };
+		0E7FE335286F3F3A009DC513 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "pt-BR"; path = "../pt-BR.lproj/LaunchScreen.storyboard.xml"; sourceTree = "<group>"; };
+
 		0EE5BE99284016170074B27B /* ChargeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeViewController.swift; sourceTree = "<group>"; };
+
 		2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NoPasteTextField.swift"; sourceTree = "<group>"; };
 		2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+LineTextField.swift"; sourceTree = "<group>"; };
 		2720C21F286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+LoginAgencyAndAgencyMask.swift"; sourceTree = "<group>"; };
@@ -333,6 +342,7 @@
 				900479FD283D5CB7005D7208 /* Cell */,
 				900479F9283D5C21005D7208 /* MyKeysViewController.swift */,
 				900479FB283D5C30005D7208 /* MyKeysViewModel.swift */,
+				0E627F6D28732056005684D2 /* LocalizableMyKeys.strings */,
 			);
 			path = MyKeys;
 			sourceTree = "<group>";
@@ -831,6 +841,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = E6C7CA0C281A940200D44104;
 			productRefGroup = E6C7CA16281A940200D44104 /* Products */;
@@ -853,6 +864,7 @@
 				9097C3AE2852810000701562 /* Nunito-Light.ttf in Resources */,
 				9097C3AF2852810000701562 /* Nunito-Regular.ttf in Resources */,
 				9097C3B82852810000701562 /* Nunito-LightItalic.ttf in Resources */,
+				0E627F6E28732056005684D2 /* LocalizableMyKeys.strings in Resources */,
 				9097C3B22852810000701562 /* Nunito-BoldItalic.ttf in Resources */,
 				C91FF8D6286F73AA00034F91 /* ChargePixLocalizable.strings in Resources */,
 				9097C3B62852810000701562 /* Nunito-BlackItalic.ttf in Resources */,
@@ -1013,6 +1025,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D349E66D2824717F00EACD33 /* Base */,
+				0E7FE335286F3F3A009DC513 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard.xml;
 			sourceTree = "<group>";
@@ -1024,6 +1037,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1084,6 +1098,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
