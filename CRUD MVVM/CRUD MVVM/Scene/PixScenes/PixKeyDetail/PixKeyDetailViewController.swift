@@ -67,7 +67,7 @@ class PixKeyDetailViewController: UIViewController {
        let view = UIButton()
         view.backgroundColor = .MyTheme.blueColor
         view.setTitleColor(UIColor.MyTheme.backgroundColor, for: .normal)
-        view.setTitle(NSLocalizedString("Excluir chave", comment: " "),for: .normal)
+        view.setTitle("Excluir chave".localized(tableName: "LocalizableMyKeys"), for: .normal)
         view.layer.cornerRadius = 5
         view.addTarget(self, action: #selector(performDelete), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false

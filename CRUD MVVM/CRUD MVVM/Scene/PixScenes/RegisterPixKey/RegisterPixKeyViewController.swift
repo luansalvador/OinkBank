@@ -109,7 +109,7 @@ class RegisterPixKeyViewController: UIViewController {
     private lazy var registerPixKeyButton: UIButton = {
         let view = UIButton()
         view.backgroundColor = .MyTheme.blueColor
-        view.setTitle(NSLocalizedString("Cadastrar", comment: " "),for: .normal)
+        view.setTitle("Cadastrar".localized(tableName: "LocalizableMyKeys"), for: .normal)
         view.setTitleColor(UIColor.MyTheme.backgroundColor, for: .normal)
         view.titleLabel?.font = .MyTheme.defaultText
         view.layer.cornerRadius = 5

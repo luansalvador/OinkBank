@@ -224,7 +224,7 @@ final class RegisterPixKeyViewModel {
         if validate == true {
             return true
         } else {
-            self.delegate?.displayAlert(title: "Erro", message: String(format: NSLocalizedString("E-mail Inválido", comment: " ")))
+            self.delegate?.displayAlert(title: "Erro", message: "E-mail Inválido".localized(tableName: "LoginLocalizable"))
             return false
         }
     }
