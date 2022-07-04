@@ -7,7 +7,7 @@ class CopyAndPasteView: UIView {
     
     private lazy var label: UILabel = {
         let view = UILabel()
-        view.text = "Insira o Pix copia e cola"
+        view.text = "inputPixLabel".localized(tableName: "CopyAndPasteLocalizable")
         view.font = .MyTheme.defaultText
         view.textColor = .MyTheme.defaultTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -16,7 +16,7 @@ class CopyAndPasteView: UIView {
     
     private lazy var textField: UITextField = {
         let view = UITextField()
-        view.placeholder = "Pix Copia e Cola"
+        view.placeholder = "pixCopyAndPasteTf".localized(tableName: "CopyAndPasteLocalizable")
         view.font = .MyTheme.defaultText
         view.clearsOnBeginEditing = true
         view.clearButtonMode = .whileEditing
@@ -27,7 +27,7 @@ class CopyAndPasteView: UIView {
     private lazy var button: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Continuar", for: .normal)
+        button.setTitle("continue".localized(tableName: "CopyAndPasteLocalizable"), for: .normal)
         button.titleLabel?.font = UIFont.MyTheme.defaultText
         button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         button.backgroundColor = UIColor.MyTheme.greenColor
@@ -91,3 +91,4 @@ class CopyAndPasteView: UIView {
         return textField.text ?? ""
     }
 }
+
