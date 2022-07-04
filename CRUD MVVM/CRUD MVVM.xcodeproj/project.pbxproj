@@ -23,6 +23,7 @@
 		28BB0AC12864DF6200503A08 /* RegisterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */; };
 		30047B3F287334D4004A38E2 /* RegisterSucessLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30047B3E287334D4004A38E2 /* RegisterSucessLocalizable.strings */; };
 		307A0D1A28735C5E0008F2E3 /* ReceivedTransferLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 307A0D1928735C5E0008F2E3 /* ReceivedTransferLocalizable.strings */; };
+		307A0D1C287362680008F2E3 /* TransactionSucessLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 307A0D1B287362680008F2E3 /* TransactionSucessLocalizable.strings */; };
 		30A55E772841310C00C86045 /* CopyAndPasteConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A55E762841310C00C86045 /* CopyAndPasteConfirm.swift */; };
 		900479F5283D36BE005D7208 /* HomePixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900479F4283D36BE005D7208 /* HomePixViewController.swift */; };
 		900479FA283D5C21005D7208 /* MyKeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900479F9283D5C21005D7208 /* MyKeysViewController.swift */; };
@@ -142,6 +143,7 @@
 		28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeaderView.swift; sourceTree = "<group>"; };
 		30047B3E287334D4004A38E2 /* RegisterSucessLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = RegisterSucessLocalizable.strings; sourceTree = "<group>"; };
 		307A0D1928735C5E0008F2E3 /* ReceivedTransferLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ReceivedTransferLocalizable.strings; sourceTree = "<group>"; };
+		307A0D1B287362680008F2E3 /* TransactionSucessLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TransactionSucessLocalizable.strings; sourceTree = "<group>"; };
 		30A55E762841310C00C86045 /* CopyAndPasteConfirm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteConfirm.swift; sourceTree = "<group>"; };
 		900479F4283D36BE005D7208 /* HomePixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePixViewController.swift; sourceTree = "<group>"; };
 		900479F9283D5C21005D7208 /* MyKeysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeysViewController.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				90AD79E22860B77600B7150B /* TransactionSuccessViewController.swift */,
+				307A0D1B287362680008F2E3 /* TransactionSucessLocalizable.strings */,
 			);
 			path = TransactionSucess;
 			sourceTree = "<group>";
@@ -884,6 +887,7 @@
 				C91FF8CE286F21F900034F91 /* LoginLocalizable.strings in Resources */,
 				9097C3B32852810000701562 /* Nunito-Black.ttf in Resources */,
 				9097C3B42852810000701562 /* Nunito-ExtraLight.ttf in Resources */,
+				307A0D1C287362680008F2E3 /* TransactionSucessLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
