@@ -21,7 +21,10 @@
 		27EA01E7286B83A0003FB4B3 /* Extension+PhoneMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA01E6286B83A0003FB4B3 /* Extension+PhoneMask.swift */; };
 		27FF5EC1286E097600636BB3 /* Extension+StringLowercased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF5EC0286E097600636BB3 /* Extension+StringLowercased.swift */; };
 		28BB0AC12864DF6200503A08 /* RegisterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */; };
+
 		30047B3F287334D4004A38E2 /* RegisterSucessLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30047B3E287334D4004A38E2 /* RegisterSucessLocalizable.strings */; };
+
+
 		30A55E772841310C00C86045 /* CopyAndPasteConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A55E762841310C00C86045 /* CopyAndPasteConfirm.swift */; };
 		900479F5283D36BE005D7208 /* HomePixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900479F4283D36BE005D7208 /* HomePixViewController.swift */; };
 		900479FA283D5C21005D7208 /* MyKeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900479F9283D5C21005D7208 /* MyKeysViewController.swift */; };
@@ -139,7 +142,10 @@
 		27EA01E6286B83A0003FB4B3 /* Extension+PhoneMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+PhoneMask.swift"; sourceTree = "<group>"; };
 		27FF5EC0286E097600636BB3 /* Extension+StringLowercased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+StringLowercased.swift"; sourceTree = "<group>"; };
 		28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeaderView.swift; sourceTree = "<group>"; };
+
 		30047B3E287334D4004A38E2 /* RegisterSucessLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = RegisterSucessLocalizable.strings; sourceTree = "<group>"; };
+
+
 		30A55E762841310C00C86045 /* CopyAndPasteConfirm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteConfirm.swift; sourceTree = "<group>"; };
 		900479F4283D36BE005D7208 /* HomePixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePixViewController.swift; sourceTree = "<group>"; };
 		900479F9283D5C21005D7208 /* MyKeysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeysViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				90AD79F72860C50700B7150B /* ReceivedTransferViewController.swift */,
+				30047B3C28731FEB004A38E2 /* ReceivedTransferLocalizable.strings */,
 			);
 			path = ReceivedTransfer;
 			sourceTree = "<group>";
@@ -874,6 +881,7 @@
 				9097C3B12852810000701562 /* Nunito-Bold.ttf in Resources */,
 				9097C3B52852810000701562 /* Nunito-SemiBoldItalic.ttf in Resources */,
 				9097C3AC2852810000701562 /* Nunito-ExtraBold.ttf in Resources */,
+				30047B3D28731FEB004A38E2 /* ReceivedTransferLocalizable.strings in Resources */,
 				9097C3AA2852810000701562 /* Nunito-Medium.ttf in Resources */,
 				9097C3AB2852810000701562 /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				9097C3B72852810000701562 /* Nunito-Italic.ttf in Resources */,
