@@ -11,7 +11,7 @@ import UIKit
 final class RegisterPickerTableViewCell: UITableViewCell {
     private weak var viewModel: RegisterViewModel?
     
-    private lazy var pickerOptions: [String] = ["Entre R$1000 e R$2000", "Entre de R$2000 e R$3000", "Entre R$3000 e R$5000", "Entre R$5000 e R$10000", "Acima de R$10000"]
+    private lazy var pickerOptions: [String] = [String(format: NSLocalizedString("registerPickerViewFirst", comment: "")), String(format: NSLocalizedString("registerPickerViewSecond", comment: "")), String(format: NSLocalizedString("registerPickerViewThird", comment: "")), String(format: NSLocalizedString("registerPickerViewFourth", comment: "")), String(format: NSLocalizedString("registerPickerViewFifith", comment: ""))]
     // MARK: - cellID
     static let reuseId: String = "RegisterPickerTableViewCell"
     
@@ -28,7 +28,7 @@ final class RegisterPickerTableViewCell: UITableViewCell {
     lazy var registerTextField: UITextField = {
        let view = UITextField()
         view.textAlignment = .left
-        view.placeholder = "R$"
+        view.placeholder = String(format: NSLocalizedString("R$", comment: ""))
         view.inputView = Picker
         view.inputAccessoryView = toolBar
         view.layer.cornerRadius = 5
@@ -72,11 +72,9 @@ final class RegisterPickerTableViewCell: UITableViewCell {
     
     lazy var tipLabel: UILabel = {
         let view = UILabel()
-        view.text = "Aqui está sua dica"
         view.font = .MyTheme.tipText
         view.textColor = .MyTheme.deleteTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.isHidden = true
         return view
     }()
     
@@ -117,12 +115,13 @@ final class RegisterPickerTableViewCell: UITableViewCell {
             
             registerTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             registerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            registerTextField.bottomAnchor.constraint(equalTo: self.tipLabel.topAnchor),
 //            registerTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor),
 //            registerTextField.heightAnchor.constraint(equalToConstant: 30),
             
             tipLabel.widthAnchor.constraint(equalTo: registerTextField.widthAnchor),
             tipLabel.centerXAnchor.constraint(equalTo: registerTextField.centerXAnchor),
-            tipLabel.topAnchor.constraint(equalTo: registerTextField.bottomAnchor)
+            tipLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
     

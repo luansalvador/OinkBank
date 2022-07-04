@@ -12,9 +12,9 @@ class RegisterFooterView: UIView {
     
     
     //MARK: - UIElements
-    private lazy var registerButton: UIButton = UIButton.defaultButton(title: "Cadastrar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performRegister))
+    private lazy var registerButton: UIButton = UIButton.defaultButton(title: String(format: NSLocalizedString("register", comment: "")), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performRegister))
     
-    private lazy var loginButton: UIButton = UIButton.transparentButton(title: "Já possui uma conta? Entre aqui", font: .MyTheme.defaultText, target: self, selector: #selector(goToLogin))
+    private lazy var loginButton: UIButton = UIButton.transparentButton(title: String(format: NSLocalizedString("registerLogin", comment: "")), font: .MyTheme.defaultText, target: self, selector: #selector(goToLogin))
     
     private lazy var toggleButton: UIButton = {
         let button = UIButton()
@@ -25,7 +25,7 @@ class RegisterFooterView: UIView {
         return button
     }()
     
-    private lazy var termsAndConditionsButton: UIButton = UIButton.transparentButton(title: "Ao criar uma conta você aceita nossos termos e condições", font: .MyTheme.defaultText, target: self, selector: #selector(termsButtonTapped))
+    private lazy var termsAndConditionsButton: UIButton = UIButton.transparentButton(title: String(format: NSLocalizedString("registerTerms", comment: "")), font: .MyTheme.defaultText, target: self, selector: #selector(termsButtonTapped))
     
     //MARK: - Initializer
     init() {

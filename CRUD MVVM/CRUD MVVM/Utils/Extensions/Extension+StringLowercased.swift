@@ -5,7 +5,7 @@ extension RegisterViewController {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        if textField.tag == 10 {
+        if textField.tag == 3 {
             textField.text = (textField.text! as NSString).replacingCharacters(in: range, with: string.lowercased())
             return false
         }

@@ -6,7 +6,7 @@ class RegisterHeaderView: UIView {
     
     private lazy var greetingLabel: UILabel = {
         let label = UILabel()
-        label.text = "Boas-vindas, para realizar seu cadastro precisamos de alguns dados"
+        label.text = String(format: NSLocalizedString("registerGreeting", comment: ""))
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .MyTheme.boldTitleText

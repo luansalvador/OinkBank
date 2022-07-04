@@ -6,7 +6,7 @@ class RegisterViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Criar Conta"
+        self.title = String(NSLocalizedString("registerCreateAccount", comment: ""))
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
@@ -311,8 +311,8 @@ extension RegisterViewController:  UITextFieldDelegate{
             textField?.text = textField?.text?.formatMask(mask: "###.###.###-##")
         case textFieldData.netWorthTextField.rawValue:
             textField?.text = textField?.text?.currencyInputFormatting()
-        case textFieldData.emailTextField.rawValue:
-            textField?.tag = 10
+//        case textFieldData.emailTextField.rawValue:
+//            textField?.tag = 10
         case textFieldData.emailTextField.rawValue:
             textField?.delegate = self
         default:

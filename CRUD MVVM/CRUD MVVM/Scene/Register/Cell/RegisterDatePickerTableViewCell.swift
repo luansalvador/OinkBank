@@ -74,11 +74,9 @@ final class RegisterDatePickerTableViewCell: UITableViewCell {
     
     lazy var tipLabel: UILabel = {
         let view = UILabel()
-        view.text = "Aqui está sua dica"
         view.font = .MyTheme.tipText
         view.textColor = .MyTheme.deleteTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.isHidden = true
         return view
     }()
     
@@ -117,11 +115,12 @@ final class RegisterDatePickerTableViewCell: UITableViewCell {
             
             registerTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             registerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            registerTextField.bottomAnchor.constraint(equalTo: self.tipLabel.topAnchor),
 
             
             tipLabel.widthAnchor.constraint(equalTo: registerTextField.widthAnchor),
             tipLabel.centerXAnchor.constraint(equalTo: registerTextField.centerXAnchor),
-            tipLabel.topAnchor.constraint(equalTo: registerTextField.bottomAnchor)
+            tipLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
     

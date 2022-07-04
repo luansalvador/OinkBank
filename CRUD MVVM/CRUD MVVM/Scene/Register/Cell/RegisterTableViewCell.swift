@@ -49,11 +49,9 @@ final class RegisterTableViewCell: UITableViewCell {
     
     lazy var tipLabel: UILabel = {
         let view = UILabel()
-        view.text = "Aqui está sua dica"
         view.font = .MyTheme.tipText
         view.textColor = .MyTheme.deleteTextColor
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.isHidden = true
         return view
     }()
     

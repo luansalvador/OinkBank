@@ -28,6 +28,12 @@ struct RegisterData {
     var keyboardType: UIKeyboardType = .default
     var isSecure: Bool = false
     var autoCapitalization = UITextAutocapitalizationType.none
+    
+    init(titleKey: String, placeholderKey: String, isSecure: Bool = false){
+        self.title = String(NSLocalizedString(titleKey, comment: ""))
+        self.placeholder = String(format: NSLocalizedString(placeholderKey, comment: ""))
+        self.isSecure = isSecure
+    }
 }
 
 final class RegisterViewModel {
@@ -36,14 +42,15 @@ final class RegisterViewModel {
     
     // MARK: - Register INIT
     lazy var registerInformation: [RegisterData] = [
-        .init(title: "Nome", placeholder: "Ex.: João da Silva"),
-        .init(title: "CPF", placeholder: "Ex.: 000.000.000-00", keyboardType: .numberPad),
-        .init(title: "Data de Nascimento", placeholder: "Ex.: 01/01/2000"),
-        .init(title: "E-mail", placeholder: "Ex.: joao.silva@email.com", keyboardType: .emailAddress, autoCapitalization: UITextAutocapitalizationType.none),
-        .init(title: "Renda Mensal", placeholder: "Ex.: 999,99", keyboardType: .numberPad),
-        .init(title: "Patrimônio Liquido", placeholder: "Ex.: 999,99", keyboardType: .numberPad),
-        .init(title: "Senha", placeholder: "Ex.: ******", keyboardType: .numberPad, isSecure: true),
-        .init(title: "Confirmar Senha", placeholder: "Ex.: ******", keyboardType: .numberPad, isSecure: true),
+        .init(titleKey: "registerName", placeholderKey: "registerNameExample"),
+        .init(titleKey: "registerCPF", placeholderKey: "registerCPFExample"),
+        .init(titleKey: "registerBirthday", placeholderKey: "registerBirthdayExample"),
+        .init(titleKey: "registerEmail", placeholderKey: "registerEmailExample"),
+        .init(titleKey: "registerMensalGains", placeholderKey: "registerMoneyExample"),
+        .init(titleKey: "registerBalance", placeholderKey: "registerMoneyExample"),
+        .init(titleKey: "registerPassword", placeholderKey: "registerPasswordExample", isSecure: true),
+        .init(titleKey: "registerConfirmPassword", placeholderKey: "registerPasswordExample", isSecure: true),
+        
     ]
     
     // MARK: - New Client attributes and Add Functions
@@ -63,7 +70,7 @@ final class RegisterViewModel {
         newClientVerifyDigit = verifyDigit(account: String(newClientAccount))
         
         let newClient = Client(name: newClientName, cpf: newClientCpf, birthDate: newClientBirthDate, email: newClientEmail, monthlyIncome: newClientMonthlyIncome, netWorth: newClientNetWorth, password: newClientPassword, balance: newClientBalance, account: newClientAccount, verifyDigit: newClientVerifyDigit)
-        let newClientPix = Pix(account: newClientAccount, agency: "1-9", cpfKey: "S/ Cadastro", randomKey: "S/ Cadastro", phoneKey: "S/ Cadastro", copyPastePix: "", emailKey: "S/ Cadastro")
+        let newClientPix = Pix(account: newClientAccount, agency: "1-9", cpfKey: String(format: NSLocalizedString("registerNoRegister", comment: "")), randomKey: String(format: NSLocalizedString("registerNoRegister", comment: "")), phoneKey: String(format: NSLocalizedString("registerNoRegister", comment: "")), copyPastePix: "", emailKey: String(format: NSLocalizedString("registerNoRegister", comment: "")))
         
         let verify = verifyTf()
         let verifyEmail = verifyEmail(email: newClient.email)
@@ -87,7 +94,7 @@ final class RegisterViewModel {
         for i in 0...valuesTyped.count-1{
             print("indice: \(i), valor: \(valuesTyped[i])")
             if valuesTyped[i] == "" || valuesTyped[i]  == "0.0"{
-                self.delegate?.displayAlert(title: "Erro", message: "Preencha todos os Campos")
+                self.delegate?.displayAlert(title: String(format: NSLocalizedString("registerError", comment: "")), message: String(format: NSLocalizedString("registerAllFieldsError", comment: "")))
                 return false
             }
         }
@@ -144,7 +151,7 @@ final class RegisterViewModel {
         print(maxAge)
         
         if date >= minAge || date <= maxAge {
-            self.delegate?.displayAlert(title: "Erro", message: "Idade Inválida, a idade mínima é 18 anos e a máxima 120 anos")
+            self.delegate?.displayAlert(title: String(format: NSLocalizedString("registerError", comment: "")), message: String(format: NSLocalizedString("registerInvalidAgeError", comment: "")))
             newClientBirthDate = ""
             
         } else {
@@ -154,7 +161,7 @@ final class RegisterViewModel {
     
     func verifyPassword(password: String, confirmPassword: String) -> Bool{
         if password != confirmPassword {
-            self.delegate?.displayAlert(title: "Erro", message: "Senhas não correspondem")
+            self.delegate?.displayAlert(title: String(format: NSLocalizedString("registerError", comment: "")), message: String(format: NSLocalizedString("registerPasswordMatchesError", comment: "")))
             return false
         } else {
             return true
