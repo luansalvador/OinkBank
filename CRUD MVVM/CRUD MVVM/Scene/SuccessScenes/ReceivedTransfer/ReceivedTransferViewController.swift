@@ -9,7 +9,7 @@ class ReceivedTransferViewController: UIViewController {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.numberOfLines = 1
-        lb.text = "Transferência recebida!"
+        lb.text = String(format: NSLocalizedString(("Transferência recebida"), comment: ""))
         lb.font = .MyTheme.boldTitleText
         lb.textColor = .MyTheme.defaultTextColor
         lb.textAlignment = .left
@@ -20,7 +20,7 @@ class ReceivedTransferViewController: UIViewController {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.numberOfLines = 2
-        lb.text = "Você recebeu uma transferência e já está disponível em sua conta."
+        lb.text = String(format: NSLocalizedString(("Transferência disponível"), comment: ""))
         lb.font = .MyTheme.defaultText
         lb.textColor = .MyTheme.defaultTextColor
         lb.textAlignment = .left
@@ -39,7 +39,7 @@ class ReceivedTransferViewController: UIViewController {
     
     //MARK: - Button
     
-    private lazy var backButton: UIButton = UIButton.defaultButton(title: "Voltar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(back))
+    private lazy var backButton: UIButton = UIButton.defaultButton(title: String(format: NSLocalizedString(("Voltar"), comment: "")), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(back))
     
     
     //MARK: - Button Action

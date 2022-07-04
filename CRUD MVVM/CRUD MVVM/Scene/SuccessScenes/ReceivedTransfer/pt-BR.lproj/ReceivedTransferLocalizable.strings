@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  CRUD MVVM
+
+  Created by user217584 on 01/07/22.
+  
+*/
+
+"Transferência recebida" = "Transferência recebida!";
+"Transferência disponível" = "Você recebeu uma transferência e já está disponível em sua conta.";
+"Voltar" = "Voltar";
