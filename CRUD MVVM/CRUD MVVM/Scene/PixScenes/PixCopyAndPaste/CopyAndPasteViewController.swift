@@ -8,7 +8,7 @@ class CopyAndPastViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Copia e Cola"
+        title = "copyAndPaste".localized(tableName: "CopyAndPasteLocalizable")
         setupView()
     }
     

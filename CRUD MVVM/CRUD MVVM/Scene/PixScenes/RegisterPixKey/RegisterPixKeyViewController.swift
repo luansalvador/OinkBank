@@ -11,21 +11,21 @@ class RegisterPixKeyViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if editPixIndex == 0{
-            selectOptionTextField.text = "CPF"
+            selectOptionTextField.text = "CPF".localized(tableName: "LocalizableMyKeys")
             viewModel?.optionSelected = "CPF"
             yourKeyTextField.text = viewModel?.verifySelection()
             
         }
         
         if editPixIndex == 1{
-            selectOptionTextField.text = "Chave Aleatória"
+            selectOptionTextField.text = "Chave Aleatória".localized(tableName: "LocalizableMyKeys")
             viewModel?.optionSelected = "Chave Aleatória"
             yourKeyTextField.text = viewModel?.verifySelection()
             
         }
         
         if editPixIndex == 2{
-            selectOptionTextField.text = "Telefone"
+            selectOptionTextField.text = "Telefone".localized(tableName: "LocalizableMyKeys")
             viewModel?.optionSelected = "Telefone"
             yourKeyTextField.text = viewModel?.verifySelection()
             
@@ -40,7 +40,7 @@ class RegisterPixKeyViewController: UIViewController {
         }
         
         if editPixIndex == 3{
-            selectOptionTextField.text = "E-mail"
+            selectOptionTextField.text = "E-mail".localized(tableName: "LocalizableMyKeys")
             viewModel?.optionSelected = "E-mail"
             yourKeyTextField.text = viewModel?.verifySelection()
             
@@ -69,7 +69,7 @@ class RegisterPixKeyViewController: UIViewController {
     //MARK: - UIElements
     private lazy var descriptionLabel: UILabel = {
         let view = UILabel()
-        view.text = "Cadastrar uma chave PIX"
+        view.text = "Cadastrar uma chave PIX".localized(tableName: "LocalizableMyKeys")
         view.font = .MyTheme.boldTitleText
         view.numberOfLines = -1
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -78,7 +78,7 @@ class RegisterPixKeyViewController: UIViewController {
     
     private lazy var keyTypeDescriptionLabel: UILabel = {
         let view = UILabel()
-        view.text = "Selecione o tipo de chave desejada:"
+        view.text = "Selecione o tipo de chave desejada:".localized(tableName: "LocalizableMyKeys")
         view.font = .MyTheme.defaultText
         view.numberOfLines = -1
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -87,7 +87,7 @@ class RegisterPixKeyViewController: UIViewController {
     
     lazy var yourKeyDescriptionLabel: UILabel = {
         let view = UILabel()
-        view.text = "Sua Chave:"
+        view.text = "Sua Chave:".localized(tableName: "LocalizableMyKeys")
         view.font = .MyTheme.defaultText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -109,7 +109,7 @@ class RegisterPixKeyViewController: UIViewController {
     private lazy var registerPixKeyButton: UIButton = {
         let view = UIButton()
         view.backgroundColor = .MyTheme.blueColor
-        view.setTitle("Cadastrar", for: .normal)
+        view.setTitle("Cadastrar".localized(tableName: "LocalizableMyKeys"), for: .normal)
         view.setTitleColor(UIColor.MyTheme.backgroundColor, for: .normal)
         view.titleLabel?.font = .MyTheme.defaultText
         view.layer.cornerRadius = 5
@@ -126,7 +126,7 @@ class RegisterPixKeyViewController: UIViewController {
         
         if verify == true && verifyNumber == true{
             
-            let alert = UIAlertController(title: "Chave cadastrada", message: "",preferredStyle: .alert)
+            let alert = UIAlertController(title: String(format: NSLocalizedString("Chave cadastrada", comment: " ")), message: "",preferredStyle: .alert)
             let registerAlert = UIAlertAction(title: "Ok", style: .default){ (action)in  self.dismiss(animated: true)}
             alert.addAction(registerAlert)
             self.present(alert,animated: true)
@@ -144,7 +144,7 @@ class RegisterPixKeyViewController: UIViewController {
         let view = UITextField()
          view.textAlignment = .center
          view.textColor = .MyTheme.blueColor
-         view.text = "Selecionar"
+         view.text = "Selecionar".localized(tableName: "LocalizableMyKeys")
          view.backgroundColor = .MyTheme.greenColor
          view.inputView = Picker
          view.inputAccessoryView = toolBar

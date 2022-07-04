@@ -9,13 +9,13 @@ class ChargeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .MyTheme.backgroundColor
         
-        title = "Cobrar"
+        title = "charge".chargePixLocalized()
         
     }
     
     private lazy var label: UILabel = {
         let view = UILabel()
-        view.text = "Qual valor você quer receber"
+        view.text = "writeValue".chargePixLocalized()
         view.numberOfLines = 0
         view.font = .MyTheme.boldTitleText
         view.textColor = .MyTheme.defaultTextColor
@@ -25,7 +25,7 @@ class ChargeViewController: UIViewController {
     
     private lazy var textField: UITextField = {
         let view = UITextField()
-        view.placeholder = "R$ 0,00"
+        view.placeholder = "cifrao".chargePixLocalized()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(myTextFieldDidChange), for: .editingChanged)
         return view
@@ -33,7 +33,7 @@ class ChargeViewController: UIViewController {
     
     private lazy var notValuebutton: UIButton = {
         let view = UIButton(frame: .zero)
-        view.setTitle("Não especificar valor", for: .normal)
+        view.setTitle("doNotSpecifyValue".chargePixLocalized(), for: .normal)
         view.backgroundColor = .MyTheme.backgroundColor
         view.setTitleColor(UIColor.MyTheme.blueColor, for: .normal)
         view.addTarget(self, action: #selector(notValueButtonTapped), for: .touchUpInside)
@@ -43,7 +43,7 @@ class ChargeViewController: UIViewController {
     
     private lazy var button: UIButton = {
         let view = UIButton(frame: .zero)
-        view.setTitle("Confirmar", for: .normal)
+        view.setTitle("confirm".chargePixLocalized(), for: .normal)
         view.titleLabel?.font = UIFont.MyTheme.defaultText
         view.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         view.backgroundColor = UIColor.MyTheme.greenColor
@@ -120,6 +120,13 @@ class ChargeViewController: UIViewController {
         if let amountString = textField.text?.currencyInputFormatting() {
             textField.text = amountString
         }
+    }
+}
+
+extension String {
+    
+    func chargePixLocalized() -> String {
+       return localized(tableName: "ChargePixLocalizable")
     }
 }
 
