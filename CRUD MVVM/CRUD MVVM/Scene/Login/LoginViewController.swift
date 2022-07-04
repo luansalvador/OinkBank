@@ -36,9 +36,9 @@ class LoginViewController: UIViewController {
         
         //"Alguma descrição".localized()
         
-        let atritutedString1 = NSMutableAttributedString(string: "welcome".loginLocalized(), attributes: attrs1 as [NSAttributedString.Key : Any])
-        let atritutedString2 = NSMutableAttributedString(string: "bankName".loginLocalized(), attributes: attrs2 as [NSAttributedString.Key : Any])
-        let atritutedString3 = NSMutableAttributedString(string: "newBank".loginLocalized() /*", seu \nmais novo banco."*/, attributes: attrs3 as [NSAttributedString.Key : Any])
+        let atritutedString1 = NSMutableAttributedString(string: "welcome".localized(tableName: "LoginLocalizable"), attributes: attrs1 as [NSAttributedString.Key : Any])
+        let atritutedString2 = NSMutableAttributedString(string: "bankName".localized(tableName: "LoginLocalizable"), attributes: attrs2 as [NSAttributedString.Key : Any])
+        let atritutedString3 = NSMutableAttributedString(string: "newBank".localized(tableName: "LoginLocalizable"), attributes: attrs3 as [NSAttributedString.Key : Any])
         
         
         atritutedString1.append(atritutedString2)
@@ -63,7 +63,7 @@ class LoginViewController: UIViewController {
         let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
         view.font = .MyTheme.defaultText
-        view.text = "agency".loginLocalized()
+        view.text = "agency".localized(tableName: "LoginLocalizable")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
         view.textColor = .MyTheme.defaultTextColor
 
         //.MyTheme.whiteTextColor
-        view.text = "account".loginLocalized()
+        view.text = "account".localized(tableName: "LoginLocalizable")
         view.font = .MyTheme.defaultText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -112,7 +112,7 @@ class LoginViewController: UIViewController {
         let view = UILabel()
         view.textColor = .MyTheme.defaultTextColor
         view.font = .MyTheme.defaultText
-        view.text = "password".loginLocalized()
+        view.text = "password".localized(tableName: "LoginLocalizable")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -130,7 +130,7 @@ class LoginViewController: UIViewController {
     // MARK: - login button
     
 
-    private lazy var loginButton: UIButton = UIButton.defaultButton(title: "login".loginLocalized(), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performLogin))
+    private lazy var loginButton: UIButton = UIButton.defaultButton(title: "login".localized(tableName: "LoginLocalizable"), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performLogin))
 
 
     
@@ -139,7 +139,7 @@ class LoginViewController: UIViewController {
         let view = UIButton()
         view.tintColor = .MyTheme.defaultTextColor
         view.setTitleColor(.tintColor, for: .normal)
-        view.setTitle("createAccount".loginLocalized(), for: .normal)
+        view.setTitle("createAccount".localized(tableName: "LoginLocalizable"), for: .normal)
         view.titleLabel?.font = .MyTheme.defaultText
         view.layer.cornerRadius = 5
         view.addTarget(self, action: #selector(registerTapButton), for: .touchUpInside)
@@ -271,16 +271,6 @@ extension LoginViewController: LoginViewModelDelegate {
     }
 }
 
-extension String {
-    
-    func loginLocalized() -> String {
-        return NSLocalizedString(self,
-                                 tableName: "LoginLocalizable",
-                                 bundle: .main,
-                                 value: self,
-                                 comment: self)
-    }
-}
 
 
 

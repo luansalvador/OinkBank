@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  CRUD MVVM
+
+  Created by user220212 on 7/4/22.
+  
+*/
+"inputPixLabel" = "Insira o Pix copia e cola" ;
+"pixCopyAndPasteTf" = "Pix copia e cola" ;
+"continue" = "Continuar" ;
+"copyAndPaste" =  "Copia e Cola" ;
+
+
