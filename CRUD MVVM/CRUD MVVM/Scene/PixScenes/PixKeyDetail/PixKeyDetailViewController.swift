@@ -23,7 +23,7 @@ class PixKeyDetailViewController: UIViewController {
     //MARK: - UIElements
     private lazy var descriptionLabel: UILabel = {
        let view = UILabel()
-        view.text = String(format: NSLocalizedString("Visualizar sua chave PIX", comment: " "))
+        view.text = "Visualizar sua chave PIX".localized(tableName: "LocalizableMyKeys")
         view.font = .MyTheme.boldTitleText
         view.numberOfLines = -1
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +32,7 @@ class PixKeyDetailViewController: UIViewController {
     
     private lazy var keyTypeDescriptionLabel: UILabel = {
        let view = UILabel()
-        view.text = String(format: NSLocalizedString("Tipo de chave:", comment: " "))
+        view.text = "Tipo de chave:".localized(tableName: "LocalizableMyKeys")
         view.font = .MyTheme.defaultBoldText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -40,7 +40,7 @@ class PixKeyDetailViewController: UIViewController {
     
     private lazy var keyTypeLabel: UILabel = {
        let view = UILabel()
-        view.text = String(format: NSLocalizedString("Chave Aleatória", comment: " "))
+        view.text = "Chave Aleatória".localized(tableName: "LocalizableMyKeys")
         view.font = .MyTheme.defaultBoldText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -48,7 +48,7 @@ class PixKeyDetailViewController: UIViewController {
     
     private lazy var yourKeyDescriptionLabel: UILabel = {
        let view = UILabel()
-        view.text = String(format: NSLocalizedString("Sua chave:", comment: " "))
+        view.text = "Sua chave:".localized(tableName: "LocalizableMyKeys")
         view.font = .MyTheme.defaultBoldText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

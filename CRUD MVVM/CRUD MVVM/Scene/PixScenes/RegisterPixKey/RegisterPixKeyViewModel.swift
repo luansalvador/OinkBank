@@ -234,7 +234,7 @@ final class RegisterPixKeyViewModel {
         
         if text == "" || text == "Chave Teste"{
             
-            displayAlert(title: "Erro", message: String(format: NSLocalizedString("Por favor verifique todos os campos", comment: " ")))
+            displayAlert(title: "Erro", message: "Por favor verifique todos os campos".localized(tableName: "LocalizableMyKeys"))
             
             return false
             

@@ -5,7 +5,7 @@ class MyKeysViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = String(format: NSLocalizedString("Minhas chaves PIX", comment: " "))
+        title = "Minhas chaves PIX".localized(tableName: "LocalizableMyKeys")
         view.backgroundColor = .systemBackground
         
         viewModel.verifyPix()

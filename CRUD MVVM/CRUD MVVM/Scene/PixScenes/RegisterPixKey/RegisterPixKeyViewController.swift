@@ -11,21 +11,21 @@ class RegisterPixKeyViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if editPixIndex == 0{
-            selectOptionTextField.text = String(format: NSLocalizedString("CPF", comment: " "))
+            selectOptionTextField.text = "CPF".localized(tableName: "LocalizableMyKeys")
             viewModel?.optionSelected = "CPF"
             yourKeyTextField.text = viewModel?.verifySelection()
             
         }
         
         if editPixIndex == 1{
-            selectOptionTextField.text = String(format: NSLocalizedString("Chave Aleatória", comment: " "))
+            selectOptionTextField.text = "Chave Aleatória".localized(tableName: "LocalizableMyKeys")
             viewModel?.optionSelected = "Chave Aleatória"
             yourKeyTextField.text = viewModel?.verifySelection()
             
         }
         
         if editPixIndex == 2{
-            selectOptionTextField.text = String(format: NSLocalizedString("Telefone", comment: " "))
+            selectOptionTextField.text = "Telefone".localized(tableName: "LocalizableMyKeys")
             viewModel?.optionSelected = "Telefone"
             yourKeyTextField.text = viewModel?.verifySelection()
             
@@ -40,7 +40,7 @@ class RegisterPixKeyViewController: UIViewController {
         }
         
         if editPixIndex == 3{
-            selectOptionTextField.text = String(format: NSLocalizedString("E-mail", comment: " "))
+            selectOptionTextField.text = "E-mail".localized(tableName: "LocalizableMyKeys")
             viewModel?.optionSelected = "E-mail"
             yourKeyTextField.text = viewModel?.verifySelection()
             
@@ -69,7 +69,7 @@ class RegisterPixKeyViewController: UIViewController {
     //MARK: - UIElements
     private lazy var descriptionLabel: UILabel = {
         let view = UILabel()
-        view.text = String(format: NSLocalizedString("Cadastrar uma chave PIX", comment: " "))
+        view.text = "Cadastrar uma chave PIX".localized(tableName: "LocalizableMyKeys")
         view.font = .MyTheme.boldTitleText
         view.numberOfLines = -1
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -78,7 +78,7 @@ class RegisterPixKeyViewController: UIViewController {
     
     private lazy var keyTypeDescriptionLabel: UILabel = {
         let view = UILabel()
-        view.text = String(format: NSLocalizedString( "Selecione o tipo de chave desejada:", comment: " "))
+        view.text = "Selecione o tipo de chave desejada:".localized(tableName: "LocalizableMyKeys")
         view.font = .MyTheme.defaultText
         view.numberOfLines = -1
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -87,7 +87,7 @@ class RegisterPixKeyViewController: UIViewController {
     
     lazy var yourKeyDescriptionLabel: UILabel = {
         let view = UILabel()
-        view.text = String(format: NSLocalizedString("Sua Chave:", comment: " "))
+        view.text = "Sua Chave:".localized(tableName: "LocalizableMyKeys")
         view.font = .MyTheme.defaultText
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -144,7 +144,7 @@ class RegisterPixKeyViewController: UIViewController {
         let view = UITextField()
          view.textAlignment = .center
          view.textColor = .MyTheme.blueColor
-         view.text = String(format: NSLocalizedString("Selecionar", comment: " "))
+         view.text = "Selecionar".localized(tableName: "LocalizableMyKeys")
          view.backgroundColor = .MyTheme.greenColor
          view.inputView = Picker
          view.inputAccessoryView = toolBar
