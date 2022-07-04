@@ -5,7 +5,7 @@ class RegisterSucessViewController: UIViewController {
     //MARK: - Labels Texts
     private lazy var sucessLabel:UILabel = {
         let view = UILabel()
-        view.text = String(format: NSLocalizedString("Bem-vindo", comment: ""))
+        view.text = "Bem-vindo".localized(tableName: "RegisterSucessLocalizable")
         view.numberOfLines = 3
         view.font = UIFont.MyTheme.defaultText.withSize(24)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -13,7 +13,7 @@ class RegisterSucessViewController: UIViewController {
     }()
     private lazy var infoLabel:UILabel = {
         let view = UILabel()
-        view.text = String(format: NSLocalizedString("Seus dados", comment: ""))
+        view.text = "Seus dados".localized(tableName: "RegisterSucessLocalizable")
         view.font = UIFont.MyTheme.defaultText.withSize(17)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -24,7 +24,7 @@ class RegisterSucessViewController: UIViewController {
         let account = String(clients[loginIndex].account)
         let digit = String(clients[loginIndex].verifyDigit)
         view.numberOfLines = 2
-        view.text = String(format: NSLocalizedString("Conta", comment: ""), account, digit)
+        view.text = String(format: "Conta".localized(tableName: "RegisterSucessLocalizable"), account, digit)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -36,7 +36,7 @@ class RegisterSucessViewController: UIViewController {
         return view
     }()
     //MARK: - Botão
-    private lazy var sucessButton: UIButton = UIButton.defaultButton(title: String(format: NSLocalizedString("Entrar", comment: "")), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(sucessEnterButton))
+    private lazy var sucessButton: UIButton = UIButton.defaultButton(title: "Entrar".localized(tableName: "RegisterSucessLocalizable"), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(sucessEnterButton))
     
     
     
