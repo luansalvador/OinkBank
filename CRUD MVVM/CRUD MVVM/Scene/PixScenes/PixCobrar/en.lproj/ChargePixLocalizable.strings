@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  CRUD MVVM
+
+  Created by user220212 on 7/1/22.
+  
+*/
+"charge" = "Cobrar" ;
+"writeValue" = "Digite o valor que você deseja receber" ;
+"doNotSpecifyValue" = "Não especificar valor" ;
+"confirm" = "Confirmar" ;
+"cifrao" = "R$ 0,00" ;
