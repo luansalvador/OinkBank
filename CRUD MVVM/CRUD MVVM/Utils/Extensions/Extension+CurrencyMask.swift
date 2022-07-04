@@ -28,11 +28,12 @@ extension String {
     }
     
     func localized(tableName: String) -> String {
-          return NSLocalizedString(self,
-                                   tableName: tableName,
-                                   bundle: .main,
-                                   value: self,
-                                   comment: self)
+        return NSLocalizedString(self,
+                                 tableName: tableName,
+                                 bundle: .main,
+                                 value: self,
+                                 comment: self)
+    }
+    
+    
 }
-
-
