@@ -19,8 +19,8 @@
 		27EA01E3286B81A1003FB4B3 /* Extension+CpfValidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA01E2286B81A1003FB4B3 /* Extension+CpfValidate.swift */; };
 		27EA01E7286B83A0003FB4B3 /* Extension+PhoneMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA01E6286B83A0003FB4B3 /* Extension+PhoneMask.swift */; };
 		27FF5EC1286E097600636BB3 /* Extension+StringLowercased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF5EC0286E097600636BB3 /* Extension+StringLowercased.swift */; };
-		2864447F286F403100AD295D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28644481286F403100AD295D /* Localizable.strings */; };
 		28BB0AC12864DF6200503A08 /* RegisterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */; };
+		28C4359E2873114400C76C5C /* RegisterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28C4359D2873114400C76C5C /* RegisterLocalizable.strings */; };
 		30A55E772841310C00C86045 /* CopyAndPasteConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A55E762841310C00C86045 /* CopyAndPasteConfirm.swift */; };
 		900479F5283D36BE005D7208 /* HomePixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900479F4283D36BE005D7208 /* HomePixViewController.swift */; };
 		900479FA283D5C21005D7208 /* MyKeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900479F9283D5C21005D7208 /* MyKeysViewController.swift */; };
@@ -134,9 +134,8 @@
 		27EA01E2286B81A1003FB4B3 /* Extension+CpfValidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CpfValidate.swift"; sourceTree = "<group>"; };
 		27EA01E6286B83A0003FB4B3 /* Extension+PhoneMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+PhoneMask.swift"; sourceTree = "<group>"; };
 		27FF5EC0286E097600636BB3 /* Extension+StringLowercased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+StringLowercased.swift"; sourceTree = "<group>"; };
-		28644480286F403100AD295D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		28644482286F404800AD295D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		28BB0AC02864DF6200503A08 /* RegisterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeaderView.swift; sourceTree = "<group>"; };
+		28C4359D2873114400C76C5C /* RegisterLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = RegisterLocalizable.strings; sourceTree = "<group>"; };
 		30A55E762841310C00C86045 /* CopyAndPasteConfirm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteConfirm.swift; sourceTree = "<group>"; };
 		900479F4283D36BE005D7208 /* HomePixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePixViewController.swift; sourceTree = "<group>"; };
 		900479F9283D5C21005D7208 /* MyKeysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeysViewController.swift; sourceTree = "<group>"; };
@@ -588,12 +587,12 @@
 		E6832F7F28218165009BCC19 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				28644481286F403100AD295D /* Localizable.strings */,
 				28BB0ABF2864DF0D00503A08 /* Header */,
 				E6832F84282181EA009BCC19 /* Footer */,
 				E6832F83282181DC009BCC19 /* Cell */,
 				E68B14D2281AA5CF00A8F50B /* RegisterViewModel.swift */,
 				E68B14CD281AA51B00A8F50B /* RegisterViewController.swift */,
+				28C4359D2873114400C76C5C /* RegisterLocalizable.strings */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -861,6 +860,7 @@
 				9097C3B92852810000701562 /* Nunito-MediumItalic.ttf in Resources */,
 				9097C3B02852810000701562 /* Nunito-SemiBold.ttf in Resources */,
 				9097C3AD2852810000701562 /* Nunito-ExtraLightItalic.ttf in Resources */,
+				28C4359E2873114400C76C5C /* RegisterLocalizable.strings in Resources */,
 				E6C7CA25281A940200D44104 /* Assets.xcassets in Resources */,
 				9097C3B12852810000701562 /* Nunito-Bold.ttf in Resources */,
 				9097C3B52852810000701562 /* Nunito-SemiBoldItalic.ttf in Resources */,

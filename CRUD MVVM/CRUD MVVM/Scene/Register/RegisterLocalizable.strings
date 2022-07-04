@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  CRUD MVVM
+
+  Created by user220256 on 7/4/22.
+  
+*/
+
+"registerGreeting" = "Boas-vindas, para realizar seu cadastro precisamos de alguns dados";
+"register" = "Cadastrar";
+"registerLogin" = "Já possui uma conta? Entre aqui";
+"registerTerms" = "Ao criar uma conta você aceita nossos termos e condições";
+"registerPickerViewFirst" = "Entre R$1000 e R$2000";
+"registerPickerViewSecond" = "Entre de R$2000 e R$3000";
+"registerPickerViewThird" = "Entre R$3000 e R$5000";
+"registerPickerViewFourth" = "Entre R$5000 e R$10000";
+"registerPickerViewFifith" = "Acima de R$10000";
+"R$" = "R$";
+"registerName" = "Nome";
+"registerNameExample" = "Ex.: João da Silva";
+"registerCPF" = "CPF";
+"registerCPFExample" = "Ex.: 000.000.000-00";
+"registerBirthday" = "Data de Nascimento";
+"registerBirthdayExample" = "Ex.: 01/01/2000";
+"registerEmail" = "E-mail";
+"registerEmailExample" = "Ex.: joao.silva@email.com";
+"registerMensalGains" = "Rensa Mensal";
+"registerBalance" = "Patimônio Líquido";
+"registerMoneyExample" = "Ex.: R$ 999,99";
+"registerPassword" = "Senha";
+"registerConfirmPassword" = "Confirmar Senha";
+"registerPasswordExample" = "Ex.: ******";
+"registerNoRegister" = "Sem Cadastro";
+"registerError" = "Erro";
+"registerAllFieldsError" = "Preencha todos os campos";
+"registerInvalidAgeError" = "Idade Inválida, a idade mínima é 18 anos e a máxima 120 anos";
+"registerPasswordMatchesError" = "Senhas não correspondem";
+"registerCreateAccount" = "Criar Conta";
+"registerMandatoryField" = "Campo Obrigatório";
+"registerInvalidEmail" = "E-mail inválido";
+"registerInvalidCPF" = "CPF inválido ou já registrado";
+"registerOK" = "OK";

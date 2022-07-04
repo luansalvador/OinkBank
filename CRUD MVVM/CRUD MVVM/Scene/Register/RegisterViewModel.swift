@@ -30,8 +30,8 @@ struct RegisterData {
     var autoCapitalization = UITextAutocapitalizationType.none
     
     init(titleKey: String, placeholderKey: String, isSecure: Bool = false){
-        self.title = String(NSLocalizedString(titleKey, comment: ""))
-        self.placeholder = String(format: NSLocalizedString(placeholderKey, comment: ""))
+        self.title = titleKey.localized(tableName: "RegisterLocalizable")
+        self.placeholder = placeholderKey.localized(tableName: "RegisterLocalizable")
         self.isSecure = isSecure
     }
 }
@@ -70,7 +70,7 @@ final class RegisterViewModel {
         newClientVerifyDigit = verifyDigit(account: String(newClientAccount))
         
         let newClient = Client(name: newClientName, cpf: newClientCpf, birthDate: newClientBirthDate, email: newClientEmail, monthlyIncome: newClientMonthlyIncome, netWorth: newClientNetWorth, password: newClientPassword, balance: newClientBalance, account: newClientAccount, verifyDigit: newClientVerifyDigit)
-        let newClientPix = Pix(account: newClientAccount, agency: "1-9", cpfKey: String(format: NSLocalizedString("registerNoRegister", comment: "")), randomKey: String(format: NSLocalizedString("registerNoRegister", comment: "")), phoneKey: String(format: NSLocalizedString("registerNoRegister", comment: "")), copyPastePix: "", emailKey: String(format: NSLocalizedString("registerNoRegister", comment: "")))
+        let newClientPix = Pix(account: newClientAccount, agency: "1-9", cpfKey: "registerNoRegister".localized(tableName: "RegisterLocalizable"), randomKey: "registerNoRegister".localized(tableName: "RegisterLocalizable"), phoneKey: "registerNoRegister".localized(tableName: "RegisterLocalizable"), copyPastePix: "", emailKey: "registerNoRegister".localized(tableName: "RegisterLocalizable"))
         
         let verify = verifyTf()
         let verifyEmail = verifyEmail(email: newClient.email)
@@ -94,7 +94,7 @@ final class RegisterViewModel {
         for i in 0...valuesTyped.count-1{
             print("indice: \(i), valor: \(valuesTyped[i])")
             if valuesTyped[i] == "" || valuesTyped[i]  == "0.0"{
-                self.delegate?.displayAlert(title: String(format: NSLocalizedString("registerError", comment: "")), message: String(format: NSLocalizedString("registerAllFieldsError", comment: "")))
+                self.delegate?.displayAlert(title: "registerError".localized(tableName: "RegisterLocalizable"), message: "registerAllFieldsError".localized(tableName: "RegisterLocalizable"))
                 return false
             }
         }
@@ -151,7 +151,7 @@ final class RegisterViewModel {
         print(maxAge)
         
         if date >= minAge || date <= maxAge {
-            self.delegate?.displayAlert(title: String(format: NSLocalizedString("registerError", comment: "")), message: String(format: NSLocalizedString("registerInvalidAgeError", comment: "")))
+            self.delegate?.displayAlert(title: "registerError".localized(tableName: "RegisterLocalizable"), message: "registerInvalidAgeError".localized(tableName: "RegisterLocalizable"))
             newClientBirthDate = ""
             
         } else {
@@ -161,7 +161,7 @@ final class RegisterViewModel {
     
     func verifyPassword(password: String, confirmPassword: String) -> Bool{
         if password != confirmPassword {
-            self.delegate?.displayAlert(title: String(format: NSLocalizedString("registerError", comment: "")), message: String(format: NSLocalizedString("registerPasswordMatchesError", comment: "")))
+            self.delegate?.displayAlert(title: "registerError".localized(tableName: "RegisterLocalizable"), message: "registerPasswordMatchesError".localized(tableName: "RegisterLocalizable"))
             return false
         } else {
             return true

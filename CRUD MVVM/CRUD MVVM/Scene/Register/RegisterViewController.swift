@@ -6,7 +6,7 @@ class RegisterViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = String(NSLocalizedString("registerCreateAccount", comment: ""))
+        self.title = "registerCreateAccount".localized(tableName: "RegisterLocalizable")
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
@@ -144,7 +144,7 @@ extension RegisterViewController:  UITextFieldDelegate{
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
             
             if verify == false {
-                cell?.tipLabel.text = "Campo obrigatório"
+                cell?.tipLabel.text = "registerMandatoryField".localized(tableName: "RegisterLocalizable")
                 cell?.tipLabel.isHidden = false
                 cell?.accessoryAlertImageView.isHidden = false
             } else {
@@ -154,7 +154,7 @@ extension RegisterViewController:  UITextFieldDelegate{
             
         case 1:
             if textField.text == "" {
-                cell?.tipLabel.text = "Campo obrigatório"
+                cell?.tipLabel.text = "registerMandatoryField".localized(tableName: "RegisterLocalizable")
                 cell?.tipLabel.isHidden = false
                 cell?.accessoryAlertImageView.isHidden = false
                 break
@@ -163,7 +163,7 @@ extension RegisterViewController:  UITextFieldDelegate{
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
             
             if verify == false {
-                cell?.tipLabel.text = "CPF inválido ou já registrado"
+                cell?.tipLabel.text = "registerInvalidCPF".localized(tableName: "RegisterLocalizable")
                 cell?.tipLabel.isHidden = false
                 cell?.accessoryAlertImageView.isHidden = false
             } else {
@@ -175,7 +175,7 @@ extension RegisterViewController:  UITextFieldDelegate{
             
             if verify == false {
                 let cell = tableView.cellForRow(at: indexPath) as? RegisterDatePickerTableViewCell
-                cell?.tipLabel.text = "Campo obrigatório"
+                cell?.tipLabel.text = "registerMandatoryField".localized(tableName: "RegisterLocalizable")
                 cell?.tipLabel.isHidden = false
                 cell?.accessoryAlertImageView.isHidden = false
             } else {
@@ -185,7 +185,7 @@ extension RegisterViewController:  UITextFieldDelegate{
             }
         case 3:
             if textField.text == "" {
-                cell?.tipLabel.text = "Campo obrigatório"
+                cell?.tipLabel.text = "registerMandatoryField".localized(tableName: "RegisterLocalizable")
                 cell?.tipLabel.isHidden = false
                 cell?.accessoryAlertImageView.isHidden = false
                 break
@@ -194,7 +194,7 @@ extension RegisterViewController:  UITextFieldDelegate{
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
             
             if verify == false {
-                cell?.tipLabel.text = "E-mail inválido"
+                cell?.tipLabel.text = "registerInvalidEmail".localized(tableName: "RegisterLocalizable")
                 cell?.tipLabel.isHidden = false
                 cell?.accessoryAlertImageView.isHidden = false
             } else {
@@ -206,7 +206,7 @@ extension RegisterViewController:  UITextFieldDelegate{
             
             if verify == false {
                 let cell = tableView.cellForRow(at: indexPath) as? RegisterPickerTableViewCell
-                cell?.tipLabel.text = "Campo obrigatório"
+                cell?.tipLabel.text = "registerMandatoryField".localized(tableName: "RegisterLocalizable")
                 cell?.tipLabel.isHidden = false
                 cell?.accessoryAlertImageView.isHidden = false
             } else {
@@ -219,7 +219,7 @@ extension RegisterViewController:  UITextFieldDelegate{
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
             
             if verify == false {
-                cell?.tipLabel.text = "Campo obrigatório"
+                cell?.tipLabel.text = "registerMandatoryField".localized(tableName: "RegisterLocalizable")
                 cell?.tipLabel.isHidden = false
                 cell?.accessoryAlertImageView.isHidden = false
             } else {
@@ -231,7 +231,7 @@ extension RegisterViewController:  UITextFieldDelegate{
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
             
             if verify == false {
-                cell?.tipLabel.text = "Campo obrigatório"
+                cell?.tipLabel.text = "registerMandatoryField".localized(tableName: "RegisterLocalizable")
                 cell?.tipLabel.isHidden = false
                 cell?.accessoryAlertImageView.isHidden = false
             } else {
@@ -241,7 +241,7 @@ extension RegisterViewController:  UITextFieldDelegate{
             
         case 7:
             if textField.text != viewModel.newClientPassword {
-                cell?.tipLabel.text = "Senhas não correspondem"
+                cell?.tipLabel.text = "registerPasswordMatchesError".localized(tableName: "RegisterLocalizable")
                 cell?.tipLabel.isHidden = false
                 cell?.accessoryAlertImageView.isHidden = false
                 break
@@ -250,7 +250,7 @@ extension RegisterViewController:  UITextFieldDelegate{
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
             
             if verify == false {
-                cell?.tipLabel.text = "Campo obrigatório"
+                cell?.tipLabel.text = "registerMandatoryField".localized(tableName: "RegisterLocalizable")
                 cell?.tipLabel.isHidden = false
                 cell?.accessoryAlertImageView.isHidden = false
             } else {

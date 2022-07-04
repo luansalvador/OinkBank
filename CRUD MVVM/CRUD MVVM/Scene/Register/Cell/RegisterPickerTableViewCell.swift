@@ -11,7 +11,8 @@ import UIKit
 final class RegisterPickerTableViewCell: UITableViewCell {
     private weak var viewModel: RegisterViewModel?
     
-    private lazy var pickerOptions: [String] = [String(format: NSLocalizedString("registerPickerViewFirst", comment: "")), String(format: NSLocalizedString("registerPickerViewSecond", comment: "")), String(format: NSLocalizedString("registerPickerViewThird", comment: "")), String(format: NSLocalizedString("registerPickerViewFourth", comment: "")), String(format: NSLocalizedString("registerPickerViewFifith", comment: ""))]
+    private lazy var pickerOptions: [String] = [
+        "registerPickerViewFirst".localized(tableName: "RegisterLocalizable"), "registerPickerViewSecond".localized(tableName: "RegisterLocalizable"), "registerPickerViewThird".localized(tableName: "RegisterLocalizable"), "registerPickerViewFourth".localized(tableName: "RegisterLocalizable"), "registerPickerViewFifith".localized(tableName: "RegisterLocalizable")]
     // MARK: - cellID
     static let reuseId: String = "RegisterPickerTableViewCell"
     
