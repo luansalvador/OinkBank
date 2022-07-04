@@ -1,0 +1,11 @@
+/* 
+  TransactionSucessLocalizable.strings
+  CRUD MVVM
+
+  Created by user217584 on 04/07/22.
+  
+*/
+
+"Transação Concluída" = "Transação Concluída!";
+"Sucesso" = "Sua transação foi efetuada com sucesso.";
+"Continuar" = "Continuar";

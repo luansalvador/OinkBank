@@ -7,7 +7,7 @@ class TransactionSuccessViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.textColor = .MyTheme.defaultTextColor
-        label.text = "Transação Concluída!"
+        label.text = "Transação Concluída".localized(tableName: "TransactionSucessLocalizable")
         label.font = .MyTheme.boldTitleText
         return label
     }()
@@ -17,7 +17,7 @@ class TransactionSuccessViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.textColor = .MyTheme.defaultTextColor
-        label.text = "Sua transação foi efetuada com sucesso."
+        label.text = "Sucesso".localized(tableName: "TransactionSucessLocalizable")
         label.font = .MyTheme.defaultText
         return label
     }()
@@ -31,7 +31,7 @@ class TransactionSuccessViewController: UIViewController {
     
     
     
-    private lazy var continueButton: UIButton = UIButton.defaultButton(title: "Continuar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(tappedButton))
+    private lazy var continueButton: UIButton = UIButton.defaultButton(title: "Continuar".localized(tableName: "TransactionSucessLocalizable"), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(tappedButton))
     
     
     
