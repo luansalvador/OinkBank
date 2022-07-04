@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 
  
-        let rootViewController = ChargeViewController()
+        let rootViewController = TransactionSuccessViewController()
 
 
         

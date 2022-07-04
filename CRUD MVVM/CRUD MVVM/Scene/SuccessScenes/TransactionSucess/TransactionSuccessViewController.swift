@@ -31,7 +31,7 @@ class TransactionSuccessViewController: UIViewController {
     
     
     
-    private lazy var continueButton: UIButton = UIButton.defaultButton(title: "Continuar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(tappedButton))
+    private lazy var continueButton: UIButton = UIButton.defaultButton(title: NSLocalizedString("Continuar", comment: ""), font: UIFont.MyTheme.defaultText, target: self, selector: #selector(tappedButton))
     
     
     
@@ -41,6 +41,8 @@ class TransactionSuccessViewController: UIViewController {
         self.addSubviews()
         self.setupConstraints()
         self.additionalSetup()
+        
+        
     }
     
     //MARK: Função botão
