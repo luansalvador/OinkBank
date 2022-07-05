@@ -327,10 +327,12 @@ extension RegisterViewController:  UITextFieldDelegate{
             textField?.text = textField?.text?.formatMask(mask: "###.###.###-##")
         case textFieldData.netWorthTextField.rawValue:
             textField?.text = textField?.text?.currencyInputFormatting()
-        case textFieldData.emailTextField.rawValue:
-            textField?.tag = 10
-        case textFieldData.emailTextField.rawValue:
-            textField?.delegate = self
+//        case textFieldData.emailTextField.rawValue:
+//            textField?.tag = 10
+//        case textFieldData.emailTextField.rawValue:
+//            textField?.delegate = self
+
+        
         default:
             break
         }

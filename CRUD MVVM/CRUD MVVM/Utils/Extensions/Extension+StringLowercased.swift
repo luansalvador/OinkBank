@@ -10,6 +10,8 @@ import UIKit
 
 extension RegisterViewController {
 
+    
+    
 func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 
         if textField.tag == 10 {
@@ -19,3 +21,4 @@ func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange
         return true
     }
 }
+

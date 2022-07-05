@@ -515,6 +515,7 @@
 		D326CB472836B1D80030AB89 /* PixKeyDetail */ = {
 			isa = PBXGroup;
 			children = (
+				D3917D21282C24E100988F02 /* Home */,
 				D326CB482836B2060030AB89 /* PixKeyDetailViewController.swift */,
 				D326CB4A2836B2390030AB89 /* PixKeyDetailViewModel.swift */,
 			);
@@ -600,7 +601,6 @@
 				E6B237022821EB22008F206A /* EditData */,
 				D3917D1C282BE64900988F02 /* Login */,
 				E6832F7F28218165009BCC19 /* Register */,
-				D3917D21282C24E100988F02 /* Home */,
 			);
 			path = Scene;
 			sourceTree = "<group>";

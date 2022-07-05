@@ -35,7 +35,7 @@ struct RegisterData {
     let placeholder: String
     var keyboardType: UIKeyboardType = .default
     var isSecure: Bool = false
-    var autoCapitalization = UITextAutocapitalizationType.none
+    
 }
 
 final class RegisterViewModel {
@@ -49,7 +49,7 @@ final class RegisterViewModel {
         .init(title: "Nome", placeholder: "Ex.: João da Silva"),
         .init(title: "CPF", placeholder: "Ex.: 000.000.000-00", keyboardType: .numberPad),
         .init(title: "Data de Nascimento", placeholder: "Ex.: 01/01/2000"),
-        .init(title: "E-mail", placeholder: "Ex.: joao.silva@email.com", keyboardType: .emailAddress, autoCapitalization: UITextAutocapitalizationType.none),
+        .init(title: "E-mail", placeholder: "Ex.: joao.silva@email.com", keyboardType: .emailAddress),
         .init(title: "Renda Mensal", placeholder: "Ex.: 999,99", keyboardType: .numberPad),
         .init(title: "Patrimônio Liquido", placeholder: "Ex.: 999,99", keyboardType: .numberPad),
         .init(title: "Senha", placeholder: "Ex.: ******", keyboardType: .numberPad, isSecure: true),
