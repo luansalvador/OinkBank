@@ -235,7 +235,7 @@ final class RegisterViewModel {
             }
             
         case 6:
-            if value == "" {
+            if value == "" || value.count < 6{
                 return false
             }
             else {

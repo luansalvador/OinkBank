@@ -231,10 +231,21 @@ extension RegisterViewController:  UITextFieldDelegate{
             let verify = viewModel.verifyTextFieldRealTime(index: textField.tag, value: textField.text ?? "")
             
             if verify == false {
-                cell?.tipLabel.text = "Campo obrigatório"
+                cell?.tipLabel.text = "Senha precisa de no mínimo 6 caractéres"
                 cell?.tipLabel.isHidden = false
                 cell?.accessoryAlertImageView.isHidden = false
-            } else {
+                
+                if textField.text == ""{
+                    
+                    cell?.tipLabel.text = "Campo obrigatório"
+                    cell?.tipLabel.isHidden = false
+                    cell?.accessoryAlertImageView.isHidden = false
+                    
+                }
+                
+            }
+            
+            else {
                 cell?.tipLabel.isHidden = true
                 cell?.accessoryAlertImageView.isHidden = true
             }
