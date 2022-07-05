@@ -11,7 +11,7 @@ import UIKit
 final class RegisterPickerTableViewCell: UITableViewCell {
     private weak var viewModel: RegisterViewModel?
     
-    private lazy var pickerOptions: [String] = ["Entre R$1000 e R$2000", "Entre de R$2000 e R$3000", "Entre R$3000 e R$5000", "Entre R$5000 e R$10000", "Acima de R$10000"]
+    private lazy var pickerOptions: [String] = ["Selecionar","Entre R$1000 e R$2000", "Entre de R$2000 e R$3000", "Entre R$3000 e R$5000", "Entre R$5000 e R$10000", "Acima de R$10000"]
     // MARK: - cellID
     static let reuseId: String = "RegisterPickerTableViewCell"
     
@@ -112,13 +112,12 @@ final class RegisterPickerTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-//            titleLabel.widthAnchor.constraint(equalToConstant: 110),
+
             titleLabel.bottomAnchor.constraint(equalTo: registerTextField.topAnchor, constant: 5),
             
             registerTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             registerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-//            registerTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-//            registerTextField.heightAnchor.constraint(equalToConstant: 30),
+
             
             tipLabel.widthAnchor.constraint(equalTo: registerTextField.widthAnchor),
             tipLabel.centerXAnchor.constraint(equalTo: registerTextField.centerXAnchor),
@@ -128,6 +127,11 @@ final class RegisterPickerTableViewCell: UITableViewCell {
     
     //MARK: - Perform
     @objc private func performDone() {
+        
+        let selectedIndex = Picker.selectedRow(inComponent: 0)
+                registerTextField.text = pickerOptions[selectedIndex]
+                registerTextField.resignFirstResponder()
+    
         self.registerTextField.endEditing(true)
     }
 }
