@@ -11,7 +11,7 @@ import UIKit
 final class RegisterPickerTableViewCell: UITableViewCell {
     private weak var viewModel: RegisterViewModel?
     
-     lazy var pickerOptions: [String] = ["Selecionar","Entre R$1000 e R$2000", "Entre de R$2000 e R$3000", "Entre R$3000 e R$5000", "Entre R$5000 e R$10000", "Acima de R$10000"]
+    private lazy var pickerOptions: [String] = ["Entre R$1000 e R$2000", "Entre de R$2000 e R$3000", "Entre R$3000 e R$5000", "Entre R$5000 e R$10000", "Acima de R$10000"]
     // MARK: - cellID
     static let reuseId: String = "RegisterPickerTableViewCell"
     
@@ -34,6 +34,7 @@ final class RegisterPickerTableViewCell: UITableViewCell {
         view.layer.cornerRadius = 5
         view.isSecureTextEntry = false
         view.translatesAutoresizingMaskIntoConstraints = false
+        
         view.rightView = accessoryAlertImageView
         view.rightViewMode = .always
         
@@ -84,6 +85,7 @@ final class RegisterPickerTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // setupconstraints
         setupConstraints()
+        
         contentView.backgroundColor = .systemBackground
     }
     
@@ -126,11 +128,7 @@ final class RegisterPickerTableViewCell: UITableViewCell {
     
     //MARK: - Perform
     @objc private func performDone() {
-        let selectedIndex = Picker.selectedRow(inComponent: 0)
-            registerTextField.text = pickerOptions[selectedIndex]
-            registerTextField.resignFirstResponder()
-            self.registerTextField.endEditing(true)
-
+        self.registerTextField.endEditing(true)
     }
 }
 
