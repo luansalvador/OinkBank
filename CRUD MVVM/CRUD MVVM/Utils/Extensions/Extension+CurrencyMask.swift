@@ -27,13 +27,4 @@ extension String {
         return formatter.string(from: number)!
     }
     
-    func localized(tableName: String) -> String {
-        return NSLocalizedString(self,
-                                 tableName: tableName,
-                                 bundle: .main,
-                                 value: self,
-                                 comment: self)
-    }
-    
-    
 }

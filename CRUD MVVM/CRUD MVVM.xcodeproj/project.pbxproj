@@ -11,6 +11,7 @@
 		0E17111F28410354006E8BFD /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17111E28410354006E8BFD /* ConfirmViewController.swift */; };
 		0E627F6E28732056005684D2 /* LocalizableMyKeys.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E627F6D28732056005684D2 /* LocalizableMyKeys.strings */; };
 		0EE5BE9A284016170074B27B /* ChargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5BE99284016170074B27B /* ChargeViewController.swift */; };
+		16AB691A28748657001141E2 /* Extension+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB691928748657001141E2 /* Extension+Localizable.swift */; };
 		2720C21C286C89D50023323F /* Extension+NoPasteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */; };
 		2720C21E286C8ACD0023323F /* Extension+LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */; };
 		2720C220286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720C21F286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift */; };
@@ -131,6 +132,7 @@
 		0E627F6D28732056005684D2 /* LocalizableMyKeys.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LocalizableMyKeys.strings; sourceTree = "<group>"; };
 		0E7FE335286F3F3A009DC513 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "pt-BR"; path = "../pt-BR.lproj/LaunchScreen.storyboard.xml"; sourceTree = "<group>"; };
 		0EE5BE99284016170074B27B /* ChargeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeViewController.swift; sourceTree = "<group>"; };
+		16AB691928748657001141E2 /* Extension+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Localizable.swift"; sourceTree = "<group>"; };
 		2720C21B286C89D50023323F /* Extension+NoPasteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NoPasteTextField.swift"; sourceTree = "<group>"; };
 		2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+LineTextField.swift"; sourceTree = "<group>"; };
 		2720C21F286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+LoginAgencyAndAgencyMask.swift"; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				2720C21D286C8ACD0023323F /* Extension+LineTextField.swift */,
 				2720C21F286CB5230023323F /* Extension+LoginAgencyAndAgencyMask.swift */,
 				27FF5EC0286E097600636BB3 /* Extension+StringLowercased.swift */,
+				16AB691928748657001141E2 /* Extension+Localizable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -912,6 +915,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AB691A28748657001141E2 /* Extension+Localizable.swift in Sources */,
 				E68B14CE281AA51B00A8F50B /* RegisterViewController.swift in Sources */,
 				28BB0AC12864DF6200503A08 /* RegisterHeaderView.swift in Sources */,
 				900F941F2837C212005FF369 /* RegisterPixKeyViewModel.swift in Sources */,
