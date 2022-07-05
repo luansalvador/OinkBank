@@ -23,8 +23,8 @@ extension String {
         guard number != 0 as NSNumber else {
             return ""
         }
-        
         return formatter.string(from: number)!
     }
     
+
 }
