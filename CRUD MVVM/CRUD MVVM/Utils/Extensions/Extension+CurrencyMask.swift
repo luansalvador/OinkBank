@@ -23,17 +23,10 @@ extension String {
         guard number != 0 as NSNumber else {
             return ""
         }
-        
         return formatter.string(from: number)!
     }
     
     func localized(tableName: String) -> String {
-        return NSLocalizedString(self,
-                                 tableName: tableName,
-                                 bundle: .main,
-                                 value: self,
-                                 comment: self)
+        return NSLocalizedString(self, tableName: tableName, bundle: .main, value: self, comment: self)
     }
-    
-    
 }
