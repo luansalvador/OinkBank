@@ -9,7 +9,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.numberOfLines = 1
-        lb.text = "Chave Pix"
+        lb.text = "pixKey".localized(tableName: "CopyAndPasteConfirmLocalizable")
         lb.font = .MyTheme.defaultText
         lb.textColor = .MyTheme.defaultTextColor
         lb.textAlignment = .left
@@ -20,7 +20,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.numberOfLines = 1
-        lb.text = "Chave Aleatória"
+        lb.text = "randomKey".localized(tableName: "CopyAndPasteConfirmLocalizable")
         lb.font = UIFont.MyTheme.defaultText
         lb.textColor = .MyTheme.defaultTextColor
         lb.textAlignment = .right
@@ -31,7 +31,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.numberOfLines = 1
-        lb.text = "Nome"
+        lb.text = "name".localized(tableName: "CopyAndPasteConfirmLocalizable")
         lb.font = UIFont.MyTheme.defaultText
         lb.textColor = UIColor.MyTheme.defaultTextColor
         lb.textAlignment = .left
@@ -53,7 +53,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.numberOfLines = 1
-        lb.text = "CPF"
+        lb.text = "CPF".localized(tableName: "CopyAndPasteConfirmLocalizable")
         lb.font = UIFont.MyTheme.defaultText
         lb.textColor = .MyTheme.defaultTextColor
         lb.textAlignment = .left
@@ -75,7 +75,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.numberOfLines = 1
-        lb.text = "R$ 0,00"
+        lb.text = "cifra".localized(tableName: "CopyAndPasteConfirmLocalizable")
         lb.font = UIFont.MyTheme.boldTitleText
         lb.textColor = .MyTheme.defaultTextColor
         lb.textAlignment = .center
@@ -86,7 +86,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.numberOfLines = 2
-        lb.text = "Confirme os dados do beneficiário:"
+        lb.text = "confirmData".localized(tableName: "CopyAndPasteConfirmLocalizable")
         lb.font = UIFont.MyTheme.defaultText
         lb.textColor = .MyTheme.defaultTextColor
         lb.textAlignment = .center
@@ -96,7 +96,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
     lazy var confirmButton:UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Confirmar Pix", for: .normal)
+        button.setTitle("confirmPix".localized(tableName: "CopyAndPasteConfirmLocalizable"), for: .normal)
         button.titleLabel?.font = UIFont.MyTheme.defaultText
         button.setTitleColor(UIColor.MyTheme.blackColor, for: .normal)
         button.backgroundColor = UIColor.MyTheme.greenColor
@@ -134,7 +134,7 @@ class CopyAndPasteConfirmViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Confirmação"
+        self.title = "confirmation".localized(tableName: "CopyAndPasteConfirmLocalizable")
     }
     
     private func addSubviews(){

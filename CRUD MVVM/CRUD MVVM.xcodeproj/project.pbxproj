@@ -65,6 +65,7 @@
 		C91FF8CE286F21F900034F91 /* LoginLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C91FF8CD286F21F900034F91 /* LoginLocalizable.strings */; };
 		C91FF8D6286F73AA00034F91 /* ChargePixLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C91FF8D8286F73AA00034F91 /* ChargePixLocalizable.strings */; };
 		C95C02722873105D00A127BC /* CopyAndPasteLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C95C02712873105D00A127BC /* CopyAndPasteLocalizable.strings */; };
+		C98E009128770E6D00EB37FD /* CopyAndPasteConfirmLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C98E009028770E6D00EB37FD /* CopyAndPasteConfirmLocalizable.strings */; };
 		C9CE78682847A91A0001AD09 /* PixCopyAndPasteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE78672847A91A0001AD09 /* PixCopyAndPasteViewModel.swift */; };
 		C9EA70522840036200AE6393 /* CopyAndPasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA70512840036200AE6393 /* CopyAndPasteView.swift */; };
 		C9EA70542840037600AE6393 /* CopyAndPasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA70532840037600AE6393 /* CopyAndPasteViewController.swift */; };
@@ -185,6 +186,7 @@
 		C91FF8CD286F21F900034F91 /* LoginLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LoginLocalizable.strings; sourceTree = "<group>"; };
 		C91FF8D7286F73AA00034F91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ChargePixLocalizable.strings; sourceTree = "<group>"; };
 		C95C02712873105D00A127BC /* CopyAndPasteLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = CopyAndPasteLocalizable.strings; sourceTree = "<group>"; };
+		C98E009028770E6D00EB37FD /* CopyAndPasteConfirmLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = CopyAndPasteConfirmLocalizable.strings; sourceTree = "<group>"; };
 		C9CE78672847A91A0001AD09 /* PixCopyAndPasteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixCopyAndPasteViewModel.swift; sourceTree = "<group>"; };
 		C9EA70512840036200AE6393 /* CopyAndPasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteView.swift; sourceTree = "<group>"; };
 		C9EA70532840037600AE6393 /* CopyAndPasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndPasteViewController.swift; sourceTree = "<group>"; };
@@ -473,6 +475,7 @@
 				C9EA70532840037600AE6393 /* CopyAndPasteViewController.swift */,
 				C9CE78672847A91A0001AD09 /* PixCopyAndPasteViewModel.swift */,
 				C95C02712873105D00A127BC /* CopyAndPasteLocalizable.strings */,
+				C98E009028770E6D00EB37FD /* CopyAndPasteConfirmLocalizable.strings */,
 			);
 			path = PixCopyAndPaste;
 			sourceTree = "<group>";
@@ -881,6 +884,7 @@
 				9097C3B52852810000701562 /* Nunito-SemiBoldItalic.ttf in Resources */,
 				9097C3AC2852810000701562 /* Nunito-ExtraBold.ttf in Resources */,
 				307A0D1A28735C5E0008F2E3 /* ReceivedTransferLocalizable.strings in Resources */,
+				C98E009128770E6D00EB37FD /* CopyAndPasteConfirmLocalizable.strings in Resources */,
 				9097C3AA2852810000701562 /* Nunito-Medium.ttf in Resources */,
 				9097C3AB2852810000701562 /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				9097C3B72852810000701562 /* Nunito-Italic.ttf in Resources */,

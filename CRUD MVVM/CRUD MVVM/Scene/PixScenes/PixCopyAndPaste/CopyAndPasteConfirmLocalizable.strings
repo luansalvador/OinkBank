@@ -1,0 +1,18 @@
+/* 
+  CopyAndPasteConfirm.strings
+  CRUD MVVM
+
+  Created by user220212 on 7/7/22.
+  
+*/
+"confirmation" = "Confirmação" ;
+"confirmData" = "Confirme os dados do beneficiário:" ;
+"cifra" = "R$0.00" ;
+"pixKey" = "Chave PIX" ;
+"randomKey" = "Chave Aleatória" ;
+"name" = "Nome" ;
+"CPF" = "CPF";
+"confirmPix" = "Confirmar PIX" ;
+
+
+
