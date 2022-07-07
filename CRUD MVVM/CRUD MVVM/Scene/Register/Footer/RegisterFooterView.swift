@@ -1,6 +1,10 @@
 import Foundation
 import UIKit
 
+
+var flag: Bool = false
+
+
 class RegisterFooterView: UIView {
     
     weak var viewModel: RegisterViewModel?
@@ -8,18 +12,16 @@ class RegisterFooterView: UIView {
     // MARK: - Attributes
     static let height: CGFloat = 200
     
-    var clickRegisterButton: (() -> Void)?
-    
-    
     //MARK: - UIElements
     private lazy var registerButton: UIButton = UIButton.defaultButton(title: "Cadastrar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performRegister))
     
     private lazy var loginButton: UIButton = UIButton.transparentButton(title: "Já possui uma conta? Entre aqui", font: .MyTheme.defaultText, target: self, selector: #selector(goToLogin))
     
-    private lazy var toggleButton: UIButton = {
+     lazy var toggleButton: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "square"), for: .normal)
+        button.setImage(UIImage(systemName: "checkmark.square.fill"), for: .selected)
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = .MyTheme.defaultTextColor
         button.addTarget(self, action: #selector(toggleButtonTapped), for: .touchUpInside)
         return button
@@ -32,6 +34,7 @@ class RegisterFooterView: UIView {
         super.init(frame: .zero)
         self.setupView()
         self.setupLayoutConstraints()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -70,36 +73,37 @@ class RegisterFooterView: UIView {
     
     //MARK: - Button Perform
     @objc func performRegister(){
-        clickRegisterButton?()
-        
         viewModel?.addNewClient()
     }
     
     @objc func goToLogin(){
-        clickRegisterButton?()
-        
         viewModel?.popViewController()
     }
     
-    @objc func toggleButtonTapped(){
-        clickRegisterButton?()
+    @objc func toggleButtonTapped() {
         
-        guard let image = self.toggleButton.currentImage else {return}
-        let square = UIImage(systemName: "square")
-        let check = UIImage(systemName: "checkmark.square.fill")
+        toggleButton.isSelected.toggle()
+        verifyIfSelected()
         
-        if image == square {
-            self.toggleButton.setImage(check, for: .normal)
-        }
-        
-        if image == check {
-            self.toggleButton.setImage(square, for: .normal)
-        }
     }
     
+   
+        func verifyIfSelected() -> Bool {
+
+        if toggleButton.isSelected {
+            flag = true
+            print(flag)
+        }
+            return flag
+    }
+    
+    
+    
+    
     @objc func termsButtonTapped(){
-        
     }
     
     
 }
+
+

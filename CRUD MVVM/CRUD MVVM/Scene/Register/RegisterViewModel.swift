@@ -7,7 +7,6 @@ protocol RegisterViewModelDelegate: AnyObject {
     func displayAlert(title: String, message: String)
     func displayAlertWithAction(title: String, message: String)
     func onSuccessPopView()
-    
     func onSuccessPushView()
     func performSucess()
 }
@@ -31,6 +30,8 @@ struct RegisterData {
 }
 
 final class RegisterViewModel {
+    
+    
     
     weak var delegate: RegisterViewModelDelegate?
     
@@ -60,6 +61,7 @@ final class RegisterViewModel {
     var newClientVerifyDigit = 0
     
     func addNewClient(){
+        
         newClientVerifyDigit = verifyDigit(account: String(newClientAccount))
         
         let newClient = Client(name: newClientName, cpf: newClientCpf, birthDate: newClientBirthDate, email: newClientEmail, monthlyIncome: newClientMonthlyIncome, netWorth: newClientNetWorth, password: newClientPassword, balance: newClientBalance, account: newClientAccount, verifyDigit: newClientVerifyDigit)
@@ -69,23 +71,28 @@ final class RegisterViewModel {
         let verifyEmail = verifyEmail(email: newClient.email)
         let verifyPassword = verifyPassword(password: newClientPassword, confirmPassword: newClientCOnfirmPassword)
         let verifyCpf = verifyCpf(cpf: newClientCpf)
+        let verifycheckbox = flag
+
+
+        if verify == true && verifyEmail == true && verifyCpf == true && verifyPassword == true && verifycheckbox == true {
         
-        
-        if verify == true && verifyEmail == true && verifyCpf == true && verifyPassword == true{
             clients.append(newClient)
-            
             allPix.append(newClientPix)
             autoLogin()
             print(newClient)
         }
     }
     
+    
+    
+    
+    
     // MARK: - Register Verify
     func verifyTf() -> Bool {
         let valuesTyped: [String] = [newClientName, newClientCpf, newClientEmail, newClientBirthDate, String(newClientMonthlyIncome), newClientNetWorth]
         
         for i in 0...valuesTyped.count-1{
-            print("indice: \(i), valor: \(valuesTyped[i])")
+            print("indice: newClient    CRUD_MVVM.Client    \(i), valor: \(valuesTyped[i])")
             if valuesTyped[i] == "" || valuesTyped[i]  == "0.0"{
                 self.delegate?.displayAlert(title: "Erro", message: "Preencha todos os Campos")
                 return false
@@ -177,6 +184,8 @@ final class RegisterViewModel {
         
         return digitReturn
     }
+    
+    
     
     //MARK: - TextFieldVerifications
     func verifyTextFieldRealTime(index: Int, value: String) -> Bool {
