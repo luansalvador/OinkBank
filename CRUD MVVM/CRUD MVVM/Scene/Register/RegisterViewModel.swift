@@ -7,7 +7,6 @@ protocol RegisterViewModelDelegate: AnyObject {
     func displayAlert(title: String, message: String)
     func displayAlertWithAction(title: String, message: String)
     func onSuccessPopView()
-    
     func onSuccessPushView()
     func performSucess()
 }
@@ -31,6 +30,8 @@ struct RegisterData {
 }
 
 final class RegisterViewModel {
+    
+    
     
     weak var delegate: RegisterViewModelDelegate?
     
@@ -81,6 +82,8 @@ final class RegisterViewModel {
             print(newClient)
         }
     }
+    
+    
     
     
     

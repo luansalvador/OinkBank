@@ -1,7 +1,9 @@
 import Foundation
 import UIKit
 
+
 var flag: Bool = false
+
 
 class RegisterFooterView: UIView {
     
@@ -10,9 +12,6 @@ class RegisterFooterView: UIView {
     // MARK: - Attributes
     static let height: CGFloat = 200
     
-    var clickRegisterButton: (() -> Void)?
-    
-    
     //MARK: - UIElements
     private lazy var registerButton: UIButton = UIButton.defaultButton(title: "Cadastrar", font: UIFont.MyTheme.defaultText, target: self, selector: #selector(performRegister))
     
@@ -20,8 +19,8 @@ class RegisterFooterView: UIView {
     
      lazy var toggleButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "unchecked"), for: .normal)
-        button.setImage(UIImage(named: "checked"), for: .selected)
+        button.setImage(UIImage(systemName: "square"), for: .normal)
+        button.setImage(UIImage(systemName: "checkmark.square.fill"), for: .selected)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = .MyTheme.defaultTextColor
         button.addTarget(self, action: #selector(toggleButtonTapped), for: .touchUpInside)
@@ -74,14 +73,10 @@ class RegisterFooterView: UIView {
     
     //MARK: - Button Perform
     @objc func performRegister(){
-        clickRegisterButton?()
-        
         viewModel?.addNewClient()
     }
     
     @objc func goToLogin(){
-        clickRegisterButton?()
-        
         viewModel?.popViewController()
     }
     
@@ -92,8 +87,9 @@ class RegisterFooterView: UIView {
         
     }
     
-    func verifyIfSelected() -> Bool {
-    
+   
+        func verifyIfSelected() -> Bool {
+
         if toggleButton.isSelected {
             flag = true
             print(flag)
@@ -101,8 +97,13 @@ class RegisterFooterView: UIView {
             return flag
     }
     
+    
+    
+    
     @objc func termsButtonTapped(){
     }
     
     
 }
+
+
